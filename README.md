@@ -1,3 +1,5 @@
 # sjhuibregtse.github.io
-# Website for Hubrex Designs
-# Created and maintained by Sarah J. Huibregtse, Phd
+
+This website is for Hubrex Designs.  Created and maintained by Sarah J. Huibregtse, Phd.
+
+
