@@ -1,51 +1,92 @@
 <!DOCTYPE html>
-<html>
-
+<html lang="en">
 <head>
-<title>CSC108 Fall 2020</title>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<meta content="text/html; charset=iso-8859-2" http-equiv="Content-Type">
-<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
-<style>
-.mySlides {display:none;}
-</style>
+    <meta charset="UTF-8">
+	<title>CSC108 Fall 2020 - Home Page</title>
+	<link href="css/style.css" rel="stylesheet">
+	
+	<meta name="description"
+          content="Describe your web site"/>
+    <meta name="keywords"
+          content="Keywords that describe the content of this web page"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Sarah J. Huibregtse"/>
+	<!-- Course/Section: CSW 113 01 -->
+	<!-- Date: 10/19/2020 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: #BCACCC;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		
+
+	</style>
 </head>
-
 <body>
-<h1 class="w3-center">CSC108 Fall 2020</h1>
-<h2 class="w3-center">Project 2 Submissions</h2>
+	<header>
+		<!-- add page header/banner content here, start with heading 1  -->
+		<h1>CSC108 Fall 2020</h1>
+        
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="p2.html">Project 2</a></li>
+            <li><a href="p3.html">Project 3</a></li>
+        </ul>
+	</nav>
+	<main>
+		<!-- use HTML Structure tags of section, article,
+		       aside, etc. for future styling  -->
+		<section>
+            <h2 style="text-align: center">Student Project Submissions</h2>
+			<!-- content goes inside here -->
+			<article>
+                <h2>Welcome to our Fall 2020 Project Showcase!</h2>
 
-<div class="w3-content w3-section" style="max-width:750px">
-  <img class="mySlides" src="20F-Project2/P2-Rankin.jpeg" style="width:100%;">
-  <img class="mySlides" src="20F-Project2/P2-Sterling.jpg" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Elliott.PNG" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Globokar.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Mazzei.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Monigold.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Moser.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Nunamaker.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Palmer.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Rawson.PNG" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Stefancin.png" style="width:100%">
-  <img class="mySlides" src="20F-Project2/P2-Syrek.png" style="width:100%">
-</div>
+				<p>
+					Throughout our course students have been creating a variety of projects 
+					that require them to demonstrate skills learned.  This website has been 
+					setup to share their hard work and creativity.  There were also a few design
+					competitions along the way too.
+				</p>
+				<p>&nbsp;</p>
+				<h2>Week 2 Discussion Zoog Competition</h2>
+				<p style="text-align:center;"><img src="20-10-27_W2-ZoogWinners.png" alt="Zoog Competition Winners" /></p>
+					
+			
+				
 
-<script>
-var myIndex = 0;
-carousel();
+			</article>
+			<aside>
+                <h2 style="text-align: center;">CSC 108 Fall 2020</h2>
+                <h3>Course Description</h3>
+				<p>A first experience in computer programming for students 
+				who have no previous programming experience.  Hands-on laboratory activities will be a 
+				major part of the course.  2 Sem. Hrs.</p>
+				<p>There are no prerequisites to taking this course, but don't let that fool you---this 
+				is a challenging and rewarding course!  Your ability to think abstractly and work creatively 
+				will increase, as will your confidence in mastering new technology.  The hands-on projects 
+				will be a lot of fun, and you will develop fundamental computing skills that will serve you 
+				for years to come.</p>
+				<h3>Course Goal</h3>
+				<p>Students will learn introductory concepts of computer programming through hands-on 
+				experience in reading and writing programs.</p>
 
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
-
+			
+			</aside>
+        </section>
+	</main>
+	<footer>
+		<!-- resource to start with: https://www.w3schools.com/tags/tag_footer.asp
+		         research current practices for footer to determine content -->
+	</footer>
 </body>
 </html>
