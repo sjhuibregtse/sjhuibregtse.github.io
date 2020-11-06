@@ -33,7 +33,8 @@ h1 {
     display: block;
     color: white;
     text-align: center;
-    padding: 14px 16px;
+    margin-top: 6px;
+    padding: 3px 16px;
     text-decoration: none;
 }
 
