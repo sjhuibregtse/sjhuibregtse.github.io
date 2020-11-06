@@ -68,6 +68,9 @@ article {
   background-color: #f1f1f1;
   height: 700px; /* only for demonstration, should be removed */
 }
+article h1 {
+  font-size: 1.5em;
+}
 
 /* Clear floats after the columns */
 section:after {
