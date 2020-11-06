@@ -1,0 +1,28 @@
+/* CSS formats for www.mountunion/edu/~huibresa */
+
+table, th, td {
+  border: 2px black solid;
+  border-collapse:collapse;
+  margin: auto;
+  padding: 10px;
+}
+
+td {
+  text-align: center;
+}
+
+ul {
+  text-align: left;
+}
+
+th {
+	background-color: #F5F5F5;
+}
+
+#teaching {
+	background-color: #9370DB;
+}
+
+#office {
+	background-color: #90EE90;
+}

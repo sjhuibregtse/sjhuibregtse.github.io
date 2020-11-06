@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>CSC108 Fall 2020 - Home Page</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta name="description"
+          content="Describe your web site"/>
+    <meta name="keywords"
+          content="Keywords that describe the content of this web page"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Sarah J. Huibregtse"/>
+	<!-- Course/Section: CSW 113 01 -->
+	<!-- Date: 10/19/2020 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: #BCACCC;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		.mySlides {display:none;}
+
+	</style>
+</head>
+<body>
+	<header>
+		<!-- add page header/banner content here, start with heading 1  -->
+		<h1>CSC108 Fall 2020</h1>
+        
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="p2.html">Project 2</a></li>
+            <li><a href="p3.html">Project 3</a></li>
+        </ul>
+	</nav>
+	<main>
+		<!-- use HTML Structure tags of section, article,
+		       aside, etc. for future styling  -->
+		<section>
+<h2 class="w3-center">Project 2 Submissions</h2>
+
+<div class="w3-content w3-section" style="max-width:750px">
+  <img class="mySlides" src="20F-Project2/P2-Rankin.jpeg" style="width:100%;">
+  <img class="mySlides" src="20F-Project2/P2-Sterling.jpg" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Elliott.PNG" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Globokar.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Mazzei.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Monigold.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Moser.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Nunamaker.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Palmer.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Rawson.PNG" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Stefancin.png" style="width:100%">
+  <img class="mySlides" src="20F-Project2/P2-Syrek.png" style="width:100%">
+    <img class="mySlides" src="20F-Project2/P2-Kray.png" style="width:100%">
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+        </section>
+	</main>
+	<footer>
+		<!-- resource to start with: https://www.w3schools.com/tags/tag_footer.asp
+		         research current practices for footer to determine content -->
+	</footer>
+</body>
+</html>

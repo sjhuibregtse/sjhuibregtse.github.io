@@ -1,0 +1,135 @@
+/*
+ * add all external style tags in this file
+ */
+
+* {
+  box-sizing: border-box;
+}
+
+body {
+    font-family: Georgia, serif;
+}
+
+h1 {
+    text-align: center;
+}
+
+/* navigation bar styling */
+
+.main-nav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    background-color: #333;
+    font-size: large;
+}
+
+.main-nav li {
+    float: left;
+}
+
+.main-nav li a {
+    display: block;
+    color: white;
+    text-align: center;
+    margin-top: 6px;
+    padding: 3px 16px;
+    text-decoration: none;
+}
+
+.main-nav li a:hover {
+    background-color: #111;
+}
+
+/* HTML Layout setup using: https://www.w3schools.com/html/html_layout.asp */
+/* Style the header */
+header {
+  background-color: #666;
+  padding: 10px;
+  text-align: center;
+  font-size: 35px;
+  color: white;
+}
+
+
+/* Create two columns/boxes that floats next to each other */
+aside {
+  float: right;
+  width: 30%;
+  height: 700px; /* only for demonstration, should be removed */
+  background: #ccc;
+  padding: 20px;
+}
+
+article {
+  float: left;
+  padding: 20px;
+  width: 70%;
+  height: auto;
+  overflow: auto;
+  background-color: #f1f1f1;
+  height: 700px; /* only for demonstration, should be removed */
+}
+article h1 {
+  font-size: 1.5em;
+}
+
+/* Clear floats after the columns */
+section:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Style the footer */
+footer {
+  background-color: #777;
+  padding: 10px;
+  text-align: center;
+  color: white;
+}
+
+/* Social Media Styles adapted from W3Schools site*/
+.fa {
+  padding: 20px;
+  font-size: 30px;
+  width: 50px;
+  text-align: center;
+  text-decoration: none;
+  margin: 5px 2px;
+}
+
+.fa:hover {
+    opacity: 0.7;
+}
+
+.fa-twitter {
+  background: #55ACEE;
+  color: white;
+}
+
+.fa-linkedin {
+  background: #007bb5;
+  color: white;
+}
+
+.fa-youtube {
+  background: #bb0000;
+  color: white;
+}
+
+.fa-vimeo {
+  background: #45bbff;
+  color: white;
+}
+
+/* Responsive layout - makes the two columns/boxes stack on top of each
+    other instead of next to each other, on small screens */
+@media (max-width: 600px) {
+  nav, article {
+    width: 100%;
+    height: auto;
+  }
+}
+
