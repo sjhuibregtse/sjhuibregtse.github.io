@@ -87,9 +87,13 @@ footer {
   background-color: #777;
   padding: 10px;
   text-align: center;
+  font-size: smaller;
   color: white;
 }
 
+.img-responsive {
+    max-width: 100%;
+}
 /* Social Media Styles adapted from W3Schools site*/
 .fa {
   padding: 20px;
