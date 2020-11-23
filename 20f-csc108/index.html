@@ -25,21 +25,7 @@
 			border-style: groove;
 			padding: 10px 10px 20px 10px;
 		}
-		
-        .col-container {
-            display: table;  /* Make the container element behave like a table */
-            width: 100%;     /* Set full-width to expand the whole page */
-        }
-        
-        .col-1 {
-            display: table-cell;    /* Make elements inside the container behave like table cells */
-            width: 70%;
-        }
-        
-        .col-2 {
-            display: table-cell;    /* Make elements inside the container behave like table cells */
-            width: 30%;
-        }
+
 
 	</style>
 </head>
@@ -61,10 +47,10 @@
 	<main>
 		<!-- use HTML Structure tags of section, article,
 		       aside, etc. for future styling  -->
-		<div class="col-container">
+		<section class="col-container">
             <h2 style="text-align: center">Student Project Submissions</h2>
 			<!-- content goes inside here -->
-			<div class="col-1">
+			<article>
                 <h2>Welcome to our Fall 2020 Project Showcase!</h2>
 
 				<p>
@@ -81,8 +67,8 @@
 			
 				
 
-			</div>
-			<div class="col-2">
+			</article>
+			<aside>
                 <h2 style="text-align: center;">CSC 108 Fall 2020</h2>
                 <h3>Course Description</h3>
 				<p>A first experience in computer programming for students 
@@ -98,8 +84,8 @@
 				experience in reading and writing programs.</p>
 
 			
-			</div>
-        </div>
+			</aside>
+        </section>
 	</main>
 	<footer>
 		<!-- resource to start with: https://www.w3schools.com/tags/tag_footer.asp
