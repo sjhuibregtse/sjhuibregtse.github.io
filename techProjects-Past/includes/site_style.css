@@ -1,0 +1,93 @@
+﻿body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; 
+	padding: 0;
+	text-align: center; 
+	color: #000000;
+}
+#container {
+	width: 780px;  
+	background: #FFFFFF;
+	margin-top: 0; 
+	border: 0px solid #000000;
+	text-align: left; 
+	margin: auto;
+}
+#header {
+	<!-- /** The header is for the "header" image **/ -->
+	background: #DDDDDD; 
+	padding: 0;
+	margin: 0;
+}
+#header img {
+	border: 0;	
+}
+#mainContent {
+	width: 740px;
+	padding: 0 20px;
+	background: #FFFFFF;
+	margin: 0;
+	font-size: 11px;
+	min-height: 500px;
+	_height: auto !important;
+}
+#footer {
+	padding: 5px 0px 0 0;
+	background: #DDDDDD;
+}
+#footer p {
+	margin: 0;
+	padding: 0px 0;
+}
+#navcontainer ul {
+	list-style-type: none;
+	width: 100%;
+	border-left: 1px solid #FFFFFF;
+	margin-left: 0;
+	margin-top: 0;
+	height: 23px;
+	background-color: #8F0028;
+	font-size: 11px;
+	padding-left: 0px;
+}
+#navcontainer li {
+	display: inline;
+}
+#navcontainer a { 
+	float: left;
+	width: 118px;
+	text-decoration: none;
+	color: #FFF;
+	font-weight:bold;
+	background: #8F0028;
+	padding: 5px;
+	border-right: 1px solid #FFFFFF;
+	text-align: center;
+}
+#navcontainer a:hover {
+	background: #000;
+	color: #FFF;
+}
+a#current {
+	background: #000;
+	color: #FFF;
+}
+#title {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+  	color: #000;
+	font-weight: bold;
+}
+#headings {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+  	color: #8C0029;
+	font-weight: bold;
+}
+#text {
+	font-size: 11px;
+	font-weight: normal;
+	color: #000;
+
+}

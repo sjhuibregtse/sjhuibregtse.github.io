@@ -1,0 +1,87 @@
+  
+.mainDiv
+{
+  width:180px;
+}
+.topItem
+{
+	width:180px;
+	height:25px;
+	cursor:pointer;
+	text-decoration: none;
+	color: white;
+	font-weight:bold;
+	font-family:Arial, Helvetica, sans-serif;
+	font-size: small;
+	background-color: #666666;
+ 
+}
+
+
+.dropMenu
+{
+  background:#D9D9D9;
+  border-top:1px solid #000099;
+  border-left:1px solid #92B1F8;
+  border-right:1px solid #92B1F8;
+  border-bottom:1px solid #92B1F8;
+}
+
+.subMenu
+{
+   display:none;
+}
+.subItem
+{
+	padding-left:4px;
+	cursor:pointer;
+	font-weight:bold;
+	text-decoration:none;
+	color:black;
+	font-size: x-small;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.subItem a
+{
+	text-decoration:none;
+	color:black;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+}
+
+.subItemOver
+{
+	cursor:pointer;
+	color:blue;
+	text-decoration:underline;
+	font-weight:bold;
+	padding-left:4px;
+	font-size: xx-small;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+.subItemOver  a
+{
+	color:blue;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: xx-small;
+}
+
+
+.drop
+{
+   border-left:1px solid black;
+   border-right:1px solid black;	
+}
+.menuSubHeadings {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: small;
+	font-weight: bold;
+	color: #000066;
+}
+.menuFooter {
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 9px;
+	color: #FFFF99;
+}

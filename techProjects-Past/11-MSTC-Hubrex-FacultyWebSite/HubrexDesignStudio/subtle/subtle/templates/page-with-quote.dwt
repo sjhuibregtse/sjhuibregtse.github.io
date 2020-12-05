@@ -1,0 +1,73 @@
+﻿<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html dir="ltr" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+    <meta name="description" content="" />
+    <meta name="keywords" content="" />
+    <link rel="shortcut icon" href="../template-files/blueprint-v1.7.css" />
+    <link rel="stylesheet" href="../template-files/blueprint-v1.7.css" type="text/css" media="Screen, projection, print" />
+    <link rel="stylesheet" href="../template-files/vinebranches-v3.0.css" type="text/css" media="Screen, projection, print" />
+  </head>
+  <body>
+    <div id="page-wrapper">
+      <div id="content-wrapper">
+        <div id="grid-wrapper">
+          <div id="navigation" class="prepend-8 span-16 last">
+            <ul class="section">
+              <li><a href="default.html">home</a></li>
+              <li><a href="products.html">products</a></li>
+              <li><a href="">about</a></li>
+              <li><a href="">contact</a></li>
+            </ul>
+          </div>
+          <div id="masthead" class="span-24 last">
+            <h1>Subtle</h1>
+          </div>
+          <div id="content" class="prepend-8 span-15 append-1 last">
+          	<div class="articlediv"><h2><!-- #BeginEditable "Heading" -->Heading<!-- #EndEditable --></h2>
+						<!-- #BeginEditable "Content" -->
+						<p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Praesent rutrum cursus lacus. Fusce feugiat odio non nisl. Morbi dui magna, gravida posuere, varius quis, lacinia vitae, purus. Phasellus imperdiet suscipit augue. Donec non erat. Integer adipiscing nunc facilisis ligula.</p>
+						<img src="../images/browser-screens.jpg" alt="three browser screens" />
+						<p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Sed in pede consequat est cursus facilisis. Pellentesque tempor, odio et sollicitudin vestibulum, dui leo tincidunt ligula, blandit facilisis eros diam quis lacus. Cras quis justo. Pellentesque sed est ut odio congue volutpat.</p>
+						<p>Morbi porta, neque a luctus porta, odio metus fringilla ante, id cursus mauris tellus ut erat. Donec tempor. Donec feugiat mauris quis dui aliquet feugiat. Maecenas nibh. Ut lobortis.
+						</p>
+						<!-- #EndEditable -->
+					</div>
+          </div>
+          <div id="supplemental-filler" class="container">
+            <div id="obligatory-complimentary-quote" class="span-8">
+              <div class="quoteblock">
+                <q cite="http://"><!-- #BeginEditable "QuoteText" -->Vivamus quis sem a sapien consequat lacinia. Nam arcu libero, condimentum sit amet, porta at, suscipit ut, risus. Pellentesque tortor arcu, porta sit amet, blandit vitae, consectetur sed, purus.<!-- #EndEditable --></q>
+                <cite>
+                  — <!-- #BeginEditable "QuoteAuthor" -->Magna Lobortis<!-- #EndEditable --><span><!-- #BeginEditable "QuoteAuthorTitle" -->CEO, vestibulum.com<!-- #EndEditable --></span>
+                </cite>
+              </div>
+            </div>
+            <div id="parting-shots" class="span-15 append-1 last">
+              <div id="collaborate">
+                <h3><!-- #BeginEditable "OneMoreThingHeading" -->Blandit Vitae.<!-- #EndEditable --></h3>
+                <!-- #BeginEditable "OneMoreThing" -->
+                <p>Cras id magna. Mauris ultricies auctor nisl. Sed eu leo. Integer malesuada sapien eget nulla. Nulla posuere, nibh et ultrices convallis, arcu sem euismod ante, nec lacinia purus mauris dapibus turpis.</p>
+                <p>Class aptent taciti sociosqu ad litora torquent per conubia nostra, per inceptos himenaeos. Nullam viverra porta est. Vestibulum pulvinar gravida neque. Nunc molestie. Quisque pede quam, consequat ullamcorper, convallis nec, eleifend vel, neque.</p>
+                <p>Pellentesque tortor arcu, porta sit amet, blandit vitae, consectetur sed, purus. <a href="">Praesent posuere elit</a> ac eros. Donec non felis eu nisl consectetur vehicula.</p>
+                <!-- #EndEditable -->
+              </div>
+            </div>
+          </div>
+          <div id="footer" class="prepend-8 span-16 last" >
+            <ul>
+              <li>
+                copyright © 2009 <a href="http://">your company inc</a>
+              </li>
+              <li>
+                <!-- please keep this link if you use this template -->
+                design by <a href="http://vinebranches.com">vine branches</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>
+

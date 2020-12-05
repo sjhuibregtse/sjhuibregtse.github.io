@@ -1,0 +1,110 @@
+﻿body {
+	font: 100% Verdana, Arial, Helvetica, sans-serif;
+	background: #666666;
+	margin: 0; 
+	padding: 0;
+	text-align: center; 
+	color: #000000;
+}
+#container {
+	width: 780px;  
+	background: #FFFFFF;
+	margin-top: 0; 
+	border: 0px solid #000000;
+	text-align: left; 
+	margin: auto;
+}
+#header {
+	<!-- /** The header is for the "header" image **/ -->
+	background: #DDDDDD; 
+	padding: 0;
+	margin: 0;
+	height: 72px;
+	
+}
+#header img {
+	border: 0px;
+	height: 72px;
+	width: 780px;
+	margin-bottom: 0px;
+}
+#mainContent {
+	width: 740px;
+	padding: 0 20px;
+	background: #FFFFFF;
+	margin: 0;
+	font-size: 11px;
+	min-height: 500px;
+	_height: auto !important;
+}
+#footer {
+	padding: 0;
+	background: #EFDDAB;
+	margin: 0;
+	
+}
+#footer p {
+	margin: 0;
+	padding: 0px 0;
+}
+#footer img {
+	border: 0;
+	height: 65px;
+	width: 780px;
+}
+
+#navcontainer ul {
+	list-style-type: none;
+	width: 100%;
+	border-left: 0px solid #FFFFFF;
+	margin-left: 0;
+	margin-top: 0;
+	height: 21px;
+	background-color: #8F0028;
+	font-size: 11px;
+	padding-left: 0px;
+}
+#navcontainer li {
+	display: inline;
+}
+#navcontainer a { 
+	float: left;
+	width: 118px;
+	text-decoration: none;
+	color: #FFF;
+	font-weight: bold;
+	background: #8F0028;
+	padding: 4px;
+	border-right: 0px solid #FFFFFF;
+	text-align: center;
+}
+#navcontainer a:hover {
+	background: #000;
+	color: #FFF;
+}
+a#current {
+	background: #000;
+	color: #FFF;
+}
+#title {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 16px;
+  	color: #000;
+	font-weight: bold;
+}
+a:link {text-decoration: none}
+a:visited {text-decoration: none}
+a:hover {text-decoration: underline; color:red}
+
+#headings {
+	font-family: Verdana, Helvetica, sans-serif;
+	font-size: 14px;
+  	color: #8C0029;
+	font-weight: bold;
+}
+#text {
+	font-size: 11px;
+	font-weight: normal;
+	color: #000;
+
+}
