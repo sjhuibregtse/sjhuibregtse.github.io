@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>CSC399 Spring 2021 - Advice</title>
+	<link href="css/style.css" rel="stylesheet">
+	<link rel="stylesheet" href="https://www.w3schools.com/w3css/4/w3.css">
+	<meta name="description"
+          content="Describe your web site"/>
+    <meta name="keywords"
+          content="Keywords that describe the content of this web page"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Sarah J. Huibregtse"/>
+	<!-- Course/Section: CSW 113 01 -->
+	<!-- Date: 10/19/2020 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: #BCACCC;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		p.advice {
+      font-size: 95%;
+      font-style: italic;
+      border: thick solid #9370db;
+      background-color: #e6e6fa;
+      padding: 15px;
+      margin: 5px 5px;
+      border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+      -moz-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+      -webkit-border-radius: 1em 4em 1em 4em / 2em 1em 2em 1em;
+    }
+
+	</style>
+</head>
+<body>
+	<header>
+		<!-- add page header/banner content here, start with heading 1  -->
+		<h1>CSC 399 Spring 2021</h1>
+        
+	</header>
+	<nav class="main-nav">
+        <ul>
+          <li><a href="../index.html">Website Home</a></li>
+            <li><a href="index.html">CSC399 Home</a></li>
+            <li><a href="p1.html">Project 1</a></li>
+            <li><a href="p2.html">Project 2</a></li>
+            <li><a href="p3.html">Project 3</a></li>
+            <li><a href="advice.html">Words of Wisdom</a></li>
+        </ul>
+	</nav>
+	<main>
+		<!-- use HTML Structure tags of section, article,
+		       aside, etc. for future styling  -->
+		<section>
+<h2 class="w3-center">Words of Wisdom for Future Students</h2>
+
+<div class="w3-content w3-section" style="max-width: 85%">
+  <p class="advice">
+    
+  </p>
+  
+</div>
+
+<script>
+var myIndex = 0;
+carousel();
+
+function carousel() {
+  var i;
+  var x = document.getElementsByClassName("mySlides");
+  for (i = 0; i < x.length; i++) {
+    x[i].style.display = "none";  
+  }
+  myIndex++;
+  if (myIndex > x.length) {myIndex = 1}    
+  x[myIndex-1].style.display = "block";  
+  setTimeout(carousel, 2000); // Change image every 2 seconds
+}
+</script>
+
+        </section>
+	</main>
+	<footer>
+		<!-- resource to start with: https://www.w3schools.com/tags/tag_footer.asp
+		         research current practices for footer to determine content -->
+	</footer>
+</body>
+</html>
