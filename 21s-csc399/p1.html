@@ -13,9 +13,10 @@
           content="unfollow"/>
     <meta name="author"
           content="Sarah J. Huibregtse"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
 	<!-- Course/Section: CSW 113 01 -->
 	<!-- Date: 10/19/2020 -->
-
+  <link href='https://fonts.googleapis.com/css?family=Allerta' rel='stylesheet'>
 	<style>
 		/* example of embedded style tags */
 		
@@ -25,46 +26,53 @@
 			border-style: groove;
 			padding: 10px 10px 20px 10px;
 		}
-		.mySlides {display:none;}
+    section {
+      display: block;
+      width: 100%;
+    }
     
+    /* format around each semester class projects */
     .yearlyBox {
       border: 1px solid #665544;
       padding: 25px;
+      width: 100%;
     }
-    
-    article {
+    .studentProjects {
       width: 95%;
       background: #C8C8C8;
-      -webkit-column-count: 2;
-      -moz-column-count: 2;
-      column-count: 2;
-      
-      -moz-column-fill: auto;
-      column-fill: auto;
-      
-      height: auto;
-      
-      -webkit-column-width: 475px;
-      -moz-column-width: 475px;
-      column-width: 475px;
-      
-      -webkit-column-gap: 2em;
-      -moz-column-gap: 2em;
-      column-gap: 2em;
-      
-      -webkit-column-rule: 1px dotted #ddd;
-      -moz-column-rule: 1px dotted #ddd;
-      column-rule: 1px dotted #ddd;     
-
     }
-    
-    @media (min-height: 450px) {
-      article {
-        -webkit-columns: 2 400px;
-        -moz-columns: 2 400px;
-        columns: 2 400px;
+      
+    /* column setup
+      https://www.w3schools.com/howto/tryit.asp?filename=tryhow_css_two_columns_responsive */
+      * {
+        box-sizing: border-box;
       }
-    }
+  
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 50%;
+        padding: 10px;
+        height: auto; /* Should be removed. Only for demonstration */
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        background-color: #aaa;
+      }
+      .card {
+        
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
 
 	</style>
 </head>
@@ -88,7 +96,7 @@
 		<!-- use HTML Structure tags of section, article,
 		       aside, etc. for future styling  -->
 		<section>
-      <h2 class="w3-center">Project 1 Submissions</h2>
+      <h2>Project 1 Submissions</h2>
       <p>Project 1 for this course is always a professor selected piece that
       all students develop during the first half of the semester.  However, as you can hear how
       students enhance and personalize the piece is up to them and depends on what they decide to focus on. 
@@ -96,153 +104,161 @@
 
       <p><em>Please note, we do not claim to own the copyright to the music performed in these Python
       programmed pieces.</em></p>
-      <section>
+      <section class="yearlyBox">
         <h2>Spring 2021 Projects</h2>
         <p>The professor selected piece for this semester was the <em>Chattanooga Choo Choo</em> with
         music by Harry Warren.</p>
-        <article>
-            <figure>
-                <figcaption>Listen to Adkin's final version:</figcaption>
-                <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Adkins.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
-            <figure>
-               <figcaption>Listen to Davis's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Davis.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Hedigus's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Hedigus.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Holderbaum's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Holderbaum.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Kaufman's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Kaufman.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Martin's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Martin.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to McGinnis's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-McGinnis.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Miller's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Miller.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Moore's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Moore.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Newsom's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Newsom.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
-            <figure>
-              <figcaption>Listen to Spencer's final version:</figcaption>
-              <audio
-                    controls
-                    src="21S-p1/21S-P1-Final-Spencer.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-              </audio>
-            </figure>
+        <div class="row"></div>
+        <article class="column" style="">
+          <div class="card">
+            <p>Listen to Adkin's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Adkins.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Davis's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Davis.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Hedigus's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Hedigus.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Holderbaum's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Holderbaum.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Kaufman's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Kaufman.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Martin's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Martin.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+        </article>
+        <article class="column" style="">
+          <div class="card">
+            <p>Listen to McGinnis's final version:</figcaption>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-McGinnis.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Miller's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Miller.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Moore's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Moore.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Newsom's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Newsom.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Spencer's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/21S-P1-Final-Spencer.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+
         </article>
       </section>
-      <section>
+      <section class="yearlyBox">  
         <h2>Spring 2020 Projects</h2>
         <p>The professor selected piece for this semester was the <em>The Entertainer</em> with
         music by Scott Joplin.</p>
-        <article>
-            <figure>
-                <figcaption>Listen to Dr. Huibregtse's final version:</figcaption>
-                <audio
-                    controls
-                    src="20S-p1/20S-P1-Huibregtse.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
-                        <figure>
-                <figcaption>Listen to Barker's final version:</figcaption>
-                <audio
-                    controls
-                    src="20S-p1/20S-P1-Barker.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
-            <figure>
-                <figcaption>Listen to MacDonald's final version:</figcaption>
-                <audio
-                    controls
-                    src="20S-p1/20S-P1-MacDonald.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
-            <figure>
-                <figcaption>Listen to Schulte's final version:</figcaption>
-                <audio
-                    controls
-                    src="20S-p1/20S-P1-Schulte.m4a">
-                        Your browser does not support the
-                        <code>audio</code> element.
-                </audio>
-            </figure>
+        <div class="row"></div>
+        <article class="column" style="">
+          <div class="card">
+            <p>Listen to Dr. Huibregtse's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="20S-p1/20S-P1-Huibregtse.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <p>Listen to Barker's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/20S-P1-Barker.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+        </article>
+        <article class="column" style="">
+          <div class="card">
+            <p>Listen to MacDonald's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/20S-P1-Macdonald.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>   
+          <div class="card">
+            <p>Listen to Schulte's final version:</p>
+            <div class="container-audio">
+              <audio controls  loop autoplay>
+                   <source src="21S-p1/20S-P1-Schulte.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>   
+
         </article>
       </section>
 
