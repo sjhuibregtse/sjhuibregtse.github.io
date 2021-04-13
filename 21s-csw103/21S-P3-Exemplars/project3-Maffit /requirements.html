@@ -1,0 +1,295 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<!-- renamed all folders to lowercase -->
+		<meta charset="UTF-8">
+		<title>Requirements - Maffit</title>
+		<meta name="description" content="Tags learned in chapters">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="author" content="Gillian Maffit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<!-- put each element on new line and spaces after brackets -->
+	<style>	
+		body {
+			background-color: rgb(203,203,203);
+			font-family: monospace, sans-serif;
+		}
+		h1 {
+			font-family: berkshire_swashregular, monospace;
+			font-style: italic;
+			color: rgb(191,101,227);
+			text-shadow: 2px 2px 2px #000000;
+			text-transform: uppercase;
+            text-decoration: underline overline;
+			text-align: center;
+			font-size: 32pt;
+		}
+		div {
+			border: black dotted;
+			background-color: white;
+			text-align: center;
+		}
+		h2 {
+			color: #FF2772;
+			text-shadow: 2px 2px 2px #000000;
+			font-family: cursive, monospace;
+		}
+		h6 {
+			font-family: inherit;
+		}
+		.div2 {
+			border: black;
+			background-color: white;
+			text-align: center;
+			font-family: Times;
+		}
+		.p {
+			color: #27E5FF;
+			text-shadow: 1px 1px 1px #000000;
+		}
+		ul {
+			list-style-type: square;
+		}
+		.topnav {
+			background-color: black;
+			overflow: hidden;
+		}
+		.topnav a {
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: underline overline;
+			font-size: 17px;
+			float: left;
+			border-right: 1px solid white;
+			font-family: Times; 
+
+		}
+		.topnav a:hover {
+			 background-color: white;
+			 color: black;
+		}
+		.topnav a.active {
+			 background-color: rgb(191,101,227);
+			 color: white;
+		}
+		.p3 {
+			text-align: center;
+		}
+	</style>
+	</head>
+	<body>
+		<div>
+			<a id="top"></a>
+				<h1>Project Requirement Summary</h1>
+		</div>
+		<div class="topnav">
+			<a href="index.html">Home</a> |
+			<a href="resume.html">Resum&eacute;</a> |
+			<a href="favorites.html">Favorites</a> |
+			<a href="education.html">My Education</a> |
+			<a class="active" href="requirements.html">Project Requirement Summary</a>
+		</div>
+		
+		<p class="p3">
+			<a href="p3-layouts.html" target="_blank"><b>Link to Layouts Page</b></a>
+		</p>
+		<ul>
+			<li><a href="#Chapter1Structure">Chapter 1 Structure</a></li>
+			<li><a href="#Chapter2Text">Chapter 2 Text</a></li>
+			<li><a href="#Chapter3Lists">Chapter 3 Lists</a></li>
+			<li><a href="#Chapter4Links">Chapter 4 Links</a></li>
+			<li><a href="#Chapter5Images">Chapter 5 Images</a></li>
+			<li><a href="#Chapter6Tables">Chapter 6 Tables</a></li>
+			<li><a href="#Chapter8ExtraMarkup">Chapter 8 Extra Markup</a></li>
+			<li><a href="#Chapter10IntroductiontoCSS"> Chapter 10 Introduction to CSS</a></li>
+			<li><a href="#Chapter11Colors">Chapter 11 Colors</a></li>
+			<li><a href="#Chapter12Text">Chapter 12 Text</a></li>
+			<li><a href="#Chapter13Boxes">Chapter 13 Boxes</a></li>
+			<li><a href="#Chapter14ListsandTables">Chapter 14 Lists and Tables</a></li>
+			<li><a href="#Chapter15Layouts">Chapter 15 Layouts</a></li>
+			<li><a href="#Chapter17HTML5Layouts">Chapter 17 HTML5 Layouts</a></li>
+			
+		</ul>
+
+		<h2><a id="Chapter1Structure">Chapter 1 Structure</a></h2>
+			<dl>
+				<dt class="p">The Body Tag</dt>
+					<dd>
+						The body tag follows after the head tag. Everything that is inserted inside of the body tag shows up in the main browser.
+						<br>
+							<img src="images/2-body-browser.jpg" alt="image of body tag in browser" height="100" width="500">
+							<img src="images/2-body-code.jpg" alt="image of body tag in code" height="100" width="500">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter2Text">Chapter 2 Text</a></h2>
+			<dl>
+				<dt class="p">The Superscript Tag</dt>
+					<dd>
+						The supercript tag is used to contain characters that should be superscript such as the suffixes of dates or mathematical concepts like raising a number to a power.
+						<br>
+							<img src="images/2-sup-browser.jpg" alt="image of superscript tag in browser" height="100" width="500">
+							<img src="images/2-sup-code.jpg" alt="image of superscript tag in code" height="100" width="600">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter3Lists">Chapter 3 Lists</a></h2>
+			<dl>
+				<dt class="p">The Unordered List Tag</dt>
+					<dd>
+						The unordered list tag creates a list and is used for a topic that doesn't have a certain order like a grocery list.
+						<br>
+							<img src="images/2-ul-browser.jpg" alt="image of unordered list tag in browser" height="200" width="300">
+							<img src="images/2-ul-code.jpg" alt="image of unordered tag in code" height="200" width="300">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter4Links">Chapter 4 Links</a></h2>
+			<dl>
+				<dt class="p">The A Tag with Href Attribute</dt>
+					<dd>
+						The a tag is how links are created, but adding the attribute called href how people go to the page you want when they click on the link.
+						<br>
+							<img src="images/2-ahref-browser.jpg" alt="image of a tag with href attribute in browser" height="100" width="500">
+							<img src="images/2-ahref-code.jpg" alt="image of a tag with href attribute in code" height="100" width="800">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter5Images">Chapter 5 Images</a></h2>
+			<dl>
+				<dt class="p">The Image Tag with Attributes</dt>
+					<dd>
+						The image tag is used to add an image into the page, but needs to have the src attribute to tell the browser where it can find the image file
+						and alt attribute to provide a text description of the image which describes the image if someone cannot see it.
+						<br>
+							<img src="images/2-img-browser.jpg" alt="image of image tag with attributes in browser" height="200" width="300">
+							<img src="images/2-img-code.jpg" alt="image of image tag with attributes in code" height="100" width="900">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+
+		<h2><a id="Chapter6Tables">Chapter 6 Tables</a></h2>
+			<dl>
+				<dt class="p">The Table Row Tag</dt>
+					<dd>
+						The table row tag is used to indicate where the start of each row is in the table.
+						<br>
+							<img src="images/2-tr-browser.jpg" alt="image of table row tag in browser" height="200" width="300">
+							<img src="images/2-tr-code.jpg" alt="image of table row tag in code" height="200" width="300">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter8ExtraMarkup">Chapter 8 Extra Markup</a></h2>
+			<dl>
+				<dt class="p">Grouping Text</dt>
+					<dd>
+						The div tag allows you to group a set of elements together in one block-level box. In a browser, the contents of the div tag will start on a new line.
+						<br>
+							<img src="images/2-div-browser.jpg" alt="image of div tag in browser" height="100" width="500">
+							<img src="images/2-div-code.jpg" alt="image of div tag in code" height="100" width="700">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter10IntroductiontoCSS">Chapter 10 Introduction to CSS</a></h2>
+			<dl>
+				<dt class="p">Style Tag</dt>
+					<dd>
+						The style tag can be added by using CSS in 3 ways inline, internal, and external. Inline is when the style tag is used as an attribute following a tag. Internal is
+						using the style tag inside of the head tag. External is used by using the link tag to an external CSS file. For the example below, I have shown the inline style being
+						used.
+						<br>
+							<img src="images/2-style-browser.jpg" alt="image of style tag in browser" height="100" width="500">
+							<img src="images/2-style-code.jpg" alt="image of style tag in code" height="100" width="750">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+
+		<h2><a id="Chapter11Colors">Chapter 11 Colors</a></h2>
+			<dl>
+				<dt class="p">Hex Codes</dt>
+					<dd>
+						The hex codes are used within the color property that is seen in style tags. The hex code are six-digit codes that represent the amount of red, green and blue in a color,
+						preceded by a pound or hash # sign. This gives you a chance t get an exact color you want instead of using the name of a color. You can find hex codes in HTML color pickers
+						where you can move and adjust till you get a color you want.
+						<br>
+							<img src="images/2-hex-browser.jpg" alt="image of hex code in browser" height="100" width="500">
+							<img src="images/2-hex-code.jpg" alt="image of hex code in code" height="100" width="600">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+
+		<h2><a id="Chapter12Text">Chapter 12 Text</a></h2>
+			<dl>
+				<dt class="p">Font Family</dt>
+					<dd>
+						The font family property allows you to specify the typeface that you would like to be used for any text inside the elements to which a CSS rule applies. This would be the font you
+						want to use in your webpage. You can find fonts through other sources as well like font websites if you want something very different.
+						<br>
+							<img src="images/2-font-browser.jpg" alt="image of font famliy in browser" height="100" width="500">
+							<img src="images/2-font-code.jpg" alt="image of font family in code" height="100" width="750">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter13Boxes">Chapter 13 Boxes</a></h2>
+			<dl>
+				<dt class="p">Border Width</dt>
+					<dd>
+						The border width property is used to control the width of the border surrounding a text. It can be given in pixels or by using thin, medium, or thick. Percentages cannot be used with
+						this property, and you can also specify where you want to control the width. This means you can adjuest the border width on the right, left, top, or bottom.
+						<br>
+							<img src="images/2-boxes-browser.jpg" alt="image of border width in browser" height="300" width="600">
+							<img src="images/2-boxes-code.jpg" alt="image of border width in code" height="300" width="500">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+
+		<h2><a id="Chapter14ListsandTables">Chapter 14 Lists and Tables</a></h2>
+			<dl>
+				<dt class="p">List Style Type</dt>
+					<dd>
+						This style attribute allows you to control the shape or style of a bullet point. There are certain words to follow this attribute, like in the example below
+						I wanted numbers to be infront of everything on the list, therfore I had to type decimal after the attribute to get just numbers before the list.
+						<br>
+							<img src="images/2-list.type-browser.jpg" alt="image of list style type in browser" height="300" width="500">
+							<img src="images/2-list.type-code.jpg" alt="image of list style type in code" height="400" width="550">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter15Layouts">Chapter 15 Layouts</a></h2>
+			<dl>
+				<dt class="p">Fixed Positioning</dt>
+					<dd>
+						This is a type of absolute positioning , it positions the element in relation to the browser window. Therefore, when a user scrolls down the page, it stays in the exact same place.
+						<br>
+							<img src="images/2-fixed-browser.jpg" alt="image of fixed positioning in browser" height="300" width="700">
+							<img src="images/2-fixed-code.jpg" alt="image of fixed positioning in code" height="400" width="550">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+		
+		<h2><a id="Chapter17HTML5Layouts">Chapter 17 HTML5 Layouts</a></h2>
+			<dl>
+				<dt class="p">Aside Tag</dt>
+					<dd>
+						This tag is used inside of an article tag and inside the aside tag it should contain information that is related to the article but not essential to its overall 
+						meaning, so it would makesense for it to be seperate from everything else on the page.
+						<br>
+							<img src="images/2-aside-browser.jpg" alt="image of aside tag in browser" height="300" width="600">
+							<img src="images/2-aside-code.jpg" alt="image of aside tag in code" height="400" width="600">
+					</dd>
+			</dl>
+		<p><small><a href="#top" target="_self">back to top</a></small></p>
+
+		<h6><em>This web page was created by Gillian Maffit<br>
+		Last updated on 03/02/2021</em></h6>
+	</body>
+</html>

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8">
+		<title>Project 3 Layouts - Maffit</title>
+		<meta name="description" content="Layouts">
+		<meta name="keywords" content="HTML, CSS">
+		<meta name="author" content="Gillian Maffit">
+		<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<style>
+		body {
+            background-color: rgb(203,203,203);
+        }
+		h1 {
+			font-family: berkshire_swashregular, monospace;
+			font-style: italic;
+			color: rgb(191,101,227);
+			text-shadow: 2px 2px 2px #000000;
+			text-transform: uppercase;
+            text-decoration: underline overline;
+			text-align: center;
+			font-size: 32pt;
+		}
+		.p {
+			font-family: sans-serif;
+			font-style: normal;
+			text-align: left;
+		}
+		.p2 {
+			text-indent: 5px;
+			text-align: left;
+		}
+		div {
+			border: black dotted;
+			background-color: white;
+			text-align: center;
+		}
+		.topnav {
+			background-color: black;
+			overflow: hidden;
+		}
+		.topnav a {
+			color: #f2f2f2;
+			text-align: center;
+			padding: 14px 16px;
+			text-decoration: underline overline;
+			font-size: 17px;
+			float: left;
+			border-right: 1px solid white;
+
+		}
+		.topnav a:hover {
+			 background-color: white;
+			 color: black;
+		}
+		.topnav a.active {
+			 background-color: rgb(191,101,227);
+			 color: white;
+		}
+		div.box {
+			height: 300px;
+			width: 300px;
+			background-color: #90FEEB;
+			border: solid;
+			border-width: thick;
+			position: relative;
+			float: left;
+			margin-left: 350px;
+			box-shadow: -8px -10px rgb(191,101,227);
+		}
+		div.box2 {
+			height:320px;
+			width: 300px;
+			background-color: #90FEEB;
+			border: solid;
+			border-width: thick;
+			box-shadow: 10px 15px 10px rgb(191,101,227);
+			float: left;
+			margin-left: 350px;
+			position: sticky;
+			top: 10px;
+		}
+		div.box3 {
+			height: 350px;
+			width: 400px;
+			background-color: #90FEEB;
+			border: solid;
+			border-width: thick;
+			position: relative;
+			float: left;
+			margin-left: 50px;
+			box-shadow: -8px -10px rgb(191,101,227);
+		}
+		div.box4 {
+			height: 450px;
+			width: 310px;
+			background-color: #90FEEB;
+			border: solid;
+			border-width: thick;
+			position: relative;
+			float: left;
+			margin-left: 450px;
+			box-shadow: -8px -10px rgb(191,101,227);
+		}
+		div.box5 {
+			height:400px;
+			width: 400px;
+			background-color: #90FEEB;
+			border: solid;
+			border-width: thick;
+			box-shadow: -8px -10px rgb(191,101,227);
+			float: left;
+			margin-left: 570px;
+			position: relative;
+		}
+		.br {
+			clear: both;
+		}
+		h3 {
+			color: #FFFFFF;
+			text-shadow: 1px 2px 1px gray;
+			font-family: cursive, monospace;
+			background-color: black;
+		}
+		ul {
+			text-align: left;
+		}
+		.aside {
+			float: right;
+		}
+	</style>
+	</head>
+	<body>
+		<div id="page" class="div">
+			<header>
+				<h1>Spring 2021 Project 3 Requirements Summary</h1>
+					<p>On this page I highlight what I have fixed prior to this project for projects 1 and 2 as well as going over what I have added for this
+					   final project. I also talk about my use of CSS boexes as well as the new layout I have implemented onto this page.
+					</p>
+			</header>
+		</div>
+		<br class="br">
+		<div id="content" class="box">
+			<article>
+				<h3>Project 1 Edits & Corrections</h3>
+					<p>For project one I did not have a lot of corrections, it just mainly focused on details.</p>
+						<br>
+							<ul>
+								<li>I went back to add the closing quotes for those missing it.</li>
+								<li>I went back and fixed break tags since they were not indented.</li>
+								<li>I also imrpoved the footer to match the requirements needed.</li>
+							</ul>
+			</article>
+		</div>
+		<br><br><br><br><br>
+		<div class="box2">
+			<article>
+					<h3>Additional Edits & Enhancements</h3>
+						<aside class="aside">
+							<p>I made sure for project 3 I added a bunch of new elements that I thought would help enhance my page and more it look professional.</p>
+								<ul>
+									<li>Box shadows on this page.</li>
+									<li>Overline and underline on all page titles.</li>
+									<li>I implemented the HTML5 layout to help improve this page.</li>
+									<li>Tried some new style tags like padding.</li>
+									<li>Included comment tags on corrects from project 2.</li>
+								</ul>
+						</aside>
+			</article>
+		</div>
+		<br class="br">
+		<div class="box3">
+			<article>
+				<h3>Project 2 Edits & Corrections</h3>
+					<p>Again, this project I had a couple of more edits or corrections. I also did forget to include an element that we needed.</p>
+						<ul>
+							<li>I forgot to document in comment tags edits from project one, so I went back to do that.</li>
+							<li>I renamed folders to all lowercase to follow standard practices.</li>
+							<li>Added in table that I forgot.</li>
+							<li>Put external and embedded styles on new lines.</li>
+							<li>Included spaces after brackets.</li>
+							<li>Used meta tags in head for every page</li>	
+						</ul>
+			</article>
+		</div>
+		<br class="br"><br><br>
+		<div class="box4">
+			<article>
+				<h3>Screen & Size Styling Applied </h3>
+					<p>I added in screen and size styling in my external CSS sheet which is applied to my
+						<a href="education.html"><b>education page.</b></a> For this I had to use extra resources to master
+					   how to use it properly, but when you are decreasing the size of the window that is showing my page it will
+					   switch to a light blue background and removes all the style codes. This happens because Media queries can be
+					   used to change layout of a page depending on the orientation of the browser. I used the CSS propertie that will
+					   only apply when the browser window is wider than its height, a so called "Landscape" orientation. I also added in a max
+					   resolution for header 1. A resolution represents the size of a single “dot” in a graphical representation by indicating
+					   how many of these dots fit in a CSS. Keeping the dpi at 250 keeps my header the same but if i lower it to 150 it will change
+					   to the plain black text a header is in an HTML site.
+					</p>
+			</article>
+		</div>
+		<br class="br"><br><br>
+		<div class="box5">
+			<article>
+				<h3>CSS Boxes</h3>
+					<p>
+						For the CSS boxes on this page I really wanted to focus on two positions for all the boxes. I wanted to include the sticky
+						position because I felt like that would be one used in websites for the future. I also have seen it a lot on websites I visit,
+						I like that the box follows as you scroll, I feel like it is very handy. I have also focused in on the relative position for the boxes
+						so it is positioned relative to its normal position. But I did add in some margin space on certain sides to move them more center. As for styling
+						for the boxes, I added in box shadows because this was something I have never done before and I thought it would be something new and different to
+						add for my page. I also two did different types of box shadows to gain a better understand about how negative pixels would work in coding. I implempted
+						my boxes inside the HTML5 layout which was tricky at first but using extra notes and resources we were given for the class made it very easy to figure everything
+						out. (All screen captures are shown below!)
+					</p>
+			</article>
+		</div>
+		<br class="br"><br>
+		<article>
+			<img src="images/p2-boxes.jpg" alt="image of boxes position in code" height="200" width="300">
+				<p><blockquote>This screenshot shows how I did the styling for my boxes, although ony two styles are shown those are the only two I used for all the boxes to keep<br> the same look consistent on my pages.
+				   Having multiple options for a position is nice because you can try everything until you find the one you want<br> and using it with the new layout of HTML5 made it a little tricky
+				   compared to labs we completed this semester, overall I feel like the boxes look<br> very nice with the styles and positioning and help stick to the color theme of my pages.
+				</blockquote></p>
+			<br class="br">
+			<img src="images/html5-1.jpg" alt="image of boxes position in code" height="200" width="500">
+			<img src="images/html5-2.jpg" alt="image of boxes position in code" height="200" width="600">
+				<p><blockquote>These screen shots show the coding for the HTML5 layout I used in this page. I reallyt like this layout and the new tags because it keeps everything more<br> organized and it allows new styles to
+				try on pages. Along with this the screen shot shows how I followed the templete we were provided in our textboox<br> and it shows all the new tags that follow the layout rules. My favotire part about the new layout
+				is the aside tag because it is something new and something<br> seen on a lot of websites so once I figured out how that tag works I was very excited to use it in this project!
+				</blockquote></p>
+		</article>
+		<footer>
+			   <h6><em>This web page was created by Gillian Maffit<br>
+		Last updated on 03/02/2021</em></h6>
+		</footer>
+	</body>
+</html>

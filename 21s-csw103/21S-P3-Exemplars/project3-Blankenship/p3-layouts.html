@@ -1,0 +1,174 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<title>Spring 2021 Project 3 Requirements Summary - Blankenship</title>
+		<meta charset="UTF-8">
+		<meta name="description" content="Includes information about the project
+            and what went in to creating my website">
+		<meta name="keywords" content="CSW103, Spring 2021">
+		<meta name="author" content="Emily Blankenship">
+        <link href="css/styles.css" rel="stylesheet" type="text/css">
+        
+        <style>
+            body {
+				border-style: solid;
+			}
+            .content-top {
+                overflow: auto;
+            }
+            .feature {
+                position: relative;
+                margin: 15px;
+                margin-bottom: 1em;
+                border: 5px double LightBlue;
+                height: 6em;
+                background-color: #aaa;
+                text-align: center;
+                padding: 15px;
+            }
+            .articleC1, .articleC2, .articleC3 {
+                position: relative;
+                width: 29%;
+                height: 25em;
+                float: left;
+                margin: 15px;
+                margin-bottom: 30px;
+                background-color: #aaa;
+                border: 5px double #fef584;
+                padding: 10px;
+                text-align: left;
+            }
+            
+            hr.one, hr.two {
+				height: 15px; 
+				background: LightBlue;
+				border: none;
+			}
+			hr.one {
+				margin-right: 300px;
+			}
+			hr.two {
+				margin-left: 300px;
+			}
+			.row-one, .row-three {
+				margin-left: 20px;
+			}
+			.row-two, .row-four {
+				margin-left: 670px;
+                margin-right: 15px;
+			}
+        </style>
+    </head>
+    <body>
+        <div class="header">
+			<h1 id="top">Layouts</h1>
+		</div>
+        
+        <div class="topnav">
+			<a href="index.html">Home</a>
+			<a href="resume.html">Resum&eacute;</a>
+			<a href="education.html">Education</a>
+			<a href="favorites.html">Favorites</a>
+			<a href="requirements.html">Requirements</a>
+            <a class="active" href="p3-layouts.html">Layouts</a>
+		</div>
+        
+        <div class="content-top">
+            <div class="feature">
+                <p>On this page, you will discover the many changes I have made to my project since the
+                    start of it. Also, you can read about other elements that go into making a website,
+                    rather than tags and properties as summarized on the previous page. A lot of time and
+                    hard work goes into developing HTML and CSS web pages and sites. This page breifly summarizes
+                    the journey through the making of this project, My Website.</p>
+            </div>
+            
+            <div class="articleC1">
+                <br><br>
+                <p>After receiving back project 1, I was very proud with my score and took action on the
+                    feedback that was given. The first error I had corrected was adding the semicolon at
+                    the end of each "resum&eacute;" in my code to add the accent onto the e.
+                    The second error I corrected was changing the property that sets the bullet type of the
+                    unordered list on my favorites page. I originally had type="square", then corrected it
+                    to style="list-style-type: square". After these two corrected errors, my project 1 was ready
+                    to continue with project 2.</p>
+            </div>
+            
+            <div class="articleC2">
+                <p>Looking at the feedback from project 2, I saw I had to make much more changes than I needed
+                    to after project 1. I edited the name of my CSS external style sheet, added a table on my
+                    resum&eacute; page, and set all closing brackets within the style sheets to be on their own line.
+                    Also, I put my div tags to use and added classes once I continued working with styles and started
+                    applying layouts to my pages. I moved repeated embedded styles to the external style sheet and
+                    edited my class names as well. I also edited my resum&eacute; PDF link to open up in a new tab
+                    and removed my phone number from the page and PDF, and relative linked the terms on the
+                    requirements page to the page they're shown on. My project 2 was then ready for project 3.
+                </p>
+            </div>
+            
+            <div class="articleC3">
+                <br><br><br>
+                <p>For project 3, the additional edits I made was adding CSS layouts to all of my pages, added
+                    this page to my website, implemented a proper navigation bar, and linked my terms to their corresponding
+                    pages. I added more content to my favorites and requirements pages and incorporated more boxes as well.
+                    Working on project 3 provided me with more, needed practice using div tags and allowed me to produce more creative
+                    layouts and styles for my website.</p>
+            </div>
+        </div>
+        
+        <br><br>
+        <div class="row-one">
+			<p>The screen and size styling applied in my external style sheet is<br>
+                only screen with a max-width of 960px. We use the @media rule<br>
+                to set where your site can be viewed (browser) and what it can be<br>
+                viewed on while being able to fit that screen correctly (device).</p>
+		</div>
+			<hr class="one">
+		<div class="row-two">
+			<p>A common theme accross all CSS boxes implemented on my site is that they
+                all are a double border. All boxes have a background color except for the box
+                on my landing page. They consist of different thicknesses, colors, and include
+                different margins and padding.</p>
+            <img src="images/boxStyles-code.jpg" alt="box styles in code"
+				width="265" height="200"/>
+			<img src="images/boxStyles-browser.jpg" alt="box styles in browser"
+				width="218" height="215"/>
+		</div>
+			<hr class="two">
+		<div class="row-three">
+			<p>A relative positioning scheme has been implemented to my boxes on this page, the layouts page.<br>
+                This content does not go with the normal flow or default positioning of the page. I was able<br>
+                to customize and play around with the styles to position the boxes myself using positioning<br>
+                properties such as padding, margins, floats, heights and widths, and more! Also, a static<br>
+                positioning scheme was applied to my resum&eacute; PDF link on my resum&eacute; page, as it stands<br>
+                on its own with the normal flow of the page.</p>
+            <img src="images/relative-code.jpg" alt="relative positioning in code"
+				width="199" height="150"/>
+			<img src="images/relative-browser.jpg" alt="relative positioning in browser"
+				width="633" height="100"/><br><br>
+            <img src="images/static-code.jpg" alt="static positioning in code"
+				width="210" height="80"/>
+			<img src="images/static-browser.jpg" alt="static positioning in browser"
+				width="200" height="110"/>
+		</div>
+        	<hr class="one">
+		<div class="row-four">
+			<p>I chose to use CSS layout setups to design the pages of my website. I believe
+                I have more freedom when developing my layouts and applying styles compared to
+                HTML layout setups. Also, creating CSS layouts allowed me to work more with div
+                tags and helped me better understand how they function.</p>
+            <img src="images/cssLayout-code.jpg" alt="CSS layout code"
+				width="238" height="200"/>
+			<img src="images/cssLayout-browser.jpg" alt="CSS layout in browser"
+				width="445" height="125"/>
+            <br><br><br>
+            <p style="float: right; margin-right: 30px;"><small><a href="#top">back to top</a></small></p>
+		</div>
+        <br><br><br>
+        
+        <div class="footer">
+			<h6><em>This web page was created by Emily Blankenship<br>
+			Last updated on 03/04/2021<br>
+			Email: <a href="mailto:blankeen2024@mountunion.edu">
+			blankeen2024@mountunion.edu</a></em></h6>
+        </div>
+    </body>

@@ -1,0 +1,66 @@
+/* fixed placement of closing brackets */
+
+body {
+    background-color: rgb(200,200,200);
+    font-family: CourierNew, Courier, monospace;
+    border-width: thick;
+    border-color: #6f6f6f;
+    line-height: 20px;
+}
+h1 {
+    background-color: LightBlue;
+    text-align: center;
+    text-shadow: -3px -2px #fef584;
+    letter-spacing: 0.3em;
+    padding: 10px;
+}
+/* added text-shadow, letter-spacing, and padding */
+
+h6 {
+    margin-left: 15px;
+}
+
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    font-style: italic;
+    font-family: Candara, sans-serif;
+}
+/* added font-style and font-family */
+
+.topnav a {
+    float: left;
+    border-right: 2px solid rgb(200,200,200);
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+}
+.topnav a:hover {
+    background-color: rgb(200,200,200);
+    color: black;
+}
+.topnav a.active {
+    background-color: LightBlue;
+    color: white;
+}
+
+.header {
+	background-color: #656565;
+	padding: 10px;
+	text-align: center;
+}
+.footer {
+	background-color: #656565;
+	padding: 5px;
+	color: rgb(200,200,200);
+	font-style: italic;
+}
+
+@media only screen and (max-width: 960px) {
+  body {
+    background-color: lightblue;
+  }
+}
+/* added media rule */
