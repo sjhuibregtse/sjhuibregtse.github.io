@@ -16,7 +16,7 @@
 	<!-- Course/Section: CSW 113 01 -->
 	<!-- Date: 10/19/2020 -->
 
-	<style>
+<style>
 		/* example of embedded style tags */
 		
 		body {
@@ -25,7 +25,84 @@
 			border-style: groove;
 			padding: 10px 10px 20px 10px;
 		}
-		.mySlides {display:none;}
+    h2 {
+      	text-align: center;
+        font-size: 36px;
+        line-height: 40px;
+        margin: 0 0 .6em 0;
+        font-weight: normal;
+        color: white;
+        font-family: 'Hammersmith One', sans-serif;
+        text-shadow: 0 -1px 0 rgba(0,0,0,0.4);
+        position: relative;
+        color: #505050;
+        background-color: white;
+        padding: 15px;
+    }
+    h3 {
+      text-align: center;
+      background-color: #5b0a91;
+      color: white;
+      padding: 10px;
+    }
+    p {
+      padding: 0px 15px;
+    }
+    section {
+      display: block;
+      width: 100%;
+    }
+    
+    /* format around each semester class projects */
+    .yearlyBox {
+      border: 1px solid #665544;
+      padding: 25px;
+      margin: 5px;
+      width: 100%;
+    }
+    .studentProjects {
+      width: 95%;
+      background: #C8C8C8;
+    }
+    
+    .container-audio .colum1 {
+        height: auto;
+    }
+      
+    /* column setup
+      https://www.w3schools.com/howto/howto_css_two_columns.asp */
+      * {
+        box-sizing: border-box;
+      }
+  
+      /* Create two equal columns that floats next to each other */
+      .column {
+        float: left;
+        width: 100%;
+
+      }
+      
+      /* Clear floats after the columns */
+      .row:after {
+        content: "";
+        display: table;
+        clear: both;
+        background-color: #aaa;
+      }
+      .card {
+        border: 1px solid grey;
+        margin: 5px;
+        padding: 10px;
+        padding-top: 5px;
+        padding-bottom: 5px;
+      }
+      
+      /* Responsive layout - makes the two columns stack on top of each other instead of next to each other */
+      @media screen and (max-width: 600px) {
+        .column {
+          width: 100%;
+        }
+      }
 
 	</style>
 </head>
@@ -49,29 +126,268 @@
 		<!-- use HTML Structure tags of section, article,
 		       aside, etc. for future styling  -->
 		<section>
-<h2 class="w3-center">Project 2 Submissions</h2>
+      <h2>Project 2 Final Submissions</h2>
+      <p style="text-align: justify;">Project 2 for this course is a piece selected by students that
+      requires each student to develop independently as they replicate the process learned by completing
+      Project 1.  Typically, the final version of this project is submitted by
+      around midterm.  <em>Please note, we do not claim to own the copyright to the music performed in
+      these Python programmed pieces.</em></p>
+      <section class="yearlyBox">
+        <h3>Spring 2021 Projects</h3>
+        <p>This project was part of the <em>CSC 399 Special Topic: Making
+        Music with Computers</em> course taught at the University of Mount Union in
+        Alliance, Ohio.</p>
+        <div class="row"></div>
+        <article class="column" style="">
+          <div class="card">
+            <h4>Adkins About Project 2</h4>
+            <p>For my second Python music project, I coded “25 or 6 to 4” by Chicago. I like
+            Chicago’s music because it has a lot of complex instrumentation, usually with more
+            of a distinct sound than other bands of the times by blending genres. I feel like most
+            of their music would be interesting to digitize, but I was partial to this song for
+            several reasons. I have fond memories of playing this in marching band, which is where
+            I was first introduced to it. It was a fun piece to play, because it had a saxophone part
+            in the melody, something that seemed rare to me as a saxophone player. The lyrics to the
+            song also resonate with me as an overworked college student—desperately seeking
+            inspiration, trying hard to finish writing (or, in this class’s case a musical
+            programming project) while time slips past in a way that seems unusual. </p>
+            <div class="container-audio">
+              <audio controls  loop>
+                   <source src="p2/21S/adkins-twentyFive.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Davis About Project 2</h4>
+            <p>I completed the song “Jesu, Joy of Man’s Desiring” for Project 2. This
+            song was written by Bach. I had listened to this song very often as a young
+            child and I wanted to see if I could implement it in this course. I am very
+            pleased with the result and I hope that anyone who listens to the piece also
+            enjoys it. The implementation of this song was not easy but allowed me to
+            grow my musical knowledge and expand my musical vocabulary.</p>
 
-<p>Projects coming soon...</p>
-<div class=" " style=" ">
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/7Co11b-uyI4"
+                    title="YouTube video player" frameborder="0" allow="accelerometer;
+                    autoplay; clipboard-write; encrypted-media; gyroscope;
+                    picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop>
+                   <source src="p2/21S/davis-JeJoySc.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Hedigus About Project 2</h4>
+            <p>I chose to do the song "I Won't Give Up" by Jason Mraz. The song has a
+            lovely sound without relying heavily on a repeated instrumental phrase,
+            which I felt made it perfect for this project. I went ahead and did about
+            half or more of the song. My musical composition has five parts - treble
+            and bass Rhodes piano, Dulcimer, music box, and Taiko drum. The original
+            sheet music for the piano is transcribed into my piece as the Rhodes piano
+            parts. I found additional sheet music that had the vocals for the song,
+            which is transcribed into my piece as the music box. The Dulcimer and Taiko
+            drums are additional music to give the piece a cohesive feel. Hope you enjoy
+            it!</p>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/Lg0u9deOlO8"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/Hedigus-project2.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Holderbaum About Project 2</h4>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/qrKrN6-dUVA"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/holderbaum.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Kaufman About Project 2</h4>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/gYHxbvxmkpI"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/kaufman-Miracles.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Martin About Project 2</h4>
+            <p>For my project two, I have coded in the song "All I Want for Christmas is
+            you" by Mariah Carey and Afanasieff. This was not my first song choice but
+            rather the song I chose after running into problems with my first choice.
+            This song is containing seven different instruments making seven parts running
+            from begging to end. The overall length is about 2 mins and 30 seconds long.
+            In my piece, I have used many different dynamics to raise and lower the
+            Instruments' volume. The last big thing I have done is using instruments
+            that typically do not go together. The Instruments are 1. Pad_4_Choir, 2.
+            piano, 3. Voice_oohs, 4. harp, 5. trumpet, 6. contrabass, AND 7 my
+            percussion the snare. The song is easier to recognize at the begging,
+            but it becomes challenging to identify the music as it starts playing.</p>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/XgiPyj6LGsk"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/martin-christmas.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>McGinnis About Project 2</h4>
+            <p>My selection piece was Vivaldi’s Spring from The Four Seasons. It feels
+            very timely as we near the changing of the seasons. The mood of this piece
+            is light, exciting and hopeful. I felt that a piece that creates a feeling
+            of new beginnings would be a fun focus point, being that there are so many
+            new and exciting things to look forward to in my own life within the next
+            few months. I knew that with this piece I would be able to dive into adding
+            a lot of depth to this piece with the use of many different parts. Also,
+            while transposing this piece, there were a lot of techniques that we have
+            learned tricks for such as repetition, dynamics, parts with similar durations,
+            and more. I knew I could utilize these things that we have been discussing
+            in this course and create a very interesting version of this piece.  In the
+            end, I believe I have a unique and exciting performance of this classical
+            composition. </p>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/OTC-mUq60RM"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/p2McGinnis.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Miller About Project 2</h4>
+            <p>Hi everyone, my name is Nick Miller, and this is my piece Falling Slowly
+            for my Project 2. Within this piece, I explored 4 separate instruments
+            as well as percussion. I transcribed the sheet music and then altered
+            the notes with the Mod.invert() function to give it more of a bass punch.
+            I had a fun time creating this piece and I look forward to making more
+            music with computers!</p>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/mKGWAqfWuo4"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/fallingSlowly-MillerN.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Moore About Project 2</h4>
+            <p>This project is about a song that we found interesting or had a connection
+            to. So, I choose to recreate God Bless America by Lee Greenwood. The reason
+            behind choosing this song was because of the soldier meanings behind it and
+            being part of a genre that I listen to daily. While coding this I broke it
+            down into smaller parts that would be considered modular. What this means is
+            each part is contained in its own function. While in the function the phrase
+            is created and calls upon another function to create and append the phrase.
+            After the phrase is constructed it is added to the score.</p>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/QeW47nmWzZU"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/GodBlessAmerica-Moore.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Newsom About Project 2</h4>
+            <p>I chose to program the song, “That Girl” by Stevie Wonder, for my Project 2.
+            It was a long process of breaking this song down of its many components and
+            programming it to sound as close to the original piece as possible.  I am very
+            happy with how everything turned out despite the late change to this song that
+            I had to make.  The song consisted of 2 violin parts for the melody along with
+            a viola part to compliment.  The background bassline consisted of 2 electric
+            piano parts and a percussion part to carry the beat.  Overall, the piece was
+            not too complicated as I completed each part, and the layers came together.
+            I enjoyed the results and the journey that I took to get those results and I
+            am excited to continue coding more musical pieces!!</p>
+            <div class="container-audio">
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/21S-P1-Final-Newsom.m4a" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
+          <div class="card">
+            <h4>Spencer About Project 2</h4>
+            <p>In the video submitted, I will be presenting my Project 2. The music sheet
+            I decided to go with was called Soviet Connection (GTA IV Theme Song) By Michael
+            Hunter. I transcribed 16 out of the original 23 instruments. However, due to
+            poor quality, I removed 2 of the drums from the final piece. I also transcribed
+            15 out of the original 22 pages. Overall, the piece ended up turning out really
+            well. While I ran into a few hiccups when transcribing and programming the
+            piece, everything ended up working out in the end. In the beginning of the
+            piece, the tempo starts out at 105, then it decreases to 100. Later on, it
+            then increases to 146. During the piece, many of the instruments consistently
+            do not play on some pages. Therefore, I had to create many phrases to
+            accommodate for this. Furthermore, I attempted to keep my code organized as
+            much as possible and to not write any duplicate lines of code for all measures.
+            In my video, I will discuss some factors I had trouble with, such as keeping
+            my code organized and getting the start times perfect for each instrument.</p>
+            <div class="container-audio">
+              <iframe width="560" height="315" src="https://www.youtube.com/embed/fh2fD6fkY8k"
+                      title="YouTube video player" frameborder="0" allow="accelerometer;
+                      autoplay; clipboard-write; encrypted-media; gyroscope;
+                      picture-in-picture" allowfullscreen></iframe>
+              <br><br>
+              <p>Listen to final version:</p>
+              <audio controls  loop >
+                   <source src="p2/21S/Spencer.mp3" type="audio/mpeg">
+                   Your browser dose not support the <code>audio</code> element.
+               </audio>
+            </div>
+          </div>
 
-</div>
-
-<script>
-var myIndex = 0;
-carousel();
-
-function carousel() {
-  var i;
-  var x = document.getElementsByClassName("mySlides");
-  for (i = 0; i < x.length; i++) {
-    x[i].style.display = "none";  
-  }
-  myIndex++;
-  if (myIndex > x.length) {myIndex = 1}    
-  x[myIndex-1].style.display = "block";  
-  setTimeout(carousel, 2000); // Change image every 2 seconds
-}
-</script>
+        </article>
+      </section>
+      <!-- NEW YEAR *************************** -->
+      <section class="yearlyBox">  
+        <h3>Spring 2020 Projects</h3>
 
         </section>
 	</main>
