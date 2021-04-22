@@ -56,9 +56,9 @@ header {
 aside {
   float: right;
   width: 30%;
-  height: 700px; /* only for demonstration, should be removed */
   background: #ccc;
   padding: 20px;
+  height: auto;
 }
 
 article {
@@ -66,7 +66,8 @@ article {
   padding: 20px;
   width: 70%;
   background-color: #f1f1f1;
-  height: 700px; /* only for demonstration, should be removed */
+  height: auto;
+
 }
 
 /* Clear floats after the columns */
