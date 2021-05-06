@@ -27,6 +27,7 @@ h1 {
 
 .main-nav li {
     float: left;
+    margin-left: 5px;
 }
 
 .main-nav li a {
@@ -39,7 +40,13 @@ h1 {
 }
 
 .main-nav li a:hover {
-    background-color: #111;
+    background-color: #808080;
+}
+
+.main-nav li .active {
+    background-color: #E6E6FA;
+    color: black;
+
 }
 
 /* HTML Layout setup using: https://www.w3schools.com/html/html_layout.asp */
