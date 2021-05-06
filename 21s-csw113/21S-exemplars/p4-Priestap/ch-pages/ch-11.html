@@ -1,0 +1,304 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Project 4 - Ch 11</title>
+	<!--Name: Madison Priestap-->
+	<!--Course / Semester: CSW103 Spring 2021 -->
+	<!--Description: Favorite Web Site with various links-->
+
+	<link href="../css/style.css" rel="stylesheet">
+    
+	
+	<meta name="description"
+          content="Week 6"/>
+    <meta name="keywords"
+          content="Chapter eleven"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Madison Priestap"/>
+	<!-- Course/Section: CSW 113 -->
+	<!-- Date: 05/2/2021 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: lightseagreen;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		
+         img {
+            max-width: 60%;
+            height:auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        h1 {
+            font-size: 88px;
+            font-weight: normal;
+            color: black;
+            margin: 0;
+            padding: 90px 0 25px 0;
+            transform-origin: 50% 100%;
+            text-shadow: 5px 2px 5px #333;
+             
+            animation-duration: .3s;
+            animation-name: fadeAndScale;
+            animation-timing-function: cubic-bezier(.75,.50,.62,1.57);
+          }
+       
+    .colorOne {
+        background-color: #9BC53D;
+        color: #000;
+     }
+     
+     .colorTwo {
+        background-color: #FFF;
+        color: #000;
+     }
+     
+     #mainContent {
+        width:420px;
+        margin: 0 auto;
+     }
+     
+     #mainContent p {
+        padding: 20px;
+     }
+     
+     #mainContent #firstBox {
+        font-weight: bold;
+        transform: translate3d(-30px, 0, 0);
+        transition: all .5s ease-out;
+        opacity: 0;
+     }
+     
+     #mainContent #firstBox.active {
+        background-color: #333;
+        color: #FFF;
+        transform: translate3d(0, 0px,0);
+        opacity: 1;
+     }
+     
+     #mainContent #secondBox {
+          transition: all .2s ease-in-out;
+          transform: translate3d(0, 30px, 0);
+          opacity: 0;
+          
+     }
+     
+     #mainContent #secondBox.active {
+        background-color: #1581AF;
+        color:#FFF;
+        transform: translate3d(0,0,0);
+        opacity: 1;
+     }
+     
+     #mainContent ul li{
+        padding-left: 7px;
+        margin-bottom: 15px;
+        transition: all .2s ease-in-out;
+        transform: translate3d(20px, 0, 0);
+     
+     }
+     
+     #mainContent ul li.active{
+        transform: translate3d(0px, 0, 0);
+        opacity: 1;
+        
+     }
+        
+        
+        
+	</style>
+</head>
+<body>
+
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<header>
+	
+		<h1><a href="#">Portfolio for Full Madison Priestap <br><span style="font-size: 70%;">Chapter 9
+            </span></a></h1>
+    
+	<hr>
+    </header>
+
+	<main>
+		<section>
+			
+            <h2>Week 6</h2>
+			<article>
+                <div id="mainContent">
+                    
+                <h3>Chapter 11</h3>
+                <p>
+                  I had an unfortunate event happen with technology and
+                  had to redo my chapter 11 page for this project. I
+                  was not able to get my code to work like it did the
+                  last time. In replace of that I will be explaining and
+                  showing the code for the video.
+                </div>
+                <br>
+                <br>
+                <br>
+                
+                
+                <p>
+                
+                  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/1Umk-N1mxCM" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                </p>
+                
+                <p>Pros</p>
+                <ol>
+                   <li>The web developer could create an interative experience for users that
+                   peak their interest into looking at their website.</li>
+                   
+                   <li>Can showcase the art and illistration of the website</li>
+                   
+                   <li>The main advantage is for the developer so they can have the creative
+                   freedom over their webstie. </li>
+                    
+                </ol>
+                
+                <p>Cons</p>
+                <ol>
+                   <li>Scrolling Animation can be distracting for people that visit websites.</li>
+                   
+                   <li>Depedning on the animation, like parallax scrolling it will look different
+                   on a phoen versus a PC. </li>
+                   
+                   <li>Also, with parallax scrolling it can take pages longer to load and makes
+                   the site loose the smoothness animation. </li>
+                    
+                </ol>
+                    
+             
+            
+			</article>
+			<aside>
+                <h3>Overall Throughts</h3>
+				
+				<ul id="firstBox">
+					<li>
+                        The positives of this chapter is that learning something
+                        new can bring challenges that you have to be able to think
+                        through. Even if I was not able to recover my original page
+                        does not mean that this project would have ended bad. 
+                    </li>
+                </ul>
+                
+                <ul id="secondBox">
+                    <li>
+                      The struggles with this chapter was that even after going through my
+                      code and checking it constantly with the textbook I was unable to get
+                      this code to work. Also, technology is not always your friend so
+                      you need to figure out the next best plan. 
+                    </li>
+                    
+				</ul>
+                
+			</aside>
+        </section>
+    </main>
+    
+    <script>
+        var isScrolling = false;
+        
+        window.addEventListener("scroll", throttleScroll, false);
+        
+        function throttleScroll(e) {
+            if (isScrolling ==false) {
+              window.requestAnimationFrame(function(){
+                scrolling(e);
+                isScrolling = false;
+              });
+            }
+            isScrolling = true;
+        }
+        
+        document.addEventListener("DOMContentLoaded",
+                scrolling,
+                false);
+        
+        var listItems = document.querySelectorAll(
+                        "#mainContent ul li");
+        var firstBox = document.querySelector("#firstBox");
+        var secondBox = document.querySelector("#secondBox");
+        
+        function scrolling (e) {
+            
+            if (isPartiallyVisible(fristBox)) {
+                firstBox.classList.add("active");
+                
+                document.body.classList.add("colorOne");
+                document.body.classList.remove("colorTwo");
+            } else {
+                document.body.classList.remove("colorOne");
+                document.body.classList.remove("colorTwo");
+            }
+            
+            if (isFullyVisible(secondBox)) {
+                secondBox.classList.add("active");
+                
+                document.body.classList.add("colorTwo");
+                document.body.classList.remove("colorOne");
+            }
+            
+            for (var i= 0; i < listItems.length; i++) {
+                var listItem = listItems[i];
+                
+                if (isPartiallyVisible(listItem)) {
+                    listItem.classList.add("active");
+                } else {
+                    listItem.classList.recome("active");    
+                }
+             }
+          }
+          
+          function isPartiallyVisible(el) {
+            var elementBoumdary = el.getBoundClientReact();
+            
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            var height = elementBoundary.height;
+            
+            return (( top + height >= 0) &&
+                    (height + window.innerHeight >= bottom));
+        
+          }
+          
+          function isFullyVisible(el) {
+            var elementBoundary = el.getBoundingClientRect();
+            
+            var top = elementBoundary.top;
+            var bottom = elementBoundary.bottom;
+            
+            return ((top >= 0) && (bottom <= window.innerHeight));
+          }
+        
+        
+        
+        
+    </script>
+	<footer>
+		<h6><em>This web page was created by Madison Priestap
+					Last updated 05/2/2021</em><br>
+			
+			<em>Eamil:<a href="mailto:priestmn2021@mountunion.edu">
+			priestmn2021@mountunion.edu</a></em></h6>
+	</footer>
+</body>
+</html>

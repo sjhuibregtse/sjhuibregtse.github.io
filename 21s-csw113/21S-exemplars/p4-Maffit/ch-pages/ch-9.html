@@ -1,0 +1,206 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 3 - Ch. 9 - Maffit</title>
+	<meta name="description" content="my third design studio project"/>
+    <meta name="keywords" content="Chapter 9 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/06/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #main {
+            text-align: center;
+            background-color: #82C1FF;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        #h1 {
+            font-size: 88px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            color: #FFF;
+            margin: 0;
+            padding: 90px 0 25px 0;
+            transform-origin: 50% 100%;
+            text-shadow: 2px 2px 2px #333;
+             text-decoration: none;
+            animation-duration: .3s;
+            animation-name: fadeAndScale;
+            animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+        }
+        #a {
+            font-family: Cambria, Cochin, serif;
+            font-size: 16px;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #A6D2FF;
+            transition: background-color .2s ease-out;
+        }
+        #a:hover {
+            background-color: #EEE;
+        }
+        @keyframes fadeAndScale {
+            from {
+              opacity: 0;
+              transform: scale(.9, .9);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1, 1);
+            }
+        }
+        #main2 {
+            text-align: center;
+            background-color: #82C1FF;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        #h1-2 {
+            font-size: 88px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            color: #FFF;
+            margin: 0;
+            padding: 90px 0 25px 0;
+            transform-origin: 50% 100%;
+            text-shadow: 2px 2px 2px #333;
+            text-decoration: none;
+            animation-duration: 3s;
+            animation-name: fadeAndScale;
+            animation-timing-function: cubic-bezier(.71,.65,.42,3.57);
+        }
+        #a2 {
+            font-family: Cambria, Cochin, serif;
+            font-size: 16px;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #A6D2FF;
+            transition: background-color .2s ease-in-out;
+        }
+        #a2:hover {
+            background-color: #EEE;
+        }
+        @keyframes fadeAndScale {
+            from {
+              opacity: 0;
+              transform: scale(.9, .9);
+            }
+            to {
+              opacity: 6;
+              transform: scale(1, 1);
+            }
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 9</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Simple Text Fade and Scale Animation</h2>
+			<article>
+                <h2>Chapter 9</h2>
+                    <p>
+                        In this chapter I learned more about animations! This chapter focused in on how not all animations need to be flashy and that even
+                        simple things can grab the users attention. I was also able to see another way how the animation and keyframe syntax work together.
+                        A big take away from this chapter is to remember that no matter how simple an animation I create is is, I should always strive to
+                        make it as lifelike as possible. Overshooting a target and snapping back into position, as accomplished by the easing function, that was
+                        introduced in this chapter, is a classic animation technique that represents how things move in real life. With very little added effort
+                        custom easing function can make an animation even cooler than it originally was. In the examples below, the fade and scale animation affects
+                        the “hi, everybody!” text in the blue squares. The text does in fact fade in, and it also scales up a little bit. All of that was defined by the
+                        from and to keyframes, in the code, with some extra input from the animation declaration where the duration and easing function were specified. Putting
+                        all of that together, gave me the animation that is below.
+                    </p>
+                <h4>Before Video Edits:</h4>
+                    <div id="main">
+                        <h2 id="h1">hi, everybody!</h2>
+                            <p><a href="#" id="a"
+                                  onclick="window.location.reload (true); return false;">
+                                  reload
+                                </a>
+                            </p>
+                    </div>
+                <h4>After Video Edits:</h4>
+                    <div id="main2">
+                        <h2 id="h1-2">hi, everybody!</h2>
+                            <p><a href="#" id="a2"
+                                  onclick="window.location.reload (true); return false;">
+                                  reload
+                                </a>
+                            </p>
+                    </div>
+			</article>
+			<aside>
+                <h3>My Experience with simple text fade and scale Animation</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/fnFiZUMMx6E" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Easy to combine with prior tags</li>
+                        <li>Smooth transition</li>
+                        <li>Learned new ideas</li>
+                        <li>I see this a lot on websites, so know I know I can include it to make mine look more professional</li>
+                    </ul>
+                <h4>Negative:</h4>
+                    <ul>
+                        <li>Took awhile to understand</li>
+                        <li>Hard to make changes</li>
+                        <li>Trial and error to see what each change would do and how it would look</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 04/08/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

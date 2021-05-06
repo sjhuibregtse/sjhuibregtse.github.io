@@ -1,0 +1,389 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 4 - Ch. 15 - Maffit</title>
+	<meta name="description" content="my fourth design studio project"/>
+    <meta name="keywords" content="Chapter 15 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/23/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #wrapper {
+            width: 2200px;
+            transform: translate3d(0, 0, 0);
+            transition: transform .5s ease-in-out;
+        }
+        #wrapper2 {
+            width: 2200px;
+            transform: translate3d(0, 0, 0);
+            transition: transform .8s ease-in-out;
+        }
+        .content {
+            float: left;
+            width: 550px;
+            height: 350px;
+            white-space: normal;
+            background-repeat: no-repeat;
+        }
+        .content2 {
+            float: left;
+            width: 550px;
+            height: 350px;
+            white-space: normal;
+            background-repeat: no-repeat;
+        }
+        #contentContainer {
+            width: 550px;
+            height: 350px;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+        #containerContent {
+            width: 550px;
+            height: 350px;
+            border: 5px solid black;
+            overflow: hidden;
+        }
+        #itemOne {
+            background-color: #0099CC;
+            background-image: 
+                url("https://www.kirupa.com/images/blueSquare.png");
+        }
+        #itemTwo {
+            background-color: #FFCC00;
+            background-image: 
+                url("https://www.kirupa.com/images/yellowSquare.png");
+        }
+        #itemThree {
+            background-color: #FF6666;
+            background-image: 
+                url("https://www.kirupa.com/images/pinkSquare.png");
+        }
+        #itemFour {
+            background-color: #E8E8E8;
+            background-image: 
+                url("https://www.kirupa.com/images/graySquare.png");
+        }
+        #itemFive {
+          background-color: #0099CC;
+          background-image: 
+            url("https://www.kirupa.com/images/blueSquare.png");
+        }
+        #itemSix {
+          background-color: #FFCC00;
+          background-image: 
+            url("https://www.kirupa.com/images/yellowSquare.png");
+        }
+        #itemSeven {
+          background-color: #FF6666;
+          background-image: 
+            url("https://www.kirupa.com/images/pinkSquare.png");
+        }
+        #itemEight {
+          background-color: #E8E8E8;
+          background-image: 
+            url("https://www.kirupa.com/images/graySquare.png");
+        }
+        #navLinks {
+            text-align: center;
+            width: 550px;
+        }
+        #navLinks ul {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            margin-top: 6px;
+        }
+        #navLinks ul li {
+            float: left;
+            text-align: center;
+            margin: 10px;
+            list-style: none;
+            cursor: pointer;
+            background-color: #CCCCCC;
+            padding: 5px;
+            border-radius: 50%;
+            border: black 5px solid;
+        }
+        #navLinks ul li:hover {
+            background-color: #FFFF00;
+        }
+        #navLinks ul li.active {
+            background-color: #333333;
+            color: #FFFFFF;
+            outline-width: 7px;
+        }
+        #navLinks ul li.active:hover {
+            background-color: #484848;
+            color: #FFFFFF;
+        }
+        #navLinks2 {
+            text-align: center;
+            width: 550px;
+        }
+        #navLinks2 ul {
+            margin: 0px;
+            padding: 0px;
+            display: inline-block;
+            margin-top: 6px;
+        }
+        #navLinks2 ul li {
+            float: left;
+            text-align: center;
+            margin: 10px;
+            list-style: none;
+            cursor: pointer;
+            background-color: #CCCCCC;
+            padding: 5px;
+            border-radius: 50%;
+            border: black 5px solid;
+        }
+        #navLinks2 ul li:hover {
+            background-color: #FFFF00;
+        }
+        #navLinks2 ul li.active {
+            background-color: #333333;
+            color: #FFFFFF;
+            outline-width: 7px;
+        }
+        #navLinks2 ul li.active:hover {
+            background-color: #484848;
+            color: #FFFFFF;
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 15</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Creating a Sweet Content Slider</h2>
+			<article>
+                <h2>Chapter 15</h2>
+                    <p>
+                        In this chapter I learned how to create a content slider. I feel like this was an important thing to learn since I have seen this element on
+                        a lot of websites I view. The content slider I learned how to create uses a combination of HTML, CSS, and JavaScript. Content sliders come in
+                        many shapes and sizes and forms. Some are made up of multiple rows with the sliding happening both vertically and horizontally. Clicking on each
+                        link slides your content left and right depending on which content needs to be made visible.When you view a content slider, you only see one block
+                        of content at a time. The steps to creating a content slider are as follwed. <b>First</b>, wrap the content into a container whose size is the
+                        same as one block of the content. Once the container wraps the content, you clip the contents of everything around it to ensure only one block of
+                        your content is visible. <b>The next step</b>, which allows you to see the rest of your content, can be done in various ways. For the examples, I
+                        used a series of circular links that you can click. <b>The last thing</b> is to make the actual sliding work when each link is clicked. This involves
+                        some CSS tweaks along with some JavaScript. Below, I have the example from this chapter. Following the first example, I have the same this just with some 
+                        edits done that can be seen and explained in the video on the side.
+                    </p>
+                <br>
+                <h4>Before Video Edits:</h4>
+                    <div id="contentContainer">
+                        <div id="wrapper">
+                            <div id="itemOne" class="content">
+                
+                            </div>
+                            <div id="itemTwo" class="content">
+                
+                            </div>
+                            <div id="itemThree" class="content">
+                
+                            </div>
+                            <div id="itemFour" class="content">
+                
+                            </div>
+                        </div>
+                    </div>
+                    <div id="navLinks">
+                        <ul>
+                            <li class="itemLinks" data-pos="0px"></li>
+                            <li class="itemLinks" data-pos="-550px"></li>
+                            <li class="itemLinks" data-pos="-1100px"></li>
+                            <li class="itemLinks" data-pos="-1650px"></li>
+                        </ul>
+                    </div>
+                    <script id="contentContainer">
+                        // just querying the DOM...like a boss!
+                        var links = document.querySelectorAll(".itemLinks");
+                        var wrapper = document.querySelector("#wrapper");
+                    
+                        // provides a pointer to the currently displayed item
+                        var activeLink = 0;
+                         
+                        // set up the event listeners
+                        for (var i = 0; i < links.length; i++) {
+                          var link = links[i];
+                          link.addEventListener("click", setClickedItem, false);
+                         
+                          // identify the item for the activeLink
+                          link.itemID = i;
+                        }
+                         
+                        // set first item as active
+                        links[activeLink].classList.add("active");
+                         
+                        function setClickedItem(e) {
+                          removeActiveLinks();
+                         
+                          var clickedLink = e.target;
+                          activeLink = clickedLink.itemID;
+                         
+                          changePosition(clickedLink);
+                        }
+                         
+                        function removeActiveLinks() {
+                          for (var i = 0; i < links.length; i++) {
+                            links[i].classList.remove("active");
+                          }
+                        }
+                         
+                        // Handle changing the slider position as well as ensure
+                        // the correct link is highlighted as being active
+                        function changePosition(link) {
+                          var position = link.getAttribute("data-pos");
+                        
+                          var translateValue = "translate3d(" + position + ", 0px, 0)";
+                          wrapper.style.transform = translateValue;
+                        
+                          link.classList.add("active");
+                        }
+                    </script>
+                <h4>After Video Edits:</h4>
+                    <div id="containerContent">
+                        <div id="wrapper2">
+                            <div id="itemFive" class="content2">
+                
+                            </div>
+                            <div id="itemSix" class="content2">
+                
+                            </div>
+                            <div id="itemSeven" class="content2">
+                
+                            </div>
+                            <div id="itemEight" class="content2">
+                            </div>
+                        </div>
+                    </div>
+                        <div id="navLinks2">
+                            <ul>
+                                <li class="itemLinks2" data-pos="0px"></li>
+                                <li class="itemLinks2" data-pos="-650px"></li>
+                                <li class="itemLinks2" data-pos="-1200px"></li>
+                                <li class="itemLinks2" data-pos="-1750px"></li>
+                            </ul>
+                        </div>
+                    <script id="containerContent">
+                        // just querying the DOM...like a boss!
+                        var links2 = document.querySelectorAll(".itemLinks2");
+                        var wrapper2 = document.querySelector("#wrapper2");
+                    
+                        // provides a pointer to the currently displayed item
+                        var activeLink = 0;
+                         
+                        // set up the event listeners
+                        for (var i = 0; i < links2.length; i++) {
+                          var link = links2[i];
+                          link.addEventListener("click", setClickedItem, false);
+                         
+                          // identify the item for the activeLink
+                          link.itemID = i;
+                        }
+                         
+                        // set first item as active
+                        links2[activeLink].classList.add("active");
+                         
+                        function setClickedItem(e) {
+                          removeActiveLinks();
+                         
+                          var clickedLink = e.target;
+                          activeLink = clickedLink.itemID;
+                         
+                          changePosition2(clickedLink);
+                        }
+                         
+                        function removeActiveLinks() {
+                          for (var i = 0; i < links2.length; i++) {
+                            links2[i].classList.remove("active");
+                          }
+                        }
+                         
+                        // Handle changing the slider position as well as ensure
+                        // the correct link is highlighted as being active
+                        function changePosition2(link) {
+                          var position = link.getAttribute("data-pos");
+                        
+                          var translateValue = "translate3d(" + position + ", 0px, 0)";
+                          wrapper2.style.transform = translateValue;
+                        
+                          link.classList.add("active");
+                        }
+                    </script>
+			</article>
+            
+			<aside>
+                <h3>My Experience with creating a sweet content slider</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/BT_4RhNv0Ss" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Seen on a lot of web pages</li>
+                        <li>Good to use</li>
+                        <li>Can highlight important things on website</li>
+                        <li>Subtle and fun animation</li>
+                        <li>Smooth transition from slide to slide</li>
+                        <li>Easy to include on pages</li>
+                    </ul>
+                <h4>Negative:</h4>
+                    <ul>
+                        <li>Hard to have two on the same page</li>
+                        <li>Ran into a ot of problems in coding</li>
+                        <li>Hard having to combine HTML, CSS, and JavaScript</li>
+                        <li>Lots of trial and error</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 04/23/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Project 4 - Ch 13</title>
+	<!--Name: Madison Priestap-->
+	<!--Course / Semester: CSW103 Spring 2021 -->
+	<!--Description: Favorite Web Site with various links-->
+
+	<link href="../css/style.css" rel="stylesheet">
+    
+	
+	<meta name="description"
+          content="Week 4"/>
+    <meta name="keywords"
+          content="Chapter thirteen"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Madison Priestap"/>
+	<!-- Course/Section: CSW 113 -->
+	<!-- Date: 04/28/2021 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: lightseagreen;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		
+         img {
+            max-width: 60%;
+            height:auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #content {
+           padding: 10px;
+           margin: 10px;
+           background-color: lightgreen;
+           text-align: center;
+        }
+        
+        #content p{
+            font-family: helvetica, sans-serif;
+            font-size: 28px;
+            line-height: 40px;
+            color: #111;
+        }
+        
+        #bigYellowCircle{
+            background-image: url("http://bit.ly/yellowCircle");
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: 40%;
+            position: sticky;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -1;
+            opacity:.75;
+        }
+        
+        #blueSquare {
+            background-image: url("http://bit.ly/blueSquare");
+            background-repeat: no-repeat;
+            background-position: 85% top;
+            background-size: 10%;
+            position: fixed;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -2;
+            opacity:.99;
+        }
+        
+        #greenPentagon {
+            
+            background-image: url("http://bit.ly/greenPentagon");
+            background-repeat: no-repeat;
+            background-position: 5% top;
+            background-size: 50%;
+            position: fixed ;
+            top: 0;
+            width: 100vw;
+            height: 100vh;
+            z-index: -3;
+            opacity:.75;
+        }    
+            
+	</style>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<header>
+	
+		<h1>Portfolio for Full Madison Priestap <br><span style="font-size: 70%;">Chapter 13</span></h1>
+	<hr>
+    </header>
+
+	<main>
+		<section>
+			
+            <h2>Week 7 </h2>
+			<article>
+                <h3>Chapter 13</h3>
+                <div id="content">
+                <p>
+                    In the video I discussed how the scrolling parallax and the code
+                    make it easier to have a smooth transition. A brief overview is
+                    that scrolling parallax does not require the background to moves
+                    which helps immensely when planning to do a smooth trasnision 
+                <br>
+                <br>
+                <br>
+                </div>
+                  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/5LkNSYWtwPs" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                
+                <p>
+                    Scrolling Parallax is a different type of animation in a way that
+                    it is part of the background of a website. As someone scrolls down
+                    to other parts of the page the images move along while scrolling.
+                    They do this with the JavaScript and the CSS style aspects that
+                    were implemented. 
+        
+             <p>
+                    
+                </p>
+                
+                
+                <div id="bigYellowCircle"></div>
+                <div id="blueSquare"></div>
+                <div id="greenPentagon"></div>
+			</article>
+			<aside>
+                <h3>Overall Throughts</h3>
+				
+				<ul>
+					<li>
+                        The positives is that even with JavaScript parallaz scrolling
+                        is very easy to learn and understand. It also helps to know
+                        that scrolling parallax can help make their animation seamless. 
+                    </li>
+                </ul>
+            </aside>   
+        </section>
+    </main>
+    
+    <script>
+        var bigYellowCircle =
+            document.querySelector("#bigYellowCircle");
+        var blueSquare = document.querySelector("#blueSquare");
+        var greenPentagon = document.querySelector ("#greenPentagon");
+        
+        function setTranslate (xPos, yPos, el) {
+            el.style.transform = "translate3d(" + xPos + "px, " + yPos + "px, 0)";
+        }
+        
+        window.addEventListener("DOMContentLoaded", scrollLoop, false);
+        
+        var xScrollPosition;
+        var yScrollPosition;
+        
+        function scrollLoop (){
+            xScrollPosition = window.scrollX;
+            yScrollPosition = window.scrollY;
+        }
+        
+        setTranslate(0, yScrollPosition * -0.2, bigYellowCircle);
+        setTranslate(0, yScrollPosition * -1.5, blueSquare);
+        setTranslate(0, yScrollPosition * 0.5, greenPentagon);
+        
+        requestAnimationFrame(scrollLoop);
+        }
+        
+    </script>
+    
+	<footer>
+		<h6><em>This web page was created by Madison Priestap
+					Last updated 04/28/2021</em><br>
+			
+			<em>Eamil:<a href="mailto:priestmn2021@mountunion.edu">
+			priestmn2021@mountunion.edu</a></em></h6>
+	</footer>
+</body>
+</html>

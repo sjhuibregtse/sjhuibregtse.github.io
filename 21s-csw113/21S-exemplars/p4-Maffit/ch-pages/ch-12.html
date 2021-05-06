@@ -1,0 +1,287 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 4 - Ch. 12 - Maffit</title>
+	<meta name="description" content="my fourth design studio project"/>
+    <meta name="keywords" content="Chapter 12 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/22/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        article {
+            height: 1300px;
+        }
+        aside {
+            height: 1300px;
+        }
+        #main {
+            width: 350px;
+            margin-left: 300px;
+        }
+        #main .icon {
+            padding: 20px;
+            border-radius: 40px;
+        }
+        #m​ain .icon:nth-child(2n) {
+            animation-name: keyframes1;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 10%;
+        }
+        #main .icon:nth-child(2n-1) {
+            animation-name: keyframes2;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            transform-origin: 30% 5%;
+        }
+        @keyframes keyframes1 {
+            0% {
+              transform: rotate(-1deg);
+              animation-timing-function: ease-in;
+            }
+            50% {
+              transform: rotate(1.5deg);
+              animation-timing-function: ease-out;
+            }
+        }
+        @keyframes keyframes2 {
+            0% {
+              transform: rotate(1deg);
+              animation-timing-function: ease-in;
+            }
+            50% {
+              transform: rotate(-1.5deg);
+              animation-timing-function: ease-out;
+            }
+        }
+        #main-2 {
+            width: 350px;
+            margin-left: 300px;
+        }
+        #main-2 .icon {
+            padding: 20px;
+            border-radius: 40px;
+        }
+        #m​ain-2 .icon:nth-child(2n) {
+            animation-name: keyframes1-2;
+            animation-iteration-count: infinite;
+            transform-origin: 50% 10%;
+        }
+        #main-2 .icon:nth-child(2n-1) {
+            animation-name: keyframes2-2;
+            animation-iteration-count: infinite;
+            animation-direction: alternate;
+            transform-origin: 30% 5%;
+        }
+        @keyframes keyframes1-2 {
+            0% {
+              transform: rotate(-2deg);
+              animation-timing-function: ease-in;
+            }
+            50% {
+              transform: rotate(1.5deg);
+              animation-timing-function: ease-out;
+            }
+        }
+        @keyframes keyframes2-2 {
+            0% {
+              transform: rotate(2deg);
+              animation-timing-function: ease-in;
+            }
+            50% {
+              transform: rotate(-3.5deg);
+              animation-timing-function: ease-out;
+            }
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 12</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">The iOS Icon Wobble/Jiggle</h2>
+			<article>
+                <h2>Chapter 12</h2>
+                    <p>
+                        In this chapter I learned how to create an animation that I see in my everyday life when I rearrange apps on my iphone. In this animation,
+                        notice how that the objects are rotating. It’s just that what they are rotating around isn’t the center point. They are rotating around the
+                        transformation point which is shifted up and to the left. This makes the rotation that you see look more and more like the wobble effect
+                        that you see on the iOS icons. Provided below, I have two examples. The first one being like the iOS screen that we see. This code is what was
+                        provided in this chapter. The second example, I have made some changes that can be see in the video to the side. I talk about and show the changes
+                        in the code so you can as I go along. Both are embedded below so you look at both and see the differences!
+                    </p>
+                    <br>
+                <h4>Before Video Edits:</h4>
+                    <div id="main">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.75s; animation-duration: .25s"
+                             height="100"
+                             src="http://www.kirupa.com/images/icon1.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.5s; animation-duration: .3s" 
+                             height="100"
+                             src="http://www.kirupa.com/images/icon2.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style=" animation-delay: -.05s; animation-duration: .27s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon3.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.2s; animation-duration: .33s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon4.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.31s; animation-duration: .24s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon7.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.15s; animation-duration: .25s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon5.png" 
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.2s; animation-duration: .22s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon6.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.3s; animation-duration: .28s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon8.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.22s; animation-duration: .3s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon9.png"
+                             width="100">
+                    </div>
+                    <br>
+                <h4>After Video Edits:</h4>
+                    <div id="main-2">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.75s; animation-duration: .50s"
+                             height="100"
+                             src="http://www.kirupa.com/images/icon1.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.3s; animation-duration: .5s" 
+                             height="100"
+                             src="http://www.kirupa.com/images/icon2.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style=" animation-delay: -.05s; animation-duration: .27s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon3.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.2s; animation-duration: .33s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon4.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.31s; animation-duration: .31s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon7.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.15s; animation-duration: .25s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon5.png" 
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.2s; animation-duration: .22s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon6.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.3s; animation-duration: .28s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon8.png"
+                             width="100">
+                        <img class="icon" alt="icon image"
+                             style="animation-delay: -.22s; animation-duration: .3s" 
+                             height="100" 
+                             src="http://www.kirupa.com/images/icon9.png"
+                             width="100">
+                    </div>
+                    <br>
+                <h4>The Differences Between The Two:</h4>
+                    <p>
+                        As you look at the icons showed in the two examples, at first glance they look similiar. But after you view the video I created and you look at the top
+                        left icon, you can see that the speed is different than the others. The edits I made in the video played around with the timing and more. But the biggest change
+                        that you see right away is the speed of each being different.
+                    </p>
+			</article>
+			<aside>
+                <h3>My Experience with the iOS icon wobble/jiggle</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/vZY02QXXijY" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Easy to understand after time</li>
+                        <li>Fun</li>
+                        <li>Simple</li>
+                        <li>Seen it before, so I knew what it looked like / where it could be used</li>
+                    </ul>
+                <h4>Negative:</h4>
+                    <ul>
+                        <li>Hard to understand what each thing changes</li>
+                        <li>Trial and error</li>
+                        <li>Time consuming</li>
+                        <li>Contains lots of parts and elements are combined from prior chapters making it hard to have everything be perfect first try</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 04/22/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

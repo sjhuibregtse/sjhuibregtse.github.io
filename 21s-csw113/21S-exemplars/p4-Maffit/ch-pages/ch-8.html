@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 3 - Ch. 8 - Maffit</title>
+	<meta name="description" content="my third design studio project"/>
+    <meta name="keywords" content="Chapter 8 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/06/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #li1 a {
+            color: #7E094C;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+        }
+        #li1 a:hover {
+            border-bottom: 3px dashed #0066FF;
+        }
+        #li2 a {
+            color: #7E094C;
+            text-decoration: none;
+            transition: all .2s ease-in;
+            padding: 3px;
+        }
+        #li2 a:hover {
+            background-color: #B4B4B4;
+        }
+        #li3 a {
+            color: #7E094C;
+            text-decoration: none;
+            transition: all .2s ease-in-out;
+            padding: 2px;
+            background: linear-gradient(to bottom,
+                                        rgba(181, 225, 255, 0) 0%,
+                                        rgba(181, 225, 255, 0) 50%,
+                                        rgba(181, 225, 255, 1) 50%,
+                                        rgba(181, 225, 255, 1) 100%);
+            background-repeat: no-repeat;
+            background-size: 100% 200%;
+            }
+        #li3 a:hover {
+            background-position: 0 100%;
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 8</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Animating Your Links to Life</h2>
+			<article>
+                <h2>Chapter 8</h2>
+				<p>
+                   In this chapter, I learned more about bringing in style to links on web pages I create. Links are everywhere and
+                   are in almost every webpage people will be creating or have created. By providing some sort of animated feedback
+                   when a user hovers over the links is utilizing animations in a very subtle and meaningful way.There are three different
+                   ways to animate my links that I learned in this chapter. I learned the following to animate links:
+                </p>
+                   <ol>
+                        <li><b>Animated Underline</b> which will underline the links when you hover over them. This underline won’t just suddenly appear, since in the style tag
+                                there is a text decoration showing only when you hover over the link.</li>
+                        <li><b>Simple Background Color Change</b> which will changing the link’s background color when you hover over it.</li>
+                        <li><b>Cooler Background Color Change</b> which is when instead of having the background color just fading into view, it actually slides into view.</li>
+                   </ol>
+                <br><br><br><br>
+                <h4>Animated Underline Example:</h4>
+                    <ul id="li1">
+                        <li><a href="https://www.instagram.com/" target="_blank" title="Instagram opens on new tab">
+                            Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" title="Facebook opens on new tab">
+                            Facebook</a></li>
+                        <li><a href="https://twitter.com/" target="_blank" title="Twitter opens on new tab">
+                            Twitter</a></li>
+                    </ul>
+                <h4>Simple Background Color Change Example:</h4>
+                    <ul id="li2">
+                        <li><a href="https://www.instagram.com/" target="_blank" title="Instagram opens on new tab">
+                            Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" title="Facebook opens on new tab">
+                            Facebook</a></li>
+                        <li><a href="https://twitter.com/" target="_blank" title="Twitter opens on new tab">
+                            Twitter</a></li>
+                    </ul>
+                <h4>Cooler Background Color Change Example:</h4>
+                    <ul id="li3">
+                        <li><a href="https://www.instagram.com/" target="_blank" title="Instagram opens on new tab">
+                            Instagram</a></li>
+                        <li><a href="https://www.facebook.com/" target="_blank" title="Facebook opens on new tab">
+                            Facebook</a></li>
+                        <li><a href="https://twitter.com/" target="_blank" title="Twitter opens on new tab">
+                            Twitter</a></li>
+                    </ul>
+			</article>
+			<aside>
+                <h3>My Experience with animating links to life</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/zjxC3f3gBCE" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Fun and creative</li>
+                        <li>Make links standout more</li>
+                        <li>Easy to include</li>
+                    </ul>
+                <h4>Negative:</h4>
+                    <ul>
+                        <li>None</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 04/07/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

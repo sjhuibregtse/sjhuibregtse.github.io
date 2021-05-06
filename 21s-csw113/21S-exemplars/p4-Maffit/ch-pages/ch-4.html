@@ -1,0 +1,156 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 4 - Ch. 4 - Maffit</title>
+	<meta name="description" content="my second design studio project"/>
+    <meta name="keywords" content="Chapter 4 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 03/22/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        img {
+            margin-left: 270px;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        .circle {
+            width: 40px;
+            height: 40px;
+            border-radius: 50%;
+            animation: slide 5s infinite;
+        }
+        #circle1 {
+            animation-timing-function: ease-in-out;
+            background-color: #E84855;
+        }
+        #circle2 {
+            animation-timing-function: linear;
+            background-color: #0099FF;
+        }
+        #circle3 {
+            animation-timing-function: cubic-bezier(0, 1, .76, 1.14);
+            background-color: #FFCC00;
+        }
+        #container {
+            width: 550px;
+            background-color: #FFF;
+            border: 3px #CCC dashed;
+            border-radius: 10px;
+            padding-top: 5px;
+            padding-bottom: 5px;
+            margin: 0 auto;
+        }
+        @keyframes slide {
+            0% {
+              transform: translate3d(0, 0, 0);
+            }
+            25% {
+              transform: translate3d(380px, 0, 0);
+            }
+            50% {
+              transform: translate3d(0, 0, 0);
+            }
+            100% {
+              transform: translate3d(0, 0, 0);
+            }
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 4</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Working With CSS Timing Functions</h2>
+			<article>
+                <h2>Chapter 4</h2>
+                    <p>
+                    In this chapter I was able to understand the timing function while working with animations. This was a little tricky to learn and fully
+                    understand since there are various timing functions you can use, so it was a lot of testing them out to see what each one will do. A timing
+                    function is a function that alters the speed at which your properties animate. Whenever you are working with timing functions there are four important things to keep in mind.
+                    </p> 
+                        <ol>
+                            <li>They don't change where your property values start.</li>
+                            <li>They don't change where your property values end.</li>
+                            <li>They don't change your animations duration.</li>
+                            <li>They alter the speed at which your property values change.</li>
+                        </ol>
+                <h4>Before Video Edits:</h4>
+                    <div id="container">
+                        <div class="circle" id="circle1"></div>
+                        <div class="circle" id="circle2"></div>
+                        <div class="circle" id="circle3"></div>
+                    </div>
+                <h4>After Video Edits:</h4>
+                    <div id="container-2">
+                        <div class="circle1" id="circle1-2"></div>
+                        <div class="circle1" id="circle2-2"></div>
+                        <div class="circle1" id="circle3-2"></div>
+                    </div>
+			</article>
+			<aside>
+                <h3>My Experience with Timing Functions</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/ZviVyGBHmD0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Lots of options</li>
+                        <li>Easy to include</li>
+                        <li>Used in lot of animations I've seen</li>
+                        <li>Eye-catching / attention grabbing</li>
+				</ul>
+                <h4>Negatives:</h4>
+                    <ul>
+                        <li>Hard to get at first</li>
+                        <li>Took awhile to test each timing function</li>
+                        <li>Was a little confusing at first; found myself getting frustrated</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 03/24/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

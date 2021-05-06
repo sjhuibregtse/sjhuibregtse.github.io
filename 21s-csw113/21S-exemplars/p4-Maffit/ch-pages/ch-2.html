@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 2 - Ch. 2 - Maffit</title>
+	<meta name="description" content="my second design studio project"/>
+    <meta name="keywords" content="Chapter 2 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 03/20/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        img {
+            margin-left: 270px;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #container {
+            padding: 10px;
+            width: 100%;
+            height: 250px;
+            background-color: #EEE;
+            text-align: center;
+        }
+        #hexagon {
+            animation: bobble 2s infinite;
+            margin-left: 20px;
+        }
+        @keyframes bobble {
+          0% {
+          transform: translateY(10px);
+          }
+          50% {
+          transform: translateY(40px);
+          }
+          100% {
+          transform: translateY(10px);
+          }
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 2</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Intro. to CSS Animations</h2>
+			<article>
+                <h2>Chapter 2</h2>
+				<p>
+                    For this chapter being all about creating animations I was nervous since I have never done anything like this before.
+                    However, after reading and walking through creating an animation fromt the textbook it did become easier to understand and I
+                    was able to get some important things out of it to keep in mind when creating an animation. When creating a CSS animation you will
+                    complete two steps. <b>The first step</b> is setting the animation property, as you will see in the video linked it is bobble but there are other options
+                    that you can use as well. <b>The second step</b> is defining the keyframes because they specift how and when the CSS properties get animated, which again
+                    can be seen in the video below.
+                </p>
+                    <div id="container">
+                        <img id="hexagon" alt="hexagon with smiley face" 
+                             src="https://www.kirupa.com/images/hexagon.svg"/>
+                    </div>
+                <p>
+                    To the side is my video I have created going over this animation, as well as me changing the timing element to show the affect that has on and animation. This helped
+                    me understand how to get an animation to look the way I want as well as go the speed I want. Playing around with that gave me a better understanding of how coding
+                    an animation works.
+                </p>
+			</article>
+			<aside>
+                <h3>My Experience with this Animation</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/TOGG4I5TV68" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Better understanding</li>
+                        <li>I feel confident working with animantions</li>
+                        <li>I undertsand the steps & tags</li>
+                    </ul>
+                <h4>Negatives:</h4>
+                    <ul>
+                        <li>I have to deal with trial & error a lot</li>
+                        <li>Won't be perfect right away</li>
+                        <li>Time consuming; stay focused when creating an animation</li>
+                    </ul>
+                
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 03/20/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

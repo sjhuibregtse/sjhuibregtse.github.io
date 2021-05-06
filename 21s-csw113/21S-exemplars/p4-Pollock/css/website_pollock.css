@@ -1,0 +1,83 @@
+body {
+    background-color: #D7DCD6;
+    font-family: "times New Roman";
+    line-height: 30px;
+    
+}
+hr {
+    color: #BEBCBE;
+    height: 2px;
+}
+p {
+    line-height: 30px;
+    text-align: left;
+}
+dt {
+    font-weight: bolder;
+    color: #2C045A;
+}
+
+h2 {
+    color: #580C48;
+}
+img {
+    float: right;
+}
+.topnav {
+    background-color: #333;
+    overflow: hidden;
+    position: sticky;
+    top: 0;
+    }
+
+/* Style the links inside the navigation bar */
+.topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+    position: sticky;
+    top: 0;
+    }
+
+/* Change the color of links on hover */
+.topnav a:hover {
+    background-color: #A7ACA8;
+    color: black;
+    }
+
+/* Add a color to the active/current link */
+.topnav a.active {
+    background-color: #BBE9F9;
+    color: black;
+    }
+/*Add a border to the right of each item*/
+div a {
+    border-right: 1px solid black;
+    }
+footer{
+        background-color: #8F9B92;
+        line-height: 15px;
+        padding: 5px;
+        text-align: center;
+        clear: both;
+        border: solid;
+    }
+header {
+        text-align: center;
+        font-family: monospace, sans-serif;
+        background-color: #8F9B92;
+        font-size: 25px;
+        padding: 20px;
+        border: solid;
+        line-height: normal;
+    }
+@media only screen and (max-width: 600px) {
+nav, section, article {
+    width: 100%;
+    height: auto;
+  }
+}
+

@@ -1,0 +1,361 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 4 - Ch. 11 - Maffit</title>
+	<meta name="description" content="my fourth design studio project"/>
+    <meta name="keywords" content="Chapter 11 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/19/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #main {
+            text-align: center;
+            background-color: #82C1FF;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        #h1 {
+            font-size: 88px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            color: #FFF;
+            margin: 0;
+            padding: 90px 0 25px 0;
+            transform-origin: 50% 100%;
+            text-shadow: 2px 2px 2px #333;
+             text-decoration: none;
+            animation-duration: .3s;
+            animation-name: fadeAndScale;
+            animation-timing-function: cubic-bezier(.71,.55,.62,1.57);
+        }
+        #a {
+            font-family: Cambria, Cochin, serif;
+            font-size: 16px;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #A6D2FF;
+            transition: background-color .2s ease-out;
+        }
+        #a:hover {
+            background-color: #EEE;
+        }
+        @keyframes fadeAndScale {
+            from {
+              opacity: 0;
+              transform: scale(.9, .9);
+            }
+            to {
+              opacity: 1;
+              transform: scale(1, 1);
+            }
+        }
+        #main2 {
+            text-align: center;
+            background-color: #82C1FF;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        #h1-2 {
+            font-size: 88px;
+            font-family: Arial, Helvetica, sans-serif;
+            font-weight: normal;
+            color: #FFF;
+            margin: 0;
+            padding: 90px 0 25px 0;
+            transform-origin: 50% 100%;
+            text-shadow: 2px 2px 2px #333;
+            text-decoration: none;
+            animation-duration: 3s;
+            animation-name: fadeAndScale;
+            animation-timing-function: cubic-bezier(.71,.65,.42,3.57);
+        }
+        #a2 {
+            font-family: Cambria, Cochin, serif;
+            font-size: 16px;
+            color: #333;
+            padding: 5px;
+            border-radius: 5px;
+            background-color: #A6D2FF;
+            transition: background-color .2s ease-in-out;
+        }
+        #a2:hover {
+            background-color: #EEE;
+        }
+        @keyframes fadeAndScale {
+            from {
+              opacity: 0;
+              transform: scale(.9, .9);
+            }
+            to {
+              opacity: 6;
+              transform: scale(1, 1);
+            }
+        }
+        .colorOne {
+            background-color: #9BC53D;
+            color: #000;
+        }
+        .colorTwo {
+            background-color: #FFF;
+            color: #000;
+        }
+        #mainContent {
+            width: 420px;
+            margin: 0 auto;
+        }
+        #mainContent p {
+            padding: 20px;
+        }
+        #mainContent #firstBox {
+            font-weight: bold;
+            transform: translate3d(-30px, 0, 0);
+            transition: all .5s ease-in-out;
+            opacity: 0;
+        }
+        #mainContent #firstBox.active {
+            background-color: #333;
+            color: #FFF;
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        #mainContent #secondBox {
+            transition: all .2s ease-in-out;
+            transform: translate3d(0, 30px, 0);
+            opacity: 0;
+        }
+        #mainContent #secondBox.active {
+            background-color: #1581AF;
+            color: #FFF;
+            transform: translate3d(0, 0, 0);
+            opacity: 1;
+        }
+        #mainContent ol li {
+            padding-left: 7px;
+            margin-bottom: 15px;
+            transition: all .2s ease-in-out;
+            transform: translate3d(20px, 0, 0);
+            opacity: 0;
+        }
+        #mainContent ol li.active {
+            transform: translate3d(0px, 0, 0);
+            opacity: 1;
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 11</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Scroll-Activated Animations</h2>
+			<article>
+                <h2>Chapter 11</h2>
+                    <p>
+                        In this chapter I learned learn all about scroll-activated animations and the various techniques we can use to bring
+                        scrolled elements to life and into my web pages to add enhance the designs. This can be seen in the example I have added
+                        below, and depending on how far and how fast you are scrolling and what content is currently visible you are going to see
+                        all sorts of awesomeness in the form of animations where your background color changes, content slides in from all directions,
+                        things fade into view, and so on. I also learned that there are two (very closely related) approaches you can take for this. One
+                        approach involves simply checking whether <b>any</b> part of an element is visible while the other approach involves checking whether an
+                        element is <b>fully</b> visible. While the difference between both of these approaches seems subtle, the end result of whatever effect
+                        you decide to apply to your elements will be noticeably different.
+                    </p>
+                <h4>Example from textbook:</h4>
+                    <div id="mainContent">
+                        <h3>Scroll Down</h3>
+                            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                               Curabitur quis massa a arcu efficitur suscipit vehicula 
+                               et risus.</p>
+                            <ol id="myList">
+                              <li>Nam sagittis est non enim ultrices elementum. </li>
+                              <li>Sed id ligula sed mi tempor ornare.</li>
+                              <li>Aenean feugiat risus eget sagittis volutpat. Proin quis
+                                  orci a metus lacinia auctor eget id nisi.</li>
+                              <li>Donec pulvinar nunc feugiat semper consequat.</li>
+                              <li>Etiam cursus justo eget libero gravida, nec faucibus
+                                  mauris posuere.</li>
+                              <li>In nec sem id libero egestas cursus vel a urna.</li>
+                              <li>Fusce pulvinar arcu eu lobortis egestas. Maecenas
+                                  eleifend felis ut urna consectetur, et pellentesque 
+                                  mi molestie.</li>
+                              <li>Aliquam ut felis venenatis, dapibus ante non, gravida
+                                  nulla.</li>
+                              <li>Donec consectetur quam in urna commodo, sed aliquet 
+                                   metus vehicula.</li>
+                              <li>Mauris eget est sit amet felis eleifend sagittis non id
+                                   nulla.</li>
+                            </ol>
+                            <p id="firstBox">Phasellus tortor nisl, dapibus at posuere 
+                               sed, tempor in massa. Pellentesque eu sodales orci, 
+                               finibus congue libero. Mauris molestie bibendum 
+                                posuere.</p>
+                            <p>Nunc blandit varius sapien quis ultrices. Vestibulum et
+                               consequat augue. Pellentesque et maximus nisl, sit amet 
+                               dictum ante.</p>
+                            <p id="secondBox">Nullam magna augue, consequat eu augue ut, 
+                               volutpat fringilla est. Ut commodo ac magna vulputate 
+                               dictum.</p>
+                    </div>
+			</article>
+			<aside>
+                <h3>Advantages & Disadvantages with scroll-activated animations</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/n79jqmr11-o" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Advantages of background color changes:</h4>
+                    <ul>
+                        <li>Fun</li>
+                        <li>Eye-catching</li>
+                    </ul>
+                <h4>Disadvantages of background color changes:</h4>
+                    <ul>
+                        <li>Distracting</li>
+                        <li>Ruins theme of webpage</li>
+                        <li>Colors changing a lot can hurt users eyes</li>
+                        <li>Not professional</li>
+                        <li>Not used a lot</li>
+                    </ul>
+                <h4>Advantages of content sliding in:</h4>
+                    <ul>
+                        <li>Easy to include</li>
+                        <li>Smooth</li>
+                        <li>Not super noticeable</li>
+                        <li>Not distracting; very subtle</li>
+                        <li>Looks professional</li>
+                        
+                    </ul>
+                <h4>Disadvantages of content sliding in:</h4>
+                    <ul>
+                        <li>If users go to fast it wont be smooth</li>
+                        <li>Can be too much at times</li>
+                        <li>Long process to set up</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 04/19/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+    <script>
+        var isScrolling = false;
+     
+        window.addEventListener("scroll", throttleScroll, false);
+     
+        function throttleScroll(e) {
+          if (isScrolling == false) {
+            window.requestAnimationFrame(function() {
+              scrolling(e);
+              isScrolling = false;
+            });
+          }
+          isScrolling = true;
+        }
+     
+        document.addEventListener("DOMContentLoaded", 
+                    scrolling, 
+                    false);
+     
+        var listItems = document.querySelectorAll(
+                        "#mainContent ol li");
+        var firstBox = document.querySelector("#firstBox");
+        var secondBox = document.querySelector("#secondBox");
+     
+        function scrolling(e) {
+     
+          if (isPartiallyVisible(firstBox)) {
+            firstBox.classList.add("active");
+     
+            document.body.classList.add("colorOne");
+            document.body.classList.remove("colorTwo");
+          } else {
+            document.body.classList.remove("colorOne");
+            document.body.classList.remove("colorTwo");
+          }
+     
+          if (isFullyVisible(secondBox)) {
+            secondBox.classList.add("active");
+     
+            document.body.classList.add("colorTwo");
+            document.body.classList.remove("colorOne");
+          }
+     
+          for (var i = 0; i < listItems.length; i++) {
+            var listItem = listItems[i];
+     
+            if (isPartiallyVisible(listItem)) {
+              listItem.classList.add("active");
+            } else {
+              listItem.classList.remove("active");
+            }
+          }
+        }
+     
+        function isPartiallyVisible(el) {
+          var elementBoundary = el.getBoundingClientRect();
+     
+          var top = elementBoundary.top;
+          var bottom = elementBoundary.bottom;
+          var height = elementBoundary.height;
+     
+          return ((top + height >= 0) && 
+                (height + window.innerHeight >= bottom));
+        }
+     
+        function isFullyVisible(el) {
+          var elementBoundary = el.getBoundingClientRect();
+     
+          var top = elementBoundary.top;
+          var bottom = elementBoundary.bottom;
+     
+          return ((top >= 0) && (bottom <= window.innerHeight));
+        }
+  </script>
+</body>
+</html>

@@ -1,0 +1,158 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 2 - Ch. 5 - Maffit</title>
+	<meta name="description" content="my second design studio project"/>
+    <meta name="keywords" content="Chapter 5 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 03/22/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #container {
+         text-align: center;
+       }
+       #chicken {
+         animation: slide 6s ;
+         animation-timing-function: ease-in;
+         transition: transform .4s;
+   
+       }
+       #chicken:hover {
+         opacity: 0.5;
+         transform: scale3d(1.2,1.2,1) rotate(90deg);
+       }
+       
+       @keyframes slide {
+         0% {
+         transform: translate3d(0, 0, 0);
+         }
+         25% {
+         transform: translate3d(180px, 0, 0);
+         }
+         50% {
+         transform: translate3d(0, 0, 0);
+         }
+         100% {
+         transform: translate3d(0, 0, 0);
+         }
+       }
+       #container2 {
+         text-align: center;
+       }
+        #chicken-2 {
+          animation: slide 6s ;
+          animation-timing-function: step-start;
+    
+        }
+        #chicken-2:hover {
+          opacity: 0.5;
+          transform: scale3d(1.2,1.2,1) rotate(90deg);
+        }
+        
+        @keyframes slide-2 {
+          0% {
+          transform: translate3d(0, 0, 0);
+          }
+          25% {
+          transform: translate3d(180px, 0, 0);
+          }
+          50% {
+          transform: translate3d(0, 0, 0);
+          }
+          100% {
+          transform: translate3d(0, 0, 0);
+          }
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 5</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Ensuring Your Animation Run Really Smoothly</h2>
+			<article>
+                <h2>Chapter 5</h2>
+				<p>
+                    When working with animations it is important that the transitions and the way it runs is smooth. What is a smooth animation? Well,
+                    from what I learned in this chapter a smooth animation is when they are responsive, run at 60 frams per second (fps), and are responsive
+                    and fast on mobile devices. Below I have worked with creating my very own transition that works smoothly in an animation. This was done by using
+                    what I have learned so far with animations and combining them in order to make a smooth version. I have have include a not so smooth version, so you
+                    can see the difference, I discuss why they are smooth and not smooth in my video description.
+                </p>
+                <h4>Smooth Version:</h4>
+                    <div id="container">
+                        <img id="chicken" src="../images/chicken.png" alt="image of chicken in egg" height="130" width="150"/>
+                    </div>
+                <h4>Not Smooth Version:</h4>
+                    <div id="container2">
+                        <img id="chicken-2" src="../images/chicken.png" alt="image of chicken in egg" height="130" width="150"/>
+                    </div>
+			</article>
+			<aside>
+                <h3>My Experience with Making a Smooth Animation</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/qH-gRLMAVHI" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Easy to combine with other chapters</li>
+                        <li>Smooth transition is easy to create</li>
+                        <li>New properties are easy to include</li>
+                        <li>Can be included very easily on websites</li>
+                    </ul>
+                <h4>Negative:</h4>
+                    <ul>
+                        <li>Took a lot of attempts</li>
+                        <li>Hard to make one that wasn't smooth</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 03/25/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,159 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 1 - Home Page</title>
+    <!--Name: Madison Priestap-->
+	<!--Course / Semester: CSW103 Spring 2021 -->
+	<!--Description: Favorite Web Site with various links-->
+    
+	<link href="css/style.css" rel="stylesheet">
+	
+	<meta name="description"
+          content="Professional"/>
+    <meta name="keywords"
+          content="Introduction"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Madison Priestap"/>
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 03/14/2021 -->
+
+	<style>
+		
+		
+		body {
+			background-color: lightseagreen;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		
+        img {
+            max-width: 60%;
+            height:auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        p { line-height: 25px;
+            
+        }
+    
+     #star1{
+        animation:bobble 2s infinite;
+     }
+
+    @keyframes bobble {
+        0% {
+            transform: translateY(20px);
+        }
+
+        100% {
+            transform: translateY(10px);
+        }
+        }
+        
+      
+     
+    #images{
+        animation: slide 3s infinite;
+        animation-timing-function: ease-out;
+     }
+     
+     @keyframes slide {
+        25% {
+            transform: translate3d(10px, 0, 0);
+        }
+
+        50% {
+            transform: translate3d(0,20px,0);
+        
+        }
+        100% {
+            transform: translate3d(0,0,20px);
+        }
+        }
+     
+	</style>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="index.html">Home</a></li>
+            <li><a href="toc.html">Table of Contents</a></li>
+            <li><a href="references.html">References</a></li>
+            <li><a href="21S-S1-CSW103-p3-priestap/index.html">CSW103 Project 3</a></li>
+        </ul>
+	</nav>
+    
+	<header>
+		
+		<h1><span style="font-size: 70%;">Home Page</span></h1>
+         
+      <hr>  
+	</header>
+  
+	<main>
+		
+		<section>
+            <h2><a href="#" target="black">Introduction</a></h2>   
+			
+			<article>
+                <h3>Welcome!</h3>
+				
+				<p>
+				My name is Madison Priestap, and I am a current senior
+                attending the University of Mount Union. I am a double
+                major in Sport Business and Theatre with a passion to have
+                a career in the sport entertainment industry. I have experience
+                within leadership, as I have held many leadership positions on
+                my campus such as Center for Student Success Student Coordinator,
+                and Special Events Coordinator for my universities Admissions Office.
+				</p>
+                
+				<br>
+                <br>
+                
+                 <h2>Statement of Purpose</h2>
+                
+				<p>
+				The purpose of this website is to showcase my HTML and CSS markup skills
+                within this site. As well as showcase the skills and experiences that I currently
+                possess. I plan to continue to update this webpage with new skills that I gain
+                and market myself to future employers.
+				</p>
+
+			</article>
+			<aside>
+                <p style="text-align: center">
+                <h3>Madison Priestap</h3>
+                
+                <div id="container">
+                    <img id="images" src="images/headshot.jpg" alt="headshot image"/>
+                
+                <p>
+                 Class of 2021
+                </p>
+                
+                <p>
+                 Univeristy of Mount Union Student
+                </p>
+
+                
+            <img id="star1" src="images/yellowstar.png" alt="image of a star"/>   
+            </div>
+             
+			</aside>
+        </section>
+	</main>
+	<footer>
+		<h6><em>This web page was created by Madison Priestap
+					Last updated 03/25/2021</em><br>
+			
+			<em>Eamil:<a href="mailto:priestmn2021@mountunion.edu">
+			priestmn2021@mountunion.edu</a></em></h6>
+	</footer>
+</body>
+</html>

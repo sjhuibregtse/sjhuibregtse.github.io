@@ -1,0 +1,186 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 4 - Ch. 10 - Maffit</title>
+	<meta name="description" content="my fourth design studio project"/>
+    <meta name="keywords" content="Chapter 10 info."/>
+    <meta name="robots" content="unfollow"/>
+    <meta name="author" content="Gillian Maffit"/>
+    <link href="../css/style.css" rel="stylesheet">
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/18/2021 -->
+
+	<style>	
+		body {
+			background-color: #7E094C;
+			margin: 25px;
+			border-style: groove;
+            border-color: black;
+			padding: 10px 10px 20px 10px;
+		}
+		span {
+            font-size: 70%;
+        }
+        header {
+            background-color: #444444;
+        }
+        h1 {
+            text-decoration: underline overline;
+            color: white;
+            text-shadow: 3px 3px 3px black;
+        }
+        h2 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: overline;
+            text-align: center;
+        }
+        h3 {
+            text-shadow: 2px 2px 2px black;
+            color: #B0E39A;
+            text-decoration: underline overline;
+            text-align: center;
+        }
+        #main {
+            text-align: center;
+            background-color: #82C1FF;
+            width: 600px;
+            height: 300px;
+            margin: 0 auto;
+            border-radius: 5px;
+        }
+        #roundButton {
+            background-color: #96D9FF;
+            margin-bottom: 20px;
+            width: 50px;
+            height: 50px;
+            border-radius: 50%;
+            border: 10px solid #0065A6;
+            outline: none;
+            transition: transform .3s cubic-bezier(0, .52, 0, 1);
+        }
+        #roundButton:hover {
+            background-color: #96D9FF;
+            cursor: pointer;
+            border-color: #003557;
+            transform: scale(1.2, 1.2);
+        }
+        #roundButton:active {
+            border-color: #003557;
+            background-color: #FFF;
+            text-align: center;
+        }
+        #flyoutMenu {
+            width: 100vw;
+            height: 100vh;
+            background-color: #7E094C;
+            position: fixed;
+            top: 0;
+            left: 0;
+            transform: translate3d(-100vw, 0, 0);
+            transition: transform .5s ease-in-out;
+            overflow: scroll;
+            z-index: 1000;
+        }
+        #flyoutMenu h2 a {
+            color: white;
+            margin-left: 15px;
+            text-decoration: none;
+        }
+        #flyoutMenu h2 a:hover {
+            text-decoration: underline;
+        }
+        #flyoutMenu.show {
+            transform: translate3d(0vw, 0, 0);
+        }
+	</style>
+</head>
+<body>
+	<header>
+		<h1>Portfolio for Gillian Maffit<br><span>Chapter 10</span></h1>
+	</header>
+	<nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<main>
+		<section>
+            <h2 style="text-align: center; color: white; text-shadow: 1.5px 1.5px 1.5px black;">Creating a Smooth Sliding Menu</h2>
+			<article>
+                <h2>Chapter 10</h2>
+                    <p>
+                        In this chapter I learned how to add a sliding menu into my web pages which is something I see a lot on websites that I use.
+                        Learning this allowed me to work on combining CSS transitions and JavaScript modifying CSS. One big thing I learned from this chapter
+                        was that it takes time and a lot of changing the codes functions to really see how it works and to make it smooth and match the theme of
+                        the page. It always a difficult for me to try and make the sliding menu look professional like i have seen on various web pages, but then
+                        I had to remember that I am still learning how to do this and after time it will start to look professional. In the example below I have a
+                        sliding menu, I also go over it more and make some edits in the video to the side. One thing I really like about having the option to add a
+                        sliding menu into web pages I create is that it could replace the navigation bar! The sliding menu can have links on it, as seen in my video,
+                        which is very nice because the sliding menu also acts as a navigation bar in a way! Which could be helpful in the future when creating more
+                        professional looking websites. I really enjoyed working with sliding menus in this chapter, and playing around with the timkng functions helps find
+                        the smoothest looking outcome for the slides in.
+                    </p>
+                <h4>Example: Click the circle for the sliding menu!</h4>
+                    <div id="flyoutMenu">
+                        <h2><a href="#">Home</a></h2>
+                        <h2><a href="#">About</a></h2>
+                        <h2><a href="#">Contact</a></h2>
+                        <h2><a href="#">Search</a></h2>
+                    </div>
+                    <button id="roundButton"></button>
+                <h4>What Happens?</h4>
+                    <p>
+                        When clicking on the circle, it pulls out the sliding menu. The links are not connected to anything since this is just an example. In my video,
+                        I do talk about how to link them to a page, I connect the home page to my index pae just so that way viewers know how it would work. Along with that,
+                        when the menu slides out it takes over the whole page, if you want to get out of it without clickling a link tou can tap the screen and it will then slide
+                        out of your screen.
+                    </p>
+			</article>
+			<aside>
+                <h3>My Experience with creating a smooth sliding menu</h3>
+                    <iframe width="365" height="200" src="https://www.youtube.com/embed/nMEqlO5gUf8" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                <h4>Positives:</h4>
+                    <ul>
+                        <li>Helpful to have</li>
+                        <li>Smooth transition</li>
+                        <li>Seen on lots of pages; getting my pages to look professional</li>
+                        <li>Organized</li>
+                    </ul>
+                <h4>Negative:</h4>
+                    <ul>
+                        <li>Hard to implement right away</li>
+                        <li>Struggled with changes at first</li>
+                        <li>Time consuming; make sure it is lined up or sized correctly</li>
+                    </ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Gillian Maffit<br>
+		 Last updated on 04/18/2021</em><br>
+		 Email:<a href ="mailto:maffitge2024@mountunion.edu"> maffitge2024@mountunion.edu</a></h6>
+	</footer>
+    <script>
+        var roundButton = document.querySelector("#roundButton");
+            roundButton.addEventListener("click", showMenu, false);
+     
+        var flyoutMenu = document.querySelector("#flyoutMenu");
+            flyoutMenu.addEventListener("click", hideMenu, false);
+     
+        function showMenu(e) {
+            flyoutMenu.classList.add("show");
+            document.body.style.overflow = "hidden";
+        }
+     
+        function hideMenu(e) {
+            flyoutMenu.classList.remove("show");
+            e.stopPropagation();
+            document.body.style.overflow = "auto";
+        }
+      </script>
+</body>
+</html>

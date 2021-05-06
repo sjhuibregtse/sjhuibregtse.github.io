@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Design Studio Project 4 - TOC</title>
+    <!--Name: Madison Priestap-->
+	<!--Course / Semester: CSW103 Spring 2021 -->
+	<!--Description: Favorite Web Site with various links-->
+    
+	<link href="css/style.css" rel="stylesheet">
+	
+	<meta name="description"
+          content="Table of Contents"/>
+    <meta name="keywords"
+          content="Chapters"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Madison Priestap"/>
+	<!-- Course/Section: CSW 113 / Spring 2021 -->
+	<!-- Date: 04/28/2021 -->
+
+	<style>
+		
+		body {
+			background-color: lightseagreen;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+        
+		dl {
+            line-height: 1.4;
+        }
+        
+        dd {
+            line-height: 1.5em;
+        }
+        
+        nav {
+          float: left;
+          width: 20%;
+          height: auto; 
+          background: #D6D1D1;
+          padding: 20px;
+        }
+        section {
+            background-color: #808080;
+            color: white;
+            padding: 10px;
+            margin: 0;
+        }
+  
+        aside {
+          float: right;
+          width: 20%;
+          height: auto; 
+          background: olive;
+          color: black;
+          padding: 30px;
+        }
+        
+        article {
+          float: left;
+          padding: 20px;
+          width: 60%;
+          background-color:white;
+          color: black;
+          height: auto; 
+        }
+        
+        p
+        {
+        position:static;
+        }
+        
+         img {
+            max-width: 80%;
+            height:auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        #star1 {
+        transition: all .1s ease-in-out;
+        opacity: 0.5;
+            
+        }
+        
+        
+          #star1:hover {
+            transform: scale3d(2,2,2) rotate(25deg);  
+                
+        }
+        
+        #container1 {
+        width: 75%;
+        height: 300px;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px #CCC;
+        border-radius: 10px;
+        margin: 0 auto;
+        background-color: purple;
+        transition: background-color .2s ease-out;
+    }
+        
+	</style>
+</head>
+<body>
+    
+      <div class="main-nav">
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="toc.html">Table of Contents</a></li>
+                <li><a href="references.html">References</a></li>
+                <li><a href="21S-S1-CSW103-p3-priestap/index.html">CSW103 Project 3</a></li>
+            </ul>
+        </div>
+      
+	<header>
+         <div id="container1">
+		<h1>Portfolio for Madison Priestap<br><span style="font-size: 70%;">Table of Contents</span></h1>   
+       
+        
+        <hr> 
+ 
+  <script>
+    var container = document.querySelector("#container");
+    var zeros = "0000001";
+ 
+    container.addEventListener("click", changeColor, false);
+ 
+    function changeColor (e){
+        var color = "#" + Math.floor(Math.random() * 
+                                     0xFFFFFF).toString(16);
+        var colorLength = color.length;
+ 
+        if (colorLength < 5) {
+          color += zeros.substring(0, zeros.length - colorLength);
+        }
+        container.style.backgroundColor = color;
+    }
+  </script>
+</div>
+      
+      
+	</header>
+    
+	<nav class="nav">
+        <ul>
+            <li><a href="#ch1">Chapter 1</a></li>
+            <li><a href="#ch2">Chapter 2</a></li>
+            <li><a href="#ch3">Chapter 3</a></li>
+            <li><a href="#ch4">Chapter 4</a></li>
+            <li><a href="#ch5">Chapter 5</a></li>
+            <li><a href="#ch6">Chapter 6</a></li>
+            <li><a href="#ch7">Chapter 7</a></li>
+            <li><a href="#ch8">Chapter 8</a></li>
+            <li><a href="#ch9">Chapter 9</a></li>
+            <li><a href="#ch10">Chapter 10</a></li>
+            <li><a href="#ch11">Chapter 11</a></li>
+            <li><a href="#ch11">Chapter 13</a></li>
+            <li><a href="#ch14">Chapter 14</a></li>
+        </ul>
+	</nav>
+	<main>
+		<div id="top"></div>
+      
+        <section>
+            <h2 style="text-align: center;"><a href="#" target="black">Project Progress</a></h2>
+			<aside>
+                <h3>Notes</h3>
+				
+				<ul>
+					<li>
+						Showcasing and applying the knowledged learned
+                        throughout this course. 
+					</li>
+				</ul>
+                
+            <div id="container">    
+            <img id="star1" src="images/yellowstar.png" alt="image of a star"/>   
+            </div>
+                
+			</aside>
+           
+			<article>
+
+                <h3>Project 1</h3>
+                <blockquote>
+                    <dl>
+                        <dt id="ch1">
+                            <a href="ch-pages/ch-1.html">Chapter 1</a>
+                            Introduction to Web Animations
+                        </dt>
+                        <dd>
+                     
+                        </dd>
+                    </dl>        
+                <br>
+                <p style="font-size: small;"><a href="#top">Back to top</a></p>
+                </blockquote>
+                
+              
+                <h3>Project 2</h3>
+                <blockquote>
+                    <dl>                    
+                      
+                        <dt id="ch2">
+                            <a href="ch-pages/ch-2.html">Chapter 2</a>
+                            Introduction to CSS Animations
+                        </dt>
+                        <dd>Animations using CSS will be shown with examples and
+                        embedded on the webpage. </dd>
+                        
+                       
+                        <dt id="ch3">
+                            <a href="ch-pages/ch-3.html">Chapter 3</a>
+                            Introduction to CSS Transitions</dt>
+                        <dd>Transitions using CSS will be shown with examples and
+                        embedded on the webpage. </dd>
+                        
+               
+                        <dt id="ch4">
+                           <a href="ch-pages/ch-4.html">Chapter 4</a>
+                            Working with CSS Timing Functions</dt>
+                        <dd>Animation and Transitions will be look at in more depth
+                        with how and why each can be used with timing functions.</dd>
+                        
+                    
+                        <dt id="ch5">
+                            <a href="ch-pages/ch-5.html">Chapter 5</a>
+                            Ensuring Animations Run Smoothly</dt>
+                        <dd>The importance of smooth animations will be provided with
+                        an explanation and also with examples. </dd>
+                    </dl>
+                    <br><p style="font-size: small;"><a href="#top">Back to top</a></p>
+                </blockquote>
+                
+                <h3>Project 3</h3>
+                <blockquote>
+                    <dl>                    
+                      
+                        <dt id="ch6">
+                            <a href="ch-pages/ch-6.html">Chapter 6</a>
+                            Transitions, Animations and JavaScript
+                        </dt>
+                        <dd>This page will provide a look at CSS usage along
+                        with adding some JavaScript changes.</dd>
+                        
+                       
+                        <dt id="ch7">
+                            <a href="ch-pages/ch-7.html">Chapter 7</a>
+                            CSS Animations vs CSS Transitions</dt>
+                        <dd>The similarities and differences will be explained and
+                        provided with examples between animations and transitions.</dd>
+                        
+               
+                        <dt id="ch8">
+                           <a href="ch-pages/ch-8.html">Chapter 8</a>
+                            Animating Links</dt>
+                        <dd>This section will be showcasing more animations but
+                        will include how to animated specific links to other
+                        elements.</dd>
+                        
+                    
+                        <dt id="ch9">
+                            <a href="ch-pages/ch-9.html">Chapter 9</a>
+                            Simple Text Fade and Scale Animation </dt>
+                        <dd>This page shows that animations do not have to be
+                        flashy and can be very subtle and simple. </dd>
+                    </dl>
+                    <br><p style="font-size: small;"><a href="#top">Back to top</a></p>
+                </blockquote>
+                
+                    <h3>Project 4</h3>
+                <blockquote>
+                    <dl>                    
+                      
+                        <dt id="ch10">
+                            <a href="ch-pages/ch-10.html">Chapter 10</a>
+                            Transitions, Animations and JavaScript
+                        </dt>
+                        <dd>This page will provide a look at CSS usage along
+                        with adding some JavaScript changes.</dd>
+                        
+                       
+                        <dt id="ch11">
+                            <a href="ch-pages/ch-11.html">Chapter 11</a>
+                            CSS Animations vs CSS Transitions</dt>
+                        <dd>The similarities and differences will be explained and
+                        provided with examples between animations and transitions.</dd>
+                        
+               
+                        <dt id="ch13">
+                           <a href="ch-pages/ch-13.html">Chapter 13</a>
+                            Animating Links</dt>
+                        <dd>This section will be showcasing more animations but
+                        will include how to animated specific links to other
+                        elements.</dd>
+                        
+                    
+                        <dt id="ch14">
+                            <a href="ch-pages/ch-14.html">Chapter 14</a>
+                            Simple Text Fade and Scale Animation </dt>
+                        <dd>This page shows that animations do not have to be
+                        flashy and can be very subtle and simple. </dd>
+                    </dl>
+                    <br><p style="font-size: small;"><a href="#top">Back to top</a></p>
+                </blockquote>     
+			</article>
+      </section>
+	</main>
+	<footer>
+		<h6><em>This web page was created by Madison Priestap
+					Last updated 03/14/2021</em><br>
+			
+			<em>Eamil:<a href="mailto:priestmn2021@mountunion.edu">
+			priestmn2021@mountunion.edu</a></em></h6>
+				
+        
+	</footer>
+</body>
+</html>

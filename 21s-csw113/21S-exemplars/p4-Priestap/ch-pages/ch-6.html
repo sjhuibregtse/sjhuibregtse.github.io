@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Project 2 - Ch 6</title>
+	<!--Name: Madison Priestap-->
+	<!--Course / Semester: CSW103 Spring 2021 -->
+	<!--Description: Favorite Web Site with various links-->
+
+	<link href="../css/style.css" rel="stylesheet">
+    
+	
+	<meta name="description"
+          content="Week 4"/>
+    <meta name="keywords"
+          content="Chapter six"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Madison Priestap"/>
+	<!-- Course/Section: CSW 113 -->
+	<!-- Date: 04/1/2021 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: lightseagreen;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		
+      img {
+      max-width: 60%;
+      height:auto;
+      margin-left: auto;
+      margin-right: auto;
+        }
+        
+        #container {
+        width: 100%;
+        height: 350px;
+        cursor: pointer;
+        box-shadow: 0px 0px 15px #CCC;
+        border-radius: 10px;
+        margin: 0 auto;
+        background-color: purple;
+        transition: background-color .2s ease-out;
+    }
+        
+
+	</style>
+</head>
+<body>
+    <nav class="main-nav">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+	</nav>
+	<header>
+	 <div id="container">
+		<h1>Portfolio for Full Madison Priestap <br><span style="font-size: 70%;">Chapter 6</span></h1>
+	<hr>
+    
+     <script>
+    var container = document.querySelector("#container");
+    var zeros = "0000001";
+ 
+    container.addEventListener("click", changeColor, false);
+ 
+    function changeColor(e){
+        var color = "#" + Math.floor(Math.random() * 
+                                     0xFFFFFF).toString(16);
+        var colorLength = color.length;
+ 
+        if (colorLength < 5) {
+          color += zeros.substring(0, zeros.length - colorLength);
+        }
+        container.style.backgroundColor = color;
+    }
+  </script>
+</div>
+    </header>
+
+	<main>
+		<section>
+			
+            <h2>Week 4 </h2>
+			<article>
+                <h3>Chapter 6</h3>
+                <p>
+                    The purpose of Chapter 6 was to introduce Transitions, Animations
+                    and JavaScript. The main focuse was to learn how to change initial
+                    states form using CSS to changes using JavaScript. This is very useful
+                    to learn since Java is a very prominent script that is used when coding. 
+                <br>
+                <br>
+                <br>
+                
+                  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/Aw5AT1C8g8A" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+                </p>
+                
+                <p>
+           
+          
+             
+             <p>
+               
+                    
+                </p>
+            
+			</article>
+			<aside>
+                <h3>Overall Thoughts</h3>
+				
+				<ul>
+					<li>
+                        Implementing the code and changes for JavaScript was not as
+                        difficult as some may think. The changes actually help with
+                        how an animation can become smooth and look interesting on a
+                        website. 
+                       
+                    </li>
+                    
+					<li>
+          A challenge with JavaScript though is trying to understand
+          everything that the code has programed into it. Java is very
+          different than CSS and takes more time to understand what
+          each element means. 
+                        
+				
+					</li>
+				</ul>
+			</aside>
+        </section>
+    </main>
+	<footer>
+		<h6><em>This web page was created by Madison Priestap
+					Last updated 04/1/2021</em><br>
+			
+			<em>Eamil:<a href="mailto:priestmn2021@mountunion.edu">
+			priestmn2021@mountunion.edu</a></em></h6>
+	</footer>
+</body>
+</html>

@@ -1,0 +1,202 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+	<title>Project 4 - Ch 10</title>
+	<!--Name: Madison Priestap-->
+	<!--Course / Semester: CSW103 Spring 2021 -->
+	<!--Description: Favorite Web Site with various links-->
+
+	<link href="../css/style.css" rel="stylesheet">
+    
+	
+	<meta name="description"
+          content="Week 6"/>
+    <meta name="keywords"
+          content="Chapter ten"/>
+    <meta name="robots"
+          content="unfollow"/>
+    <meta name="author"
+          content="Madison Priestap"/>
+	<!-- Course/Section: CSW 113 -->
+	<!-- Date: 04/15/2021 -->
+
+	<style>
+		/* example of embedded style tags */
+		
+		body {
+			background-color: lightseagreen;
+			margin: 25px;
+			border-style: groove;
+			padding: 10px 10px 20px 10px;
+		}
+		
+         img {
+            max-width: 60%;
+            height:auto;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        
+        
+     #container {
+        margin-bottom: 10px;
+      }
+      
+      #roundButton {
+        background-color: #96D9FF;
+        margin-bottom: 20px;
+        width: 50px;
+        height: 50px;
+        border-radius: 50%;
+        border: 10px solid #0065A6;
+        outline: none;
+        transition: transform .7s cubic-bezier(0, .52, 0, 1);
+      }
+      
+      #roundButton:hover {
+        background-color: #96D9FF;
+        cursor: pointer;
+        border-color: #003557;
+        transform: scale(1.2,1.2);
+      }
+      
+      #roundButton:active {
+        border-color: #003557;
+        background-color: #FFF;
+      }
+      
+      #flyoutMenu {
+        width: 100vw;
+        height: 100vh;
+        background-color: green;
+        position:fixed;
+        top: 0;
+        left:0;
+        transform: translate3d(-100vw, 0, 0);
+        transition: transform .3s cubic-bezier(0, .52, 0, 1);
+        overflow: scroll;
+        z-index: 10000;
+      }
+      
+      #fyloutMenu h2 a {
+        color: #333;
+        margin-left: 15px;
+        text-decoration: none;
+      }
+      
+      #flyoutMenu h2 a:hover {
+        text-decoration:underline; 
+      }
+      
+      #flyoutMenu.show {
+        transform: translate3d(0vw, 0, 0);
+      }
+      
+      #flyouMenu.show {
+        transform: translate3d(0vw, 0, 0);
+        
+        
+      } 
+      
+
+        
+        
+	</style>
+</head>
+<body>
+    
+    <div id="flyoutMenu">
+        <ul>
+            <li><a href="../index.html">Home</a></li>
+            <li><a href="../toc.html">Table of Contents</a></li>
+            <li><a href="../references.html">References</a></li>
+        </ul>
+    </div>
+    
+    <button id="roundButton"></button>
+    
+	<header>
+	
+        
+		<h1>Portfolio for Full Madison Priestap <br><span style="font-size: 70%;">Chapter 10</span></h1>
+	<hr>
+       
+    </header>
+
+
+	<main>
+		<section>
+			
+            <h2>Week 6 </h2>
+			<article>
+                <h3>Chapter 10</h3>
+                <div id="container">
+                <p>The sliding menu is an animation that can easily be
+                implemented to anypage on a website or a whole website
+                within the external style sheet. For this example, I
+                have provided a video showing the code and explaining
+                more about how to implement a sliding menu.</p>
+                </div>
+                <br>
+                
+                  
+<iframe width="560" height="315" src="https://www.youtube.com/embed/HBdgeoiBjHI" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+                        
+               
+    
+               
+                    
+              
+            
+			</article>
+			<aside>
+                <h3>Overall Thoughts</h3>
+				
+				<ul>
+					<li>
+                        The positives is that once I got the code to work
+                        everything was working correctly. The sliding menu
+                        is easy to work with but can require paying attention
+                        to the fine details of the code. 
+                    </li>
+                    
+				</ul>
+			</aside>
+        </section>
+    </main>
+    
+    <script>
+    
+    var roundButton = document.querySelector("#roundButton");
+   roundButton.addEventListener("click", showMenu, false);
+   
+   var flyoutMenu = document.querySelector("#flyoutMenu");
+   flyoutMenu.addEventListenever("click", hideMenu, false );
+   
+  function showMenu(e) {
+     flyoutMenu.classList.add("show");
+     
+     document.body.style.overflow= "hidden";
+    
+   }
+   
+   function hideMenu(e) {
+     flyoutMenu.classList.remove("show");
+     e.stopPropagation( );
+     
+     doceument.body.style.overflow = "auto";
+   }
+   
+   </script> 
+    
+    
+	<footer>
+		<h6><em>This web page was created by Madison Priestap
+					Last updated 04/28/2021</em><br>
+			
+			<em>Eamil:<a href="mailto:priestmn2021@mountunion.edu">
+			priestmn2021@mountunion.edu</a></em></h6>
+	</footer>
+</body>
+</html>
