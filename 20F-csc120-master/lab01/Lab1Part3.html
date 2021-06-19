@@ -1,0 +1,150 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+  <title>CSC 120 Lab 1</title>
+</head>
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee" text="#000000">
+
+<h2 align="center">
+<font color="#990099">
+CSC 120 Lab 1 Part 3
+</font>
+</h2>
+
+<p><font size="+1"><b>Part 3: Declare, Instantiate, and Use objects from existing Java classes.</b></font></p>
+<ol>
+
+  <li>The last two videos in the "Watch: Week 1 Getting Started" activity showed a Java program that Declares, Instantiates, and Uses objects from 
+	  the Balloon class.&nbsp; Now we will practice with a Java program that uses Flag objects.&nbsp; You may want to review those videos for help 
+	  if you need it when completing these activities.
+       <br /><br /></li>
+
+  <li>Create your Lab1 project:<br /><br />
+      <ol type="a">
+        <li>Create a new NetBeans project called Lab1.<br /><br /></li>
+        <li>Visit the <a href="../resources.html" target="_blank"> CSC 120 Resources</a> web page, <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Right-click on the link to <code><b>MUPanel.java</b></code> in the <b>Starter Templates</b> section of the page,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Choose "Save Link As..." or "Save File As...",<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;and save the file in your <b>CSC120\Java\Lab1\src</b> folder: <br /><br />
+			<!--&nbsp;&nbsp;Next, switch to NetBeans, right-click on the file name <code><b>MUPanel.txt</b></code> in the tree in the left panel,<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;Choose "Rename", and replace the ".txt" file extension with a ".java" file extension.<br /><br /-->
+		</li>
+        <li>Again on the <a href="../resources.html" target="_blank"> CSC 120 Resources</a> web page, <br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Left-click on the link to <b>MU Java Classes</b> in the <b>JavaDocs and Java Classes</b> section at the bottom of the page,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Right-click on the link to <code><b>Flag.java</b></code> on the MU Classes page,<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;Choose "Save Link As..." or "Save File As...",<br />
+            &nbsp;&nbsp;&nbsp;&nbsp;and save the file in your <b>CSC120\Java\Lab1\src</b> folder<br /><br />
+			<!--&nbsp;&nbsp;Then switch to NetBeans, right-click on the file name <code><b>Flag.txt</b></code> in the tree in the left panel,<br/>
+			&nbsp;&nbsp;&nbsp;&nbsp;and rename the file "Flag.txt" to be "Flag.java".<br /><br /-->
+        </li>
+        <li>Before moving to the next step in this lab, be sure that your <code>Lab1</code> project contains two files in the <code><b>src</b></code>
+		    folder that are named <code><b>Flag.java</b></code> and <code><b>MUPanel.java</b></code>.<br /><br />
+        </li>
+      </ol>
+  </li>
+  
+  <li>Declare a Flag object in the appropriate place in the MUPanel.java file, like this:<pre>
+private Flag flag1;</pre>
+  </li>
+  
+  <li>In the appropriate place in the MUPanel.java file instantiate (construct) your Flag object.
+      To do this you'll need to know what parameters to pass to the constructor method of the Flag
+      class. To find that out you can click on the MU Java Docs page for Balloon, Flag, etc.
+      from the CSC 120 Resources page, and from there click on the docs for the Flag class.
+      Now scroll down and find the description of the constructor method to see what parameters
+      it expects. You'll need to add a line of code in the MUPanel.java file in the space
+      where you instantiate objects. It should look something like this:
+<pre>
+flag1 = new Flag( <em>... parameters go here ...</em> );
+</pre>
+      There are 4 values that you must specify to instantiate a new Flag object:  you must first
+	  specify 2 Integer values that represent the screen position of the upper-left corner of
+	  the Flag, and then you specify two different Color values; one Color for the Flag's 
+	  background, and a second Color for the horizontal stripe across the middle of the Flag.&nbsp; The
+	  parameters in parentheses are always separated by commas.<br/><br/>
+  </li>
+  
+  <li>Finally, in the paintComponent method of MUPanel, add a line of code that calls the
+      draw method of your Flag object. Don't forget to pass it the Graphics object it expects.
+<pre>
+flag1.draw(g);
+</pre>
+  <br>
+  </li>
+      
+  <li>Now declare 3 more Flag objects, instantiate them, and ask them to draw themselves.
+      Make sure your 4 Flag objects each use different flag & stripe color combinations,
+      are in different locations, and are visible (not outside of the MUPanel window).&nbsp;
+	  <a href="JavaColorNames.html" target="_blank"> Here is a list of color names</a> you can use
+	  in Java. <br /><br /></li>
+      
+  <li>Change the String used in the "<code><b>setName</b></code>" method of the MUPanel constructor
+	  so that your name replaces Samantha's in the title of the output window when the program is run.&nbsp; Next, edit
+	  the comment header at the top of the MUPanel class to show your name
+      and today's date instead of Samantha Student and the words "Today's Date". Finally, add a brief
+      description of what your program does. <br /><br /></li>
+
+  <li> Run your program so that the output window appears on your screen.&nbsp; Take a screen capture of just the output window that includes
+       the title bar showing your name (in Windows, this can be done in one of two ways:<br/><br/>
+	     <ol>
+		     <li> Click on the output window so that it is selected, then use the [Alt]-[PrtSc] keystroke.&nbsp; Next, open Windows Paint (type
+			      "Paint" in the Windows search area), paste in your screen capture, and save the image as a 
+				  <code><b>.png</b></code> file </li><br/>
+			 <li> Use the Windows Snip & Sketch tool (search for "Snip" in the Windows search area), then save your screen snip as a 
+			      <code><b>.png</b></code> file</li>
+		 </ol><br/>
+		 Ask your 
+	   lab instructor for help if needed with this process.&nbsp; You will save your screen capture as a <code><b>.png</b></code> file to be submitted along with
+	   your NetBeans project.<br/><br/></li>	  
+	  
+  <li>Hand in your project by following these steps: <br/><br/>
+      <ol type="a">
+	    <li> Click on the &thinsp; <img src="WindowsExplorer.png" alt="file folder" /> &thinsp; icon at the bottom of the screen 
+		     to open File Explorer, and browse to the 
+		     location of your <b><code>CSC120\Java</code></b> folder.<br/><br/> </li>
+		
+	    <li> Right-click on the folder named <b><code>Lab1</code></b> and choose "Send To&thinsp; &#x25B6; &thinsp;Compressed (zipped) folder".&nbsp;
+	         This will create a new file named <b><code>Lab1.zip</code></b> in the current folder, which is a compressed file that contains your
+	         entire NetBeans project.<br/><br/> </li>
+	  
+	    <li> Use a web browser to <a href="http://d2l.mountunion.edu" target="_blank"> login to D2L</a>,
+	         and go to the CSC 120 course in your course list.<br/><br/> </li>
+		
+	    <li> Find the Lab01 dropbox folder (the Course Tour video showed you how to find the dropbox for an assignment).&nbsp; This will 
+		    display the "Lab01 Submit Files" page,
+	         and you will want to find the "Add a File" button about halfway down the page &mdash; click this button now.<br/><br/> </li>
+		
+	    <li> Click on the "Upload" button in the dialog window that appears, browse to your <b><code>CSC120\Java</code></b> folder,
+   	         and select the file named "Lab01.zip".&nbsp; Click the blue "Add" button. <br/><br/> </li>
+			 
+	    <li> Click the "Upload" button again, and this time browse to the folder in which you saved your screen capture .png file.&nbsp; Select
+		     that file and click the blue "Add" button. <br/><br/> </li>
+			 
+	    <li> Click the blue "Submit" button.&nbsp;
+	         If you did this correctly, you should receive a "File submission successful" message in your browser.&nbsp; You will also receive
+	         an e-mail message confirming that you submitted the files to the CSC 120 Lab01 dropbox.<br/><br/> </li>
+	  </ol>
+	  
+	  If you have any questions about submitting work, ask your instructor for clarification or help.<br /><br /></li>
+
+  <li><em>If time remains in this class period</em>, create a new NetBeans project called Lab1B that draws 3 
+          differently-colored Flags
+          at the same vertical position across the bottom part of the display window, with a Balloon 
+		  located above each Flag.&nbsp; Each Balloon should be the same color as the central stripe on each
+		  Flag.&nbsp; Show your results to your instructor if you are able to get this to work before the 
+		  end of today's class session.&nbsp; You won't need to submit the Lab1B project to D2L.<br /><br /></li>
+
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab01_rubric.html" target="_blank"> Lab01 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>
+

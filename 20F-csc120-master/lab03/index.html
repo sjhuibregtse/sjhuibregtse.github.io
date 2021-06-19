@@ -1,0 +1,233 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=ISO-8859-1" />
+  <title> CSC 120 Lab 3</title>
+</head>
+
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee" text="#000000">
+ 
+<h2 align="center"><font color="#990099">CSC 120 Lab 3</font></h2>
+
+In this lab we will:
+<ul>
+    <li>Add a Java source file for an existing class created by someone else to a project.
+    </li>
+    <li>Change an existing class by adding data properties and revising methods.
+    </li>
+    <li>Practice using several of the drawing methods of the Graphics class.
+    </li>
+</ul>
+
+<hr>
+
+<ol type="A">
+
+<!--
+    <li><b>Watch <a href="../../../Videos/EditAnExistingClass.wmv">this video, </a></b> which demonstrates editing the draw method of a graphical class.<br /><br />
+    
+        <ol>
+        
+            <li>Watch the video.<br /><br /></li>
+            <li>Refer back to the video, and to the <a href="../../../GraphicsTutorial.jpg">Graphics Tutorial</a> as needed.<br /><br /></li>
+        </ol>
+        
+    </li>
+-->
+
+    <li><b>Take a quick look at the <a href="../resources/GraphicsTutorial.jpg">Java Graphics Tutorial</a> page to see some available methods of the Graphics class.</b><br /><br />
+    
+        <ol>
+            <li>Refer back to the Graphics Tutorial page as needed, while working on this lab.<br /><br /></li>
+        </ol>
+        
+    </li>
+
+    <li><b>Create a new NetBeans project called Lab3 in your CSC120\Java folder, then copy the Boat &amp; MUPanel classes.</b><br /><br />
+
+        <ol>
+            <li>Visit the <a href="../resources.html" target="_blank">CSC 120 Resources Page</a>, click the link
+    			at the bottom of the page to "MU Java Classes" and
+			    save the <b>Boat.java</b> file to the src folder of your project.<br/><br/>
+            </li>
+            <li>In your web browser <b>right-click</b>
+                on <b><a href="MUPanel.java"> this MUPanel.java</a></b> and save
+                the file into the src folder of your Lab3 project.<br /><br />
+            </li>
+            
+            <li>In NetBeans open the MUPanel.java file to edit it.
+                Look over the comment header at the top, and change the name and date
+                to your name and today's date.
+                In the MUPanel constructor, set the panel name to "CSC 120 Lab 3 by Samantha Student" (but be sure to use <b><em>your name</em></b> instead of Samantha's!)
+                replacing "Java Program" in the <code>setName</code> statement.<br /><br />
+            </li>
+            
+            <li>Notice where we have <b>declared</b> a Boat object called <code>boat1</code>,
+                <b>instantiated/constructed</b> the Boat object passing specific values
+                for over and down to the Boat constructor method,
+                and <b>used</b> the Boat object by calling its <code>draw</code> method
+                and its <code>toString</code> method.<br /><br />
+            </li>
+            
+            <li>Run the program to see what it does.
+                <b>System.out.println</b> "prints" (displays) stuff in the Java Console window
+                (the <b><em>Output</em></b> window in the bottom part of NetBeans).
+                System.out.println always expects you to pass it a String parameter
+                or stuff that is concatenated (glued together) to make a String.
+                Using + with literal numbers and integer variables adds them together as expected,
+                but using + between a literal String or a String variable and another String
+                or even a number does String concatenation. We'll use String concatenation
+                and System.out.println often.<br /><br />
+            </li>
+        </ol>
+
+    </li>
+
+    <li><b>Edit the project's MUPanel.java file to declare, instantiate, and use more Boats.</b><br /><br />
+
+        <ol>
+
+            <li>In the MUPanel.java file edit the Java code to declare Boat
+                objects called <code>boat2</code> and <code>boat3</code>. You may either add a separate line for each
+                declaration and mimic the style we used to declare <code>boat1</code>, or you may declare all three
+				Boat objects with one line of code. Don't forget
+                the semicolon on the end of every line.<br /><br />
+            </li>
+            <li>In the constructor method of the MUPanel.java file, where we have
+                instantiated our <code>boat1</code>, add lines of Java code to instantiate
+				<code>boat2</code> and
+                <code>boat3</code>, using different values for the overs and downs and the names of the boats. Also, add lines
+                of Java code to use System.out.println and the <code>toString</code> method of these
+                Boats to display information about them in the Java Console.<br /><br />
+            </li>
+            <li>In the <code>paintComponent</code> method of the MUPanel.java file we have asked
+                <coat>boat1</code> to draw itself. Add lines of Java code to ask the other Boats to
+                draw themselves.<br /><br />
+            </li>
+            <li>Run the program, fix any errors that are noted, etc. until
+                you get it to run properly, showing all three Boats in the program
+                display window and printing information about all three Boats in the
+                Java Console.<br /><br />
+            </li>
+        
+        </ol>
+    
+    </li>
+
+    <li><b>Edit the Boat.java file to make changes to the Boat class.</b><br /><br />
+    
+        <ol>
+        
+
+            <li>Click <a href="Lab3Finished.png" target="_blank">HERE</a>
+                to see an example of how your Boats should look after you change the
+                Boat class. Your Boats may not look exactly like this: the positions
+                (overs &amp; downs) will be different, the names will be different, and
+                the port holes may be located differently, but this shows you the ideas
+                of the names on the sails, the port holes, and the mast support lines.<br /><br />
+            </li>
+            
+            <li>Open the Boat.java file and make the following changes.
+                <font color="red">You are strongly encouraged to draw a
+                picture of a Boat on paper, and label coordinates and distances to help
+                you figure out what values to use in the following drawOvals,
+                fillOvals, drawString, and drawLines!!</font><br /><br />
+                
+                <ol type="a">
+                
+                    <li>In the <code>draw</code> method right after the comment "// port holes"
+                        add lines of Java code to make three port holes. For each port hole set
+                        the color for the Graphics object called <code>g</code> to Color.YELLOW, use the
+                        fillOval method of <code>g</code> to make a solid yellow circle, set the <code>g</code> color to
+                        Color.BLACK, and finally use the drawOval method to make a hollow black
+                        oval outlining the yellow oval.<br /><br />
+						
+						NOTE:&nbsp; All of your code MUST draw the shapes that will make the portholes
+						<em>relative</em> to the <b><code>anchorX</code></b> and <b><code>anchorY</code></b> points of the
+						Boat.&nbsp; In other words:<br/>
+						<table width="80%" align="center">
+						    <tr>
+							    <th width="65%" align="left"> Do stuff like this: </th>
+								<th width="35%" align="left"> But NOT like this: </th>
+							</tr>
+						    <tr>
+							    <td width="65%"> <code> g.drawOval(anchorX &ndash; 15, anchorY + 30, 20, 20);</code> </td>
+								<td width="35%"> <code> g.drawOval(85, 215, 20, 20);</code> </td>
+							</tr>
+						</table><br/>
+
+                        Rerun the project, then re-edit Boat.java as needed, getting your
+                        port holes the way you want them before proceeding.<br /><br />
+                    </li>
+                
+                    <li>In the <code>draw</code> method right after the comment "// name on the
+                        sail" add lines of Java code to set the color to Color.BLACK and use
+                        the <code>drawString</code> method of the <code>g</code> object to display the name of the Boat
+                        on the sail.<br /><br />
+
+                        Rerun, fix, run, test, fix, etc.<br /><br />
+                    </li>
+                
+                    <li>In the <code>draw</code> method right after the comment "// lines
+                        steadying the mast" add code to set the color to Color.YELLOW and use
+                        the <code>drawLine</code> method of the <code>g</code> object to draw lines from the front and
+                        back of the Boat to the top of the mast. Recompile, run, test, fix, etc.<br /><br />
+                    </li>
+                
+                    <li>Continue running the program, fixing any errors that are noted, etc. until
+                        you get it to run without errors and display appropriately.<br /><br />
+                    </li>
+                
+                    <li>You may add other features to your Boat class, if you like.<br /><br />
+                    </li>
+                
+                </ol>
+            </li>
+        
+        </ol>
+        
+    </li>
+
+      
+    <li><b>Add a fourth Boat object.</b><br /><br />
+        <ol>
+            <li>Edit the MUPanel.java file to declare, instantiate and draw a fourth Boat object
+			    so that it is displayed on the screen in a way that doesn't overlap the other boats, and 
+				so that it has a different name than the other boats shown on its sail.&nbsp; Do <b>NOT</b>
+				make any changes to the Boat class to do this.<br /><br />
+            </li>
+            <li>If you wrote the <code>draw</code> method of your Boat class correctly, your fourth boat will 
+			    have portholes in the proper place, lines from the mast to the boat deck, etc.&nbsp; If you used
+				numbers instead of drawing things relative to the (anchorX, anchorY) point of the Boat, then your
+				new boat won't have portholes.&nbsp; Ask your instructor for help if your fourth boat isn't displayed
+				correctly.<br/><br/>
+            </li>
+        </ol>
+    </li>
+
+    <li><b>Hand in your Lab3 Project.</b><br /><br />
+      <ol>
+	    <li>Run your program and obtain a screen capture of the window that includes the title in the frame that shows your name, and save
+		    the capure as a .png file.</li> <br/>
+	      <li>Use File Explorer to convert  your <b>CSC120\Java\Lab3</b> folder into a .zip file by right-clicking on the Lab3 folder and 
+		    choosing "Send To > Compressed (zipped) folder".</li> <br/>
+	    <li>Then log into the
+			<a href="http://d2l.mountunion.edu" target="_blank"> D2L homepage</a>, go to CSC 120 in your list of courses,
+			and upload/submit the Lab3.zip
+			file and the screen capture .png file into the Lab3 dropbox using the techniques from the previous labs.&nbsp; Ask your
+			instructor for help if you need it. <br/><br/>
+      </ol>
+  </li>
+
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab03_rubric.html" target="_blank"> Lab03 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

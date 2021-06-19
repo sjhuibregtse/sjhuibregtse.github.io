@@ -1,0 +1,182 @@
+<html>
+<head>
+  <title>CSC 120 Test 2 Review</title>
+</head>
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee"
+ text="#000000">
+<center>
+<h2><font color="#990099">CSC 120 <br />
+                          Review for Test 2 <br/>
+						  Answer Page </font></h2>
+</center>
+
+
+    <ol>
+    <li>Consider the following Java class:
+<pre>
+    public class Book {
+	
+        private String title;
+        private Integer numPages;
+		
+        public Book( String t, Integer n ) {
+            title = t;
+            numPages = n;
+        }
+		
+        public String toString() {
+            return "This book's title is " + title + " and it contains " + numPages + " pages";
+        }
+		
+        public String getTitle() {
+            return title;
+        }
+		
+        public Integer getNumPages() {
+            return numPages;
+        }
+		
+        public void setTitle( String t ) {
+            title = t;
+        }
+		
+        public void setNumPages( Integer n ) {
+            numPages = n;
+        }
+		
+    } // end of class Book
+</pre>
+  <ol type="a">
+      <li>Write one line of code that declares a <code>Book</code> private data member named <code>novel</code>.
+	  <font color="blue">
+          <pre>    private Book novel;</pre>
+        </font> </li>
+      <li>Write one line of code that instantiates <code>novel</code>.
+	  <font color="blue">
+          <pre>    novel = new Book("Tom Sawyer", 293);</pre>
+        </font> </li>
+      <li>Write one line of code that uses the <code>toString</code> method to 
+	  print <code>novel</code>'s data to the Java Console.
+	  <font color="blue">
+          <pre>    System.out.println(novel.toString());</pre>
+        </font> </li>
+      <li>Write one line of code that displays <code>novel</code>'s title in the 
+	  Graphical Output Window at location (300, 50).
+	  <font color="blue">
+          <pre>    g.drawString(novel.getTitle(), 300, 50);</pre>
+        </font> </li>
+      <li>Write one line of code that sets <code>novel</code>'s number of pages to 234.
+	  <font color="blue">
+          <pre>    novel.setNumPages(234);</pre>
+        </font> </li>
+      <li>Write one line of code that prints <code>novel</code>'s number of pages to the Java Console.
+	  <font color="blue">
+          <pre>    System.out.println(novel.getNumPages());</pre>
+        </font> </li>
+      <li>Write a method named <code>showNum</code>, which has one <code>Integer</code> parameter and returns nothing.
+        The method should print "big" to the Java Console if the value of the parameter
+        is greater than 100, and otherwise the method should print "little" to the Java Console.
+		<font color="blue">
+          <pre>    public void showNum(Integer num)
+    {
+        if (num &gt; 100) {
+            System.out.println("big");
+        }
+        else {
+            System.out.println("little");
+        }
+    }
+</pre>
+        </font> </li>
+		
+      <!--li>Write a method named <code>draw</code>, which has one <code>Graphics</code> parameter,
+        and returns nothing. Assume that the Graphical Output Window is 500 pixels wide and 400 pixels high.
+        The method you write should draw a green square that is 50 pixels on a side
+        in the upper right corner of the window, and should draw a blue oval
+        that is 50 pixels wide and 20 pixels high in the lower left corner of the window.
+        <font color="blue">
+          <pre>    public void draw(Graphics g)    {
+        g.setColor(Color.GREEN);
+        g.drawRect(440, 10, 50, 50);
+        g.setColor(Color.BLUE);
+        g.drawOval(10, 340, 50, 20);
+    }
+</pre>
+        </font> </li-->
+    </ol>
+	
+      <li>What is the output of the following Java program fragment in the Java Console?
+<pre>
+    Double value = 77.5;
+    if ( value > 25 ) {
+        System.out.println( value + " is greater than 25" );
+    }
+    else if ( value > 50 ) {
+        System.out.println( value + " is greater than 50" );
+    }
+    else if ( value &lt;= 25 ) {
+        System.out.println( value + " is less than or equal to 50" );
+    }
+</pre>
+        <font color="blue">
+<pre>
+        77.5 is greater than 25
+</pre>
+        </font> </li>
+		
+      <li>What is the output of the following Java program fragment in the Java Console?
+<pre>
+    Double value = 77.5;
+    if ( value > 25 ) {
+        System.out.println( value + " is greater than 25" );
+    }
+    if ( value > 50 ) {
+        System.out.println( value + " is greater than 50" );
+    }
+    if ( value &lt;= 25 ) {
+        System.out.println( value + " is less than or equal to 50" );
+    }
+</pre>
+        <font color="blue">
+<pre>
+        77.5 is greater than 25
+        77.5 is greater than 50
+</pre>
+        </font> </li>
+		
+      <li>What is the output of the following Java program fragment?
+<pre>
+    Integer diameter = 10;
+    Double circumference = diameter*3.14159;
+    System.out.println( "The circumference of a circle with diameter = " );
+    System.out.println( diameter );
+    System.out.println( " is " );
+    System.out.println( circumference );
+</pre>
+        <font color="blue">
+<pre>
+        The circumference of a circle with diameter =
+        10
+         is
+        31.4159		
+</pre>
+        </font> </li>
+		
+      <li>What is the output of the following Java program fragment?
+<pre>
+    Integer diameter = 10;
+    Double circumference = diameter*3.14159;
+    System.out.print( "The circumference of a circle with diameter = " );
+    System.out.print( diameter );
+    System.out.print( " is " );
+    System.out.println( circumference );
+</pre>
+        <font color="blue">
+<pre>
+        The circumference of a circle with diameter = 10 is 31.4159		
+</pre>
+        </font> </li>
+		
+    </ol>
+  </body>
+</html>

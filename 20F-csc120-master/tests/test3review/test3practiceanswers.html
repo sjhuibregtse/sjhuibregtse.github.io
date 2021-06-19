@@ -1,0 +1,435 @@
+<html>
+<head>
+  <title>CSC 120 Practice for Test 3 (Answers)</title>
+</head>
+
+<body>
+<h2 align="center">CSC 120 Practice for Test 3 (Answers)</h2>
+<ol>
+
+  <li><a name="three"></a> Consider the following class definitions:
+<pre>
+public class MUPanel extends JPanel {
+
+
+
+
+
+
+
+
+
+    public MUPanel( ) {
+
+
+
+
+
+
+
+
+
+
+
+
+        displayAllPresidents( );
+
+    } // end of constructor
+    
+    
+    public void displayAllPresidents( ) {
+        System.out.println("Here are all the Presidents:");
+        
+        for (Integer p = 0; p &lt; prezArray.length; p++) {
+            System.out.println( "\t" + prezArray[p].toString( ) );
+        }
+    } // end of displayAllPresidents
+
+    //  frame and main methods would appear here...
+    //  Omitted to save space.
+
+} // end of class MUPanel
+
+public class President {
+    private String name;
+    private String party;
+    
+    public President ( ) {
+        name = "";
+        party = "";
+    } // end of constructor
+    
+    public void setParty( String p ) {
+        party = p;
+    } // end of setParty
+    
+    public void setName( String n ) {
+        name = n;
+    } // end of setName
+    
+    public String toString( ) {
+        return "President " + name + " (" + party + ")";
+    } // end of toString
+    
+} // end of class President
+</pre>
+
+Perform each of the following steps in turn: <br>
+    <br>
+    <ol type="a">
+      <li> In the proper place in the <code>MUPanel</code> class,
+declare an array of <code>President</code> objects named "<code>prezArray</code>"
+(be
+sure to use this name exactly). </li>
+      <li> In the proper place in the <code>MUPanel</code> class,
+instantiate the array of <code>President</code> objects so that there
+are 47 elements in the array. </li>
+      <li> In the proper place in the <code>MUPanel</code> class, use
+a loop to instantiate every <code>President</code> object the array,
+using the <b>no-parameter</b> constructor. </li>
+      <li> In the proper place in the <code>MUPanel</code> class,
+write a single statement that sets the value of the name of the <code>President</code>
+object in position 25 in the array to the <code>String</code> value
+"McKinley". </li>
+      <li> In the proper place in the <code>MUPanel</code> class,
+write a single statement that sets the value of the party of the <code>President</code>
+object in position 25 in the array to the <code>String</code> value
+"R". </li>
+      <li> In the proper place in the <code>MUPanel</code> class,
+write two separate statements that causes the <code>President</code>
+object in position 35 in the array to represent the name and party
+"Kennedy" and "D", respectively. </li>
+      <li> In the proper place in the <code>MUPanel</code> class,
+write a single statement that displays the result of the <code>toString</code>
+method for the <code>President</code> object in position 14 in the
+array in the Java Console. </li>
+    </ol>
+    <br>
+    <font color="#990000">ANSWERS: Here is the MUPanel class with the
+answers filled in:
+<pre>
+    public class MUPanel extends JPanel {
+	
+	
+        /* a. */  private President[] prezArray;<br><br>        <br>        public MUPanel() {<br>            <br>            /* b. */  prezArray = new President[47];<br><br>            /* c. */  for (Integer x = 0; x &lt; prezArray.length; x++) {<br>                          prezArray[x] = new President();<br>                      }<br><br>            /* d. */  prezArray[25].setName( "McKinley" );<br><br>            /* e. */  prezArray[25].setParty( "R" );<br><br>            /* f. */  prezArray[35].setName( "Kennedy" );<br>                      prezArray[35].setParty( "D" );<br><br>            /* g. */  System.out.println( prezArray[14].toString() );<br><br>            displayAllPresidents();<br>        } // end of constructor<br><br>        public void displayAllPresidents() {<br>            System.out.println("Here are all the Presidents:");<br>            for (Integer p = 0; p &lt; prezArray.length; p++) {<br>                System.out.println( "\t" + prezArray[p].toString() );<br>            }<br>        } // end of displayAllPresidents()<br>
+        //  frame and main methods would appear here...
+        //  Omitted to save space.
+	
+    } // end of class MUPanel<br>    </pre>
+    </font> </li>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+  <li><a name="four"></a> Fill in the blanks to show the contents of every position in the array
+      after
+      the constructor method of the MUPanel class shown here is executed:
+<font color="#990000">
+<pre>
+public class MUPanel extends JPanel {
+                                                                         list[0]:  __<u>magic # is 3</u>____
+    private String[] list;
+                                                                         list[1]:  __<u>hey</u>_____________
+    public MUPanel() {
+                                                                         list[2]:  __<u>I am string # 2</u>_
+        list = new String[10];
+                                                                         list[3]:  __<u>magic # is 3</u>____
+        for (Integer k = 1; k &lt; list.length; k = k + 3) {
+            list[k] = new String("hey!");                                list[4]:  __<u>hey</u>_____________
+        }
+                                                                         list[5]:  __<u>I am string # 5</u>_
+        for (Integer k = 2; k &lt; list.length; k = k + 3) {
+            list[k] = new String("I am string # " + k);                  list[6]:  __<u>magic # is 3</u>____
+        }
+                                                                         list[7]:  __<u>hey</u>_____________
+        for (Integer k = 0; k &lt; list.length; k = k + 3) {
+            list[k] = new String("magic # is 3");                        list[8]:  __<u>I am string # 8</u>_
+        }
+                                                                         list[9]:  __<u>magic # is 3</u>____
+    } // end of constructor
+
+} // end of class MUPanel
+
+</pre>
+    </font> <br>
+  </li>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+  <li><a name="five"></a> Consider the following class definitions:
+<pre>
+    public class MUPanel extends JPanel {
+	
+        public MUPanel() {
+		
+            Team[] teamList = new Team[12];
+            teamList[0]  = new Team("Cleveland", "Browns", 4, 6);
+            teamList[1]  = new Team("Indianapolis", "Colts", 6, 4);
+            teamList[2]  = new Team("Tennessee", "Titans", 5, 5);
+            teamList[3]  = new Team("Dallas", "Cowboys", 6, 4);
+            teamList[4]  = new Team("Chicago", "Bears", 4, 6);
+            teamList[5]  = new Team("Buffalo", "Bills", 7, 3);
+            teamList[6]  = new Team("Green Bay", "Packers", 8, 2);
+            teamList[7]  = new Team("Minnesota", "Vikings", 8, 3);
+            teamList[8]  = new Team("Pittsburgh", "Steelers", 5, 5);
+            teamList[9]  = new Team("Philadelphia", "Eagles", 5, 5);
+            teamList[10] = new Team("New York", "Giants", 2, 8);
+            teamList[11] = new Team("Cincinnati", "Bengals", 0, 10);
+            
+            displayAllTeams( teamList );
+
+            displayTeamsWith7orMoreWins( teamList );
+
+            displayTeamsWithMoreWinsThan( 5, teamList );
+
+            displayLosingRecordTeams( teamList );
+
+            System.out.println("\nThe average number of wins is "
+                    + returnAverageWins( teamList ) );
+					
+        } // end of constructor
+
+        public void displayAllTeams( Team[] theArray ) {
+            System.out.println("\nAll Teams in the array:");
+
+            /* your code goes here: */
+
+
+
+
+        } // end of displayAllTeams()
+
+        public void displayTeamsWith7orMoreWins( Team[] theArray ) {
+            System.out.println("\nAll Teams with at least 7 wins:");
+
+            /* your code goes here: */
+
+
+
+
+        } // end of displayTeamsWith7orMoreWins()
+
+        public void displayTeamsWithMoreWinsThan( Integer numWins, Team[] theArray ) {
+            System.out.println("\nAll Teams with more than " + numWins + " wins:");
+
+            /* your code goes here: */
+
+
+
+
+        } // end of displayTeamsWithMoreWinsThan()
+
+        public void displayLosingRecordTeams( Team[] theArray ) {
+            System.out.println("\nAll Teams with losing records:");
+
+            /* your code goes here: */
+
+
+
+
+        } // end of displayLosingRecordTeams
+
+        public Double returnAverageWins( Team[] theArray ){
+
+            /* your code goes here: */
+
+
+
+
+        } // end of returnAverageWins()
+
+        //  frame and main methods would appear here...
+        //  Omitted to save space.
+
+    } // end of class MUPanel
+
+
+    public class Team {
+
+        private String city;
+        private String nickname;
+        private Integer wins, losses;
+
+        public Team (String c, String n, Integer won, Integer lost) {
+            city = c;
+            nickname = n;
+            wins = won;
+            losses = lost;
+        } // end of constructor
+
+        public String getCity() {
+            return city;
+        } // end of getCity()
+
+        public String getNickname() {
+            return nickname;
+        } // end of getNickname()
+
+        public Integer getWins() {
+            return wins;
+        } // end of getWins()
+
+        public Integer getLosses() {
+            return losses;
+        } // end of getLosses()
+
+        public String toString()  {
+            return "The " + city + " " + nickname + " have a record of "
+                          + wins + " and " + losses;
+        } // end of toString()
+
+    } // end of class Team
+</pre>
+Perform each of these steps in turn: <br>
+    <br>
+    <ol type="a">
+      <li> Complete the body of the method named <code>displayAllTeams</code>
+in the MUPanel class so that it uses a loop to display the results
+returned by the <code>toString</code> method for every Team element in
+the array on a separate line in the Java Console. Run the program to
+see if the results are what you expect.</li>
+      <li> Complete the body of the method named <code>displayTeamsWith7orMoreWins</code>
+in the MUPanel class so that it uses a loop to display ONLY those Teams
+in the array that have 7 or more wins. Run the program to see if the
+results are what you expect.</li>
+      <li> Complete the body of the method named <code>displayTeamsWithMoreWinsThan</code>
+in the MUPanel class so that it uses a loop to display ONLY those Teams
+in the array that have more wins than the parameter value that is
+passed into the method. Run the program to see if the results are what
+you expect.</li>
+      <li> Complete the body of the method named <code>displayLosingRecordTeams</code>
+in the MUPanel class so that it uses a loop to display ONLY those Teams
+in the array that have losing records (more losses than wins). Run the
+program to see if the results are what you expect.</li>
+      <li> Complete the body of the method named <code>returnAverageWins</code>
+in the MUPanel class so that it uses a loop to calculate and return the
+average number of wins for all Teams in the array. The average should
+be a <strong> Double </strong> value (meaning there will be digits to
+the right of a decimal point!). Run the program to see if the results
+are what you expect.</li>
+    </ol>
+    <br>
+    <font color="#990000">ANSWERS: </font>
+    <blockquote><font color="#990000"> </font>
+      <ol type="a">
+        <font color="#990000">
+        <li>
+          <pre>    public void displayAllTeams( Team[] theArray ) {<br>        System.out.println("\nAll Teams in the array:");<br>        for (Integer t = 0; t &lt; theArray.length; t++) {<br>            System.out.println("    " + theArray[t].toString());<br>        } // end for<br>    } // end of displayAllTeams()<br></pre>
+        </li>
+        <li>
+          <pre>    public void displayTeamsWith7orMoreWins( Team[] theArray ) {<br>        System.out.println("\nAll Teams with at least 7 wins:");<br>        for (Integer t = 0; t &lt; theArray.length; t++) {<br>            if (theArray[t].getWins() &gt;= 7) {<br>                System.out.println("    " + theArray[t].toString());<br>            } // end if<br>        } // end for<br>    } // end of displayTeamsWith7orMoreWins()<br></pre>
+        </li>
+        <li>
+          <pre>    public void displayTeamsWithMoreWinsThan( Integer numWins, Team[] theArray ) {<br>        System.out.println("\nAll Teams with at least " + numWins + " wins:");<br>        for (Integer t = 0; t &lt; theArray.length; t++) {<br>            if (theArray[t].getWins() &gt; numWins) {<br>                System.out.println("    " + theArray[t].toString());<br>            } // end if<br>        } // end for<br>    } // end of displayTeamsWithMoreWinsThan()<br></pre>
+        </li>
+        <li>
+          <pre>    public void displayLosingRecordTeams( Team[] theArray ) {<br>        System.out.println("\nAll Teams with losing records:");<br>        for (Integer t = 0; t &lt; theArray.length; t++) {<br>            if (theArray[t].getWins() &lt; theArray[t].getLosses()) {<br>                System.out.println("    " + theArray[t].toString());<br>            } // end if<br>        } // end for<br>    } // end of displayLosingRecordTeams()<br></pre>
+        </li>
+        <li>
+          <pre>    public Double getAverageWins( Team[] theArray ) {<br>        Double sum = 0;<br>        Double average = 0;<br><br>        for (Integer t = 0; t &lt; theArray.length; t++) {<br>            sum = sum + theArray[t].getWins();<br>        } // end for<br><br>        average = sum / theArray.length;<br>        return average;<br>    } // end of getAverageWins()<br></pre>
+        </li>
+        </font>
+      </ol>
+      <font color="#990000"> </font></blockquote>
+    <font color="#990000"></font> </li>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+	<br/><br/><br/><br/><br/><br/><br/><br/>
+  <li><a name="nine">Write a Java class definition for a class named <b>Dog</b>
+    <ol type="a">
+      <li>Dog has two data members: <b>name</b> and <b>age</b>.</li>
+      <li>The class should have a constructor method, two getters, two
+setters, and a toString method.</li>
+      <li>The constructor should have both name and age parameters.</li>
+      <li>The age of a dog must be from 0 to 20. If an attempt is made
+to make an age less than 0, then an appropriate error message should be
+printed in the Java Console and the age should be set to 0. If an
+attempt is made to make an age greater than 20, then an appropriate
+error message should be printed in the Java Console and the age should
+be set to 20. </li>
+      <li>A well-formed class should:
+        <ul>
+          <li>have a name that begins with a capital letter</li>
+          <li>have data members that begin with a lower case letter</li>
+          <li>have only private data members</li>
+          <li>initialize every data member in the constructor</li>
+          <li>have validity checks on parameters when appropriate</li>
+          <li>should never allow data members to be set to disallowed
+or unreasonable values</li>
+          <li>have code that is easy to read and self-documenting</li>
+        </ul>
+      </li>
+      <li>Here is some test code that could be used to test your Dog
+class:
+        <pre>
+public void testDog() {
+    
+    dog = new Dog("Fido", 2);
+    System.out.println("after 'new Dog(\"Fido\", 2)'   " + dog.toString());
+    
+    dog.setName("x");
+    System.out.println("after 'dog.setName(\"x\")'   " + dog.toString());
+
+    dog.setName("Brandy");
+    System.out.println("after 'dog.setName(\"Brandy\")'   " + dog.toString());
+    
+    dog.setAge(3);
+    System.out.println("after 'dog.setAge(3)'   " + dog.toString());
+
+    dog.setAge(30);
+    System.out.println("after 'dog.setAge(30)'   " + dog.toString());
+	
+    dog.setAge(-3);
+    System.out.println("after 'dog.setAge(-3)'   " + dog.toString());
+	
+} // end of testDog()
+</pre>
+      </li>
+      <li> <font color="#990000">ANSWER:
+        <blockquote>
+          <pre>
+public class Dog {
+
+    private String name;
+    private Integer age;
+
+    public Dog(String n, Integer a) {
+        setName(n);
+        setAge(a);
+    } // end of constructor
+
+    public String getName() {
+        return name;
+    } // end of getName()
+
+    public Integer getAge() {
+        return age;
+    } // end of getAge()
+
+    public String toString() {
+        return "A dog named " + name + ", that is age " + age;
+    } // end of toString()
+
+    public void setName(String n) {
+        name = n;
+    } // end of setName()
+
+    public void setAge(Integer a) {
+        if (a &lt; 0) {
+            System.out.println("age of dog must be at least 0");
+            System.out.println("can't use --- "+a);
+            a = 0;
+        } 
+        if (a &gt; 20) {
+            System.out.println("age of dog must be less than or equal to 20");
+            System.out.println("can't use --- "+a);
+            a = 20;
+        }
+        age = a;
+    } // end of setAge()
+	
+} // end of class Dog
+</pre>
+        </blockquote>
+        </font> </li>
+    </ol>
+  </li>
+</ol>
+</body>
+</html>

@@ -1,0 +1,52 @@
+<html>
+<head>
+  <title>CSC 120 Test 3 Review</title>
+</head>
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee"
+ text="#000000">
+<center>
+<h2><font color="#990099">CSC 120 <br />
+                          Review for Test 3</font></h2>
+</center>
+
+<h3> Short Answer Question # 5: </h3>
+<blockquote>
+    Write a <code>for</code> loop heading that makes the control variable of the loop take on the following
+	sequence of values, in this order:
+	<blockquote>
+        <font size="+1"> 120 &nbsp; &nbsp; 151 &nbsp; &nbsp; 182 &nbsp; &nbsp; 213 &nbsp; &nbsp; 
+		                 244 &nbsp; &nbsp; 275 </font>
+	</blockquote>
+	<form action="test3practice.html">
+	<b> The loop control variable must start with the value 120, increase each time through the loop by 31, and not
+	exceed 275.&nbsp; So, a <code>for</code> loop that would have its variable take on that sequence of
+	values would be:
+<pre>
+    <b> for ( Integer x = 120;  x &lt;= 275;  x = x + 31 ) </b>
+	
+	
+</pre>
+	<b><font color="red">IMPORTANT NOTE:</font></b>&nbsp; You cannot have this code shown in red text below
+	in the loop heading for this problem:
+<pre>
+    <b> for ( Integer x = 120;  x &lt;= 275;  <font color="red">x + 31</font> ) </b>
+</pre>
+    If you do that, x will never be changed, and will always be 120 in an infinte loop.&nbsp; You must change the
+	value of x each time through the loop with a statement like
+<pre>
+    <b> x = x + 31 </b>
+</pre>
+    or
+<pre>
+    <b> x += 31 </b>
+</pre>
+    as the third expression in the <code>for</code> loop.
+	<br/><br/>
+	
+	<input type="submit" value="Click for rest of review instructions"> 
+	</form>
+</blockquote>
+
+
+</body>
+</html>

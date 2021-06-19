@@ -1,0 +1,345 @@
+  <head>
+    <title>CSC 120 Lab 8</title>
+	  	<link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+	  <p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+    <font color="#660066">
+        <h2 align="center">CSC 120 Lab 8</h2>
+    </font>
+    <ol type="A">
+      <li><b><font face="Arial">Changing the RoundHead lab (Lab 6) to use an array of objects.</font></b><br />
+        <br />
+        <ol>
+          <li>Launch Netbeans and create a Java Application project
+            named <b>Lab8</b>
+            that is located in your CSC120 folder.<br />
+            <br />
+          </li>
+          <li>
+		    <ol type="a">
+			    <li>If your <b>Lab6</b> was fully implemented having the
+                    RoundHeads move horizontally, then open your your <b>Lab6</b> project
+                    in NetBeans, copy all of the files from the src folder, and
+                    paste them into the src folder of your new <span style="font-weight:
+                    bold;">Lab8 </span>project.<br/><br/>
+				</li>
+				<li>If your <b>Lab6</b> project is not working or you didn't
+                    completely implement at least the move horizontally stuff, then right-click
+                    on the following file and save it:
+					<blockquote>
+		               <a href="Lab8StarterFiles.zip"> Lab8StarterFiles.zip</a>
+		            </blockquote>
+                    Unzip and Extract All of the files, and copy <b><u>ALL FOUR</u></b>
+					of the files you unzipped into the src folder of your project.<br/><br/>
+			    </li>
+			</ol>
+            The starting point for Lab8 is a working version of the
+            Lab6 code
+            with the <code>RoundHead</code> objects.&nbsp; 
+            Run the new project to make sure that things are working
+            before
+            proceeding.<br />
+            <br />
+          </li>
+          <li>Edit the <b>MUPanel.java</b> file, and inspect the code
+            to find all declarations, instantiations and uses of the <code>RoundHead</code>
+            objects "firstOne", "secondOne", etc.<br />
+            <br />
+            Remove the declarations of separate, individual <code>RoundHead</code>
+            objects, and in their place, declare an array of <code>RoundHead</code>s
+            called <code>rhArray</code>.
+<b><pre>
+    private RoundHead[] rhArray;
+</pre></b>
+            In the <code>MUPanel</code> constructor method, replace the
+            instantiations of the separate <code>RoundHead</code>
+            objects, and
+            instead instantiate <code>rhArray</code> so that it contains
+            19
+            elements. Then, write a loop that will be repeated once for
+            each
+            element in the array.
+<b><pre>
+    rhArray = new RoundHead[???];
+
+    for (Integer index = 0; index &lt; rhArray.length; index++) {
+        Boolean isHappy;
+	Color hatColor;
+	Integer over, down, vertStep, horizStep, size;
+	
+	isHappy = true;
+	hatColor = Color.RED;
+	over = /* replace with a formula as described below */;
+	down = /* replace with a formula as described below */;
+	vertStep = 15;
+	horizStep = 10;
+	size = 25;
+	
+        rhArray[index] = new RoundHead( isHappy, hatColor, over, down, vertStep, horizStep, size, "Sammy" );
+	
+    } // end of for loop
+</pre></b>
+            The code as written above won't work because you need to replace the right-hand sides of the assignment statements
+		  for over and down with a formula, as follows:<br />
+            <br />
+            <ul>
+              <li> over should be a formula that computes 30 times the <b>loop control
+                variable</b>.</li>
+              <li> down should be a formula that computes 20 times the <b>loop control
+                variable</b>.</li>
+                <br />
+              </li>
+            </ul>
+          </li>
+          <li>Don't forget to modify the methods in the <code>MUPanel</code> class
+		    that ask RoundHeads to
+            move, change their mood, and draw themselves. In each of
+            these methods
+            in the <code>MUPanel</code> class, add a <code>for</code>
+            loop
+            to call the appropriate method for each <code>RoundHead</code>
+            object
+            in the <code>rhArray</code> array. Run this program and
+            observe the
+            results.&nbsp; The output should show 19 roundheads in a diagonal
+            line, and
+            they should move, change moods and bounce off walls
+            correctly.<br />
+            <br />
+          </li>
+          <li>What if we don't want EVERY RoundHead to be Happy with a
+            red
+            hat?&nbsp; We can choose different values for each RoundHead
+            in the
+            array when it is constructed, as follows:&nbsp; inside the loop
+            in the <code>MUPanel</code>
+		  constructor method where we store a value in <code>isHappy</code>, we
+		  need an if/else statement because sometimes we want <code>isHappy</code> to be true
+		  and other times we want it to be false.&nbsp;
+            If
+            the
+            loop control variable is an EVEN NUMBER, store the value <b>true</b>
+            in <code>isHappy</code>; else, store <b>false</b> in <code>isHappy</code>.&nbsp;
+
+Recompile
+and
+run
+            the program.&nbsp; Did it work? <br />
+            <br />
+            Hint:&nbsp; an EVEN number is a number that has a remainder of 0 when divided by 2.&nbsp; You can find the remainder when dividing the variable
+		  named <code>index</code> by 2 with the expression <span style="background: #ff3"><code><b> index % 2</b></code></span>.&nbsp; If that expression is equal to zero, <code>index</code>
+		  is EVEN; if not, then <code>index</code> is ODD.<br/><br/>
+          </li>
+          <li> Change the program so that the first and last
+            RoundHeads have a GREEN hat.&nbsp; Run the program to verify that the
+			first and last elements in the array have different colored hats.&nbsp; You'll need an if statement to do this, and assign Color.GREEN
+		  or Color.RED to the variable named <code>hatColor</code> based on the value of <code>index</code>. <br />
+            <br />
+          </li>
+          <li> Change the program so that if the loop control variable is less than 12, the RoundHeads in the 
+		    index position in the array
+		    is instantiated with a size of 20, and the ones in positions that are not less than 12 in the array are initially
+			30 pixels in size.&nbsp; Run the program to verify that your changes were made correctly.<br />
+            <br />
+          </li>
+        </ol>
+      </li>
+      <li><b><font face="Arial">Experiments with an array of Star objects.</font></b><br />
+        <br />
+        <ol>
+          <li>It is now nighttime in RoundHead Land, so let's make some
+            changes to the program that will use a second array of
+            objects.<br />
+            <br />
+          </li>
+          <li>Copy the <code>Star</code> class into the src folder of
+            your
+            project.<br />
+            <p>
+              In your browser right click on: </p>
+            <ul>
+              <li><b><a href="Star.java">Star.java</a></b><br />
+              </li>
+            </ul>
+            <p>
+              and choose <b>Save Target As...</b> and save the file in
+              the src
+              folder of your project.&nbsp; Rename the file you copied in NetBeans 
+			  so that it has a .java extension.</p>
+          </li>
+          <li>Declare an array of <code>Star</code> objects at the top
+            of
+            the <code>MUPanel</code> class in the <b>MUPanel.java</b>
+            file. <br />
+            <br />
+          </li>
+          <li>Instantiate the array of <code>Star</code> objects in the
+            constructor method of the <code>MUPanel</code> class so
+            that the
+            array contains 100 elements. <br />
+            <br />
+          </li>
+          <li>In the constructor method of the <b>MUPanel.java</b>
+            file, write a loop that will be executed once for each of
+            the elements
+            in the array of <code>Star</code> objects.&nbsp; The body
+            of the loop
+            should:
+                <ul>
+                    <li> declare two <code>Integer</code> variables called <code>x</code>
+                         and <code>y</code> </li>
+                    <li> set <code>x</code> to the following value:&nbsp;  <code>(int) (Math.random()*590)</code> </li>
+                    <li> set <code>y</code> to the following value:&nbsp;  <code>(int) (Math.random()*390)</code> </li>
+                    <li> instantiate one element of the array,
+                         using <code>x</code> and <code>y</code> as the two
+                         parameters that
+                         are passed into the <code>Star</code> constructor method. </li>
+                </ul>
+            <br />
+            Note:&nbsp; <code>Math.random()</code>
+            is a method that returns a random decimal value between 0 and 1.&nbsp; It can be used to introduce unpredictability
+		  in our Java programs
+	  </li>
+          <li>
+            <p>In the <code>paintComponent</code> method of the <b>MUPanel.java</b>
+              file, write code that uses a loop to call the <code>draw</code>
+              method
+              of each <code>Star</code> object in the array.&nbsp; Place the
+			  loop that draws
+              the stars
+              BEFORE you draw the RoundHeads in the <code>paintComponent</code>
+              method. </p>
+          </li>
+          <li>
+            <p>If you run the program now, you won't see any stars,
+              because
+              they are white, and they are being drawn on a white
+              background.&nbsp;
+              Change the MUPanel.java file so that the background of the output
+              window is set to 
+              Color.BLACK, and run the program. </p>
+          </li>
+        </ol>
+      </li>
+      <li><b><font face="Arial">Make a .zip file from your CSC120\Lab8 folder, and obtain a screen capture of the output window after 
+	      running the program and moving the RoundHeads several times.&nbsp; Turn in both of these files from your Lab8 project in the 
+	      Dropbox in <a href="http://d2l.mountunion.edu" target="_blank">D2L</a> for grading.</font></b><br /> <br /> </li>
+</ol>	  
+	  
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab08_rubric.html" target="_blank"> Lab08 Grading Rubric</a>
+</blockquote>
+
+	&nbsp; <br /><br/>
+  
+	  <h3><b><font face="Arial"><em>Discussion Enhancements:</em>&nbsp; You may want to try these Optional Experiments that show how animation can work in Java.&nbsp;
+		  This is advanced coding, so this part of the Lab is optional.</font></b></h3>
+                <ol>
+		  <li> Declare a new RoundHead object named "Fred" in MUPanel.java, and instantiate Fred so that he is happy with
+		       a CYAN hat, is 60 pixels in size, moves 25 pixels horizontally and vertically, and is located at the start of 
+			   the program in the bottom-left corner of the screen somewhere.&nbsp; Be sure to draw Fred in the
+			   <code>paintComponent</code> method.
+		  </li>
+		  <li> <p>Add two new methods to MUPanel.java, as follows.&nbsp; The first method is named "moveFred", and it is a void
+		       method that accepts no parameters.&nbsp; In the <code>moveFred</code> method, call the <code>moveVertically</code> method and
+			   also the <code>moveHorizontally</code> method for the fred object.&nbsp; The second method is named "changeFredsMood", and
+			   it also is a void method that accepts no parameters.&nbsp; The <code>changeFredsMood</code> method should call the
+			   <code>changeMood</code> method for the fred object.
+		  </li>
+		  <li> <p>Switch to MUFrame.java in the editor, and change to "Design" mode.&nbsp; Add two new buttons to the interface, one
+		       labeled "Move Fred" and the other named "Change Fred's Mood".&nbsp; The actionPerformed methods for these two
+			   buttons should call the appropriate methods of the muPanel object that you wrote in the previous instruction, and then
+			   ask muPanel to repaint().&nbsp; Test the program now, and the new buttons should cause Fred to move or change mood 
+			   while the other RoundHeads remain stationary.
+		  </li>
+		  <li> <p>Now let's modify MUPanel so that the RoundHeads in the array move on the screen even if we aren't clicking the Move
+		       Roundheads button.&nbsp; To do this, copy the following code and paste it into MUPanel.java right above the comment that says,
+			   "Don't change anything below here":
+<pre>
+    private volatile Thread animator;
+    private Integer animationDelay = 200;
+ 
+    public void start() {
+        if (animator == null) {
+            animator = new Thread(this);
+            animator.start();
+        } // end if
+    } // end of start()
+
+    public void stop() {
+        animator = null;
+    } // end of stop()
+  
+    public void run() {
+        Thread thisThread = Thread.currentThread();
+        while (animator == thisThread) {
+            moveObjects();
+            repaint();
+			
+            try { Thread.sleep(animationDelay); }
+            catch (InterruptedException e) { }
+        } // end while
+    } // end of run()
+	
+</pre> 
+      Next, modify the class heading for the MUPanel class so that it looks like this:
+<pre>
+public class MUPanel extends JPanel implements Runnable {
+
+</pre>
+      Then, switch to MUFrame and add two more buttons to the interface, one named "Start Animation" and
+      the other named "Stop Animation".&nbsp; When the Start Animation button is clicked, you should call 
+      <code>muPanel.start()</code>; when the Stop Animation button is clicked, you should call
+      <code>muPanel.stop()</code>.&nbsp; Run the program, and try out the new buttons.&nbsp; 
+	  Can you move Fred around the screen and avoid the marching RoundHeads?	  
+		  </li>
+		  <li>
+		    <p>If you would want the animation to start as soon as the program starts, there is a simple way
+			to do that.&nbsp; In MUFrame.java, scroll to the end of the constructor method, and then right before the
+			closing brace for the method, call the <code>muPanel.start()</code> method.&nbsp; The constructor
+			is executed only once, when the program starts, and so the animation will begin right away instead
+			of waiting for the user to click the Start Animation button.&nbsp; You should be able to stop
+			and start the animation with the buttons as before.
+		  </li>
+		  <li>
+		    <p>The variable named <code>animationDelay</code> specifies the delay that will be used between 
+			repaintings, and is a number of milliseconds (thousandths of a second).&nbsp; You can make the animation
+			effects happen faster by using a smaller number for the animation delay, or slow it down with a bigger 
+			number for the delay.&nbsp;
+			Try changing the value of <code>animationDelay</code> in MUPanel.java, using 500 (which is a &frac12; second delay), then
+			try 100 (a tenth-of-a-second delay), and finally try 25 &mdash; that's really fast!&nbsp; Change the delay a final time to
+			a value that you like.
+		  </li>
+		  <li>
+		    <p>Add randomness to the instantiation of the RoundHead objects in your program
+			   so that the horizontal and vertical movement factors used for each RoundHead in the array
+			   is a random integer in the range from -30 to 30.&nbsp; Run the program and 
+			   watch the RoundHeads break out of their initial positions unpredictably.
+		  </li>
+          <li>Write a <code>ShootingStar</code> class
+            definition
+            based on the <code>Star</code> class that draws something
+            that looks
+            like a shooting star, and then declare, instantiate and draw
+            an array
+            of 10 shooting stars.&nbsp; The shooting stars should be
+            randomly
+            placed in the output window, in a manner that is similar to
+            the way the <code>Star</code>s were placed. </li>
+		  <li>
+		    <p>You could add a button or two to the interface to increase or decrease the <code>animationDelay</code>
+			value to speed up or slow down the
+			animation as it is running.&nbsp; To do that, you would need a <code>setAnimationDelay</code> method in MUPanel that could
+			be called from the actionPerformed methods in MUFrame.&nbsp; Or maybe you would like to try a Spinner or a Slider
+			for changing the animationDelay....
+		  </li> <br/>
+        </ol>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>
+	  

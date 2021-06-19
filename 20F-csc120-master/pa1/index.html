@@ -1,0 +1,260 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+<head>
+
+<meta http-equiv="content-type" content="text/html; charset=ISO-8859-1">
+  <title>CSC 120 Programming Assignment 1</title>
+</head>
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee"
+ text="#000000">
+<font color="#990099">
+<center>
+<h2>CSC 120 Programming Assignment 1</h2>
+</center>
+</font>
+<!--h4> Note:&nbsp;You should <b>not</b> work on this assignment during
+lecture or lab class-time unless:
+<ol type="a">
+  <li>You have completed all of the in-class assigned work for the day,
+and</li>
+  <li>You have permission from the instructor.</li>
+</ol>
+</h4-->
+<!--h4> This assignment must be handed in to your instructor's handin
+folder <b>before</b> the beginning of class on the due date. </h4-->
+<h3> Overview: </h3>
+<blockquote> Develop a Java Application program that draws a visual
+scene in the graphical output window. &nbsp;Your application must
+	declare, instantiate and draw <strong>at least two (2) objects</strong> from each of <strong>two
+	(2) different classes</strong> that represent visual objects (in other words,
+the classes must have a <code>draw</code> method that can be called
+from the <code>MUPanel</code> class).&nbsp; The two classes must draw
+two different-looking things on the screen, and each object must be
+drawn in a different screen location.&nbsp; Additionally, the student's
+name must be displayed somewhere in the output window using the <code>drawString</code>
+method of the <code>Graphics</code> class.&nbsp; Details of this
+assignment appear below. <br>
+  <br>
+In effect, this assignment is quite similar to the Boat lab that we've worked on 
+recently; with the
+requirement that two different-looking classes are written by the
+student, and at least two objects from each of the classes is drawn on
+the screen.
+</blockquote>
+
+<h3> Examples: </h3>
+<blockquote>
+    Here are several examples of program output that meets the requirements for the assignment.&nbsp; Click on an image to see a larger version.<br/><br/>
+    <a href="Samples/Quiddich.png" target="_blank"><img src="Samples/Quiddich.png" width="401" height="316"  /></a> &nbsp; &nbsp; &nbsp; &nbsp;
+    <a href="Samples/PA1JFK.jpg" target="_blank"><img src="Samples/PA1JFK.jpg" width="410" height="339" /></a> <br/><br/>
+    <a href="Samples/PA1-bbc.png" target="_blank"><img src="Samples/PA1-bbc.png" width="310" height="288" /></a> &nbsp; &nbsp; &nbsp; &nbsp;
+    <a href="Samples/PA1-bbc2.png" target="_blank"><img src="Samples/PA1-bbc2.png" width="310" height="288" /></a> <br/><br/>
+</blockquote>
+
+<h3> Instructions and Requirements: </h3>
+	
+<h4><em>Note:&nbsp; It is expected that each student will complete this
+	assignment <strong>INDIVIDUALLY</strong>.</em></h4>
+<ol>
+  <li>
+    <p>Create an application called <span style="font-weight: bold;">PA1
+    </span>(no
+spaces in the name, so <span style="font-weight: bold;">PA1</span>,
+not <span style="font-weight: bold;">PA 1</span>).&nbsp; It should
+have the classes <code>MUPanel</code>, <code>ThingOne</code> and <code>ThingTwo</code>
+in
+the files <b>MUPanel.java</b>, <b>ThingOne.java</b>
+and <b>ThingTwo.java</b>,
+respectively.&nbsp; To get started, you can use the <b>MUPanel.java</b> file
+from previous labs you've worked on in Java (Lab1, for example), and you should 
+right-click on the following two links and save the files in the <b>src</b> folder
+of your <b>PA1</b> project: <br/>
+    <ul>
+	  <li> <a href="ThingOne.java"> ThingOne.java</a> </li>
+	  <li> <a href="ThingTwo.java"> ThingTwo.java</a> </li>
+	</ul>
+    </p>
+	<p>Note:&nbsp; you should change the names <code>ThingOne</code> and <code>ThingTwo</code> to
+	names that are more meaningful for your project.&nbsp; As an example, good names for the classes used in
+	Example Two shown at the end of this
+	assignment description would be <code>Hummingbird</code> and <code>Flower</code>.
+	</p>
+  </li>
+  
+  <li>
+      <p>You may NOT use a class that has been used in previous labs or class examples for this assignment.&nbsp;
+	     So you may not have Balloons, Flags, SmileySuns, LollipopTrees, Boats, etc.&nbsp; You are to make up your own
+		 visual objects and develop class definitions for your items.</p>
+  </li>
+
+  <li>
+    <p>In the <code>MUPanel </code>class, you must DECLARE two or
+more private objects of type <code>ThingOne</code>, and also
+DECLARE two or more objects of 
+type <code>ThingTwo</code>.&nbsp; As an illustration, the program that produced the
+Skiing Snowmen sample above declares five (5) objects from a <code>ThingOne</code> class that draws
+a Pine Tree, and two (2) objects
+from a <code>ThingTwo</code> class that draws a Snowman.
+    <br>
+    <br>
+INSTANTIATE all of these objects inside the <code>MUPanel </code>constructor
+method.
+    <br>
+    <br>
+In the <code>paintComponent</code> method of the <code>MUPanel</code>
+class, each
+of the objects should be "asked" to draw themselves, by calling
+each object's <code>draw</code> method. </p>
+  </li>
+  <li>
+    <p> In the <code>paintComponent</code> method, use the <code>g.drawString</code>
+method to draw a text string somewhere in the output window with a
+message that includes your name.&nbsp; Examine the samples shown above to
+see how this can be done, and what might be acceptable. </p>
+  </li>
+  <li>
+    <p>The <code>ThingOne</code> and <code>ThingTwo</code> classes that will represent the 
+	visual things in the
+scene MUST each
+have data members of
+type <code>Integer</code> called <code>anchorX</code> and <code>anchorY</code>.
+They
+may
+have
+other data members, too, representing different sizes, colors or other
+aspects of the individual
+objects.&nbsp; In the starter files that are given with this assignment, 
+the <code>ThingOne</code> class has six data members (some of which you might not use) that are
+given to you as an example, and the <code>ThingTwo</code> class has no data members given
+to you.&nbsp; In the Skiing Snowmen sample above, the <code>Snowman</code> class has a <code>hatColor</code>
+data member of type <code>Color</code>, in addition to <code>anchorX</code>
+and <code>anchorY</code>.</p>
+<p>IMPORTANT:&nbsp; remember that anything that will be different from object to object must be represented by a property in the class definition for the object.&nbsp; For example, the <code>PineTree</code> class in that the Skiing Snowmen sample would only need <code>anchorX</code> and <code>anchorY</code>, because all of the Pine Trees are the same color, shape and size.&nbsp; The <code>Flower</code> class in the Hummingbird sample above would need 5 properties (<code>anchorX</code>, <code>anchorY</code>, <code>petalColor</code>, <code>centerColor</code> and <code>stemLength</code>).
+</p>
+  </li>
+  <li>
+    <p>The <code>ThingOne</code> and <code>ThingTwo</code> classes MUST each have
+a constructor method to
+initialize all properties.</p>
+  </li>
+  <li>
+    <p>The <code>ThingOne</code> and <code>ThingTwo</code> classes MUST each have
+a <code>draw </code> method that
+accepts a parameter of type <code>Graphics</code>.</p>
+  </li>
+  <li>
+    <p>All drawing done by the <code>draw</code> method of these
+classes should be
+relative to one fixed point referenced by the <code>anchorX</code> and <code>anchorY</code>
+properties. For
+instance you might use something like <br>
+    </p>
+    <pre style="margin-left: 40px;">g.drawRect(anchorX + 25, anchorY + 50, width, height);</pre>
+    <p> rather than something like</p>
+    <pre style="margin-left: 40px;">g.drawRect(125, 250, width, height);</pre>
+  </li>
+  <li>
+    <p>You must use at least four (4) different drawing colors, and at
+least four (4)
+different drawing methods of the <code>Graphics</code> class (not
+counting <code>setColor</code>) in the <code>draw</code> methods
+of the <code>ThingOne</code> and <code>ThingTwo</code> classes.&nbsp; For example <code>drawRect</code>, <code>fillRect</code>,
+    <code>drawOval</code>, <code>fillOval</code>, <code>drawArc</code>,
+    <code>fillArc</code>, etc.</p>
+  </li>
+  <li>
+    <p>You must NOT use any of the shape-drawing or shape-filling methods of the <code>Graphics</code> class
+	in the <code>paintComponent</code> method of the MUPanel class, with the exception of the <code>g.drawString</code> method call that will
+	cause your name to be displayed in the output window.</p>
+  </li>
+</ol>
+
+<h3> Hints: </h3>
+  <blockquote>
+    Look <a href="PA1Hints.html" target="_blank"> here</a> for some helpful hints.
+  </blockquote>
+  
+<h3> Enhancements: </h3>
+<blockquote>
+    This assignment includes the requirement to add at least two extra visual features over and above
+	the base requirements that make the output of the program more fun,
+    interesting, or surprising.&nbsp; Use your creativity and have fun with your 
+	drawings!&nbsp; Here are some suggestions for things you could do as enhancements:
+    <ol type="a">
+	<li> One possible enhancement would be to define your own colors
+(in
+addition to the standard ones
+that are part of the <code>Color</code> class). To do this, you can
+use the
+following method call:
+        <blockquote> <code> g.setColor( new Color( <font
+ color="#990000"><em>red</em></font>, <font color="#009900"><em>green</em></font>,
+          <font color="#000099"><em>blue</em></font>) ); </code>
+        </blockquote>
+where the three parameters shown above represent the intensities of
+the red, green,
+and blue components of your chosen color, respectively. Each parameter
+must be an integer
+number between 0 and 255. How do you know the three
+primary color components of some shade you want to use (such as
+turquoise)? Visit
+the <a href="http://html-color-codes.com/rgb.html" target="_blank">VisiBone Color Lab</a> <!--a href="http://visibone.com/colorlab" target="_blank">VisiBone Color Lab</a-->
+ to
+choose a color (the numbers shown diagaonally in each box give the red, green and blue values
+you should use when creating a new Color, in order from top-left to bottom-right).&nbsp;
+As an example, to draw using a light shade of yellow, use the following
+Java method call: <code>
+g.setColor(&nbsp;new&nbsp;Color(&nbsp;255,&nbsp;255,&nbsp;153&nbsp;)&nbsp;);
+        </code></li><br/>
+	  <li>You could define an additional class or two to go along with <code>ThingOne</code>
+	      and <code>ThingTwo</code> to add other shapes or visual items to your scene as
+		  an enhancement.
+      </li>	  <br/>
+      <li>Another possible enhancement could be using an irregular
+polygon
+(see the <a href="../howDoI/PolygonDemo/PolygonDemo.html">Polygon Demo page</a> for examples).</li> <br/>
+      <li> Yet another possible enhancement would be to use a different
+        <code>Font</code> when you draw the string in the output
+window.&nbsp; Three of the four samples above use a different font than
+the default Java setting.&nbsp; Look up the <code>Font</code> class in
+the Java Class Documentation. 
+See the <a href="../howDoI/FontDemo/FontDemo.html">Font Demo page</a> 
+	      for an example of how to do this.
+</li> 
+    </ol>
+You must document your enhancements by adding comment lines at the
+top of your program in <b>MUPanel.java</b> after your CSC 120, name,
+etc, comments. Your comments should explain what you did for your
+enhancements.
+ </blockquote>
+
+ <h3> Programming Style, Indenting, and Comments: </h3>
+ <blockquote>
+<p>Every Java program written in the
+Department of Computer Science must follow the
+	Department's documentation and style guidelines in order to obtain full credit.</p>
+<p>Click on <a href="../resources/StyleGuide.html" target="_blank">THIS LINK</a>
+to see a list of
+	requirements for programming style in CSC 120.</p>
+ </blockquote>
+ 
+ <h3> Turning in your Program for Grading: </h3>
+<blockquote>
+  When you have completed your NetBeans project for PA1 (including the comment header at
+  the top of the MUPanel.java file with your name, etc.), run the program and obtain a screen capture of
+  the output window, and be sure to include the frame of the window showing your name in the title.&nbsp; 
+  Then, use File Explorer to make a
+  .zip file of the entire <b>PA1</b> folder in your
+<b>CSC120</b> folder so that the file is named <b>PA1.zip</b>.&nbsp; Upload
+the .zip file and the .png screen capture file to the PA1 dropbox 
+in <a href="http://d2l.mountunion.edu" target="_blank">D2L</a>.
+</blockquote>
+
+
+
+<p> </p>
+<h3> Grading Rubric: </h3>
+<blockquote> <a href="PA1_rubric.html" target="_blank"> PA1 Grading Rubric</a>
+</blockquote>
+</body>
+</html>

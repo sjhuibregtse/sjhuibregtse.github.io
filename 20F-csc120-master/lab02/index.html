@@ -1,0 +1,280 @@
+<html>
+<head>
+<title> CSC 120 Lab 2</title>
+</head>
+
+<body>
+<h2 align="center"><font color="#990099">
+CSC 120 Lab 2
+</font></h2>
+
+In this lab we will:
+<ul>
+	<li>Practice drawing rectangles, ovals, lines, and arcs using methods of the <code>Graphics</code> class.</li>
+	<li>Practice organizing objects in the viewer, specifying over & down coordinates, widths, heights, and arc-angles.</li>
+</ul>
+
+<hr/>
+
+<ol type="A">
+
+  <li><b>Examine the Java Graphics Tutorial on the CSC 120 Resources Page.</b><br /><br />
+      <ol>
+        <li>Java provides basic drawing capabilities via methods defined for the Graphics class.<br /><br /></li>
+
+        <li>Visit the <a href="../resources/GraphicsTutorial.jpg" target="_blank">Java Graphics Tutorial</a> page to
+		    see examples of several of the most-commonly used drawing methods.&nbsp; We will use some of these
+			methods in today's lab activity.<br /><br /></li>
+	      
+	<li> Watch the following video that demonstrates the use of most of the drawing methods of the Graphics class:<br/><br/>
+		<iframe width="560" height="315" src="https://www.youtube.com/embed/YClAUgDnmj4" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+		<br/><br/> </li>
+	  </ol>
+  </li>
+
+  <li><b>Create a new NetBeans project called Lab2, using a special starter program that draws one rectangle.</b><br /><br />
+      <ol>
+        <li>In NetBeans choose File | New Project | Java Application, etc.<br /><br /></li>
+
+	      <li>Make sure the Project Location is in your <b>CSC120\Java</b> folder,
+            and the Project Name is <b>Lab2</b> (no spaces in Lab2).<br /><br /></li>
+
+        <li>Right-click on the following link:&nbsp; <b><a href="MUPanel.java">MUPanel.java</a></b>, and
+		    then choose <b>Save link as...</b>. Save this file in your Lab2 <b>src</b> folder. <!--Then in NetBeans,
+			right-click on the file name <code>MUPanel.txt</code> and rename the file so that it has a <b>.java</b>
+			file extension.-->
+		    <br /><br /></li>
+
+        <li>Double-click on the MUPanel.java file to edit it.
+		    Look over the comment header at the top, and change the name and date to your name
+            and today's date.<br /><br /></li>
+
+        <li>Notice in the <code>paintComponent</code> method of the <b>MUPanel</b> class definition 
+		    where we have used the <code>g.setColor</code> method to make the current drawing color be BLACK, and
+			then used the <code>g.drawRect</code> method with parameters.<br /><br /></li>
+
+        <li>Run the program to see what it does.<br /><br /></li>
+      </ol>
+  </li>
+  
+  <li><b>Edit the MUPanel.java file to finish the House.</b><br /><br />
+      <ol>
+        <li>We're going to use several more methods of the Graphics class to complete our house.
+            We want the finished house to look approximately
+            like <a href="FinishedHouse.png" target="_blank">this one</a>.<br /><br /></li>
+            
+        <li>In the <code>paintComponent</code> method of the MUPanel class, we will now add code to
+		    draw the door and window for the house.&nbsp; It is <b>strongly recommended</b> 
+			that you draw a picture
+            on paper and label coordinates & widths & heights to figure out values for your over, down, width, and height
+            for your new rectangles. Use Color.BLUE for the color of the door and Color.YELLOW for the color of the window
+            (the light is on in the room). <br /><br />
+            Consult the Java 8 Class Documentation to learn about the 
+			<a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html#drawLine-int-int-int-int-"> drawLine</a>,
+            <a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html#drawRect-int-int-int-int-"> drawRect</a>,
+			<a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html#fillRect-int-int-int-int-"> fillRect</a>, and
+   			<a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html#fillOval-int-int-int-int-"> fillOval</a> methods.<br /><br /></li>
+
+        <li>Notice that the window has a black border around the outside of the window &ndash; to produce this effect
+		    in your program, you'll need to draw a BLACK rectangle after first filling a YELLOW rectangle for the window.
+			<br /><br /></li>
+
+        <li>Run the program, fix any errors that are noted, etc. until you get it to run properly, showing all three Rects
+		    in the output window.<br /><br /></li>
+		    
+		<li>Use the <code>fillOval</code> method to paint an ORANGE Oval for the door knob,
+		    and use the <code>drawLine</code> method to draw horizontal and vertical lines to divide the 
+			window into panes,
+		    and to draw two diagonal lines for the roof.&nbsp;  Make all of the lines BLACK.<br /><br /></li>
+
+        <li>Run the program, fix any errors that are noted, etc. until you get it to run properly, and your house looks
+            approximately like <a href="FinishedHouse.png" target="_blank">this one</a>.<br /><br /></li>
+      </ol>
+  </li>
+
+  <li><b>Make a tree for the yard, and a happy-face sun for the sky.</b><br /><br />
+      <ol>
+	    <li>We want the finished picture to look approximately
+            like <a href="FinishedPicture.png" target="_blank">this one</a>.<br /><br /></li>
+            
+	    <li>Use methods from the Graphics class to fill a brown rectangle and a GREEN oval to make the tree.&nbsp;
+    		For brown instead of using Color.WHATEVER
+	        use <b>new Color(102, 51,0)</b>, which will create a new color. So, this line of code looks something like this:<br />
+	        <code>g.setColor( new Color(102, 51, 0) );</code><br/><br/>
+	        Aside: If you want to create other colors that are not "built-in" to Java, use this link to the
+			<a href="http://html-color-codes.com/rgb.html" target="_blank"> Decimal RGB Color Codes</a> web page,
+                which shows a color palette
+	        with numbers for the RGB (red-green-blue) values to pass to the Color constructor.<br /><br /></li>
+	        
+	    <li>Use a YELLOW Oval, two ORANGE Ovals, and one ORANGE Arc to make a happy-face sun.&nbsp; 
+		    Consult the Java 8 Class Documentation to learn about the 
+			<a href="http://docs.oracle.com/javase/8/docs/api/java/awt/Graphics.html#drawArc-int-int-int-int-int-int-"> drawArc</a> method.
+			<br /><br /></li>
+	    
+        <li>Run the program, fix any errors that are noted, etc. until you get it to run properly, and your picture looks
+            approximately like <a href="FinishedPicture.png" target="_blank">this one</a>.<br /><br /></li>
+      </ol>
+  </li>
+
+<!--
+  <li><b>Convert the sun into a separate class, and use a sun object in the program.</b><br /><br />
+      <ol>
+	    <li>Since the sun is made up of a big oval, two smaller ovals for the eyes and an arc for the mouth,
+		    if we want to have lots of suns in our program, the best approach is to create a new <b>Sun</b> 
+			class and then declare several Sun objects -- it cuts down on the number of Ovals and Arcs in the
+			main program, and is easier to organize.&nbsp; Let's see how to do this.<br /><br /></li>
+	        
+	    <li>Right-click on the <b>src</b> folder in the project tree in the "Files" pane on the left side
+		    of the NetBeans IDE, and choose "New | Java Class..." from the pop-up window.&nbsp; Use the
+			name "SmileySun" for the Class Name and click "Finish".&nbsp; A new, empty class file named
+			<em>SmileySun.java</em> has been added to your project, and the file is now in an editor
+			window for you to work with.<br /><br /></li>
+
+	    <li>Copy the following code and paste it into <em>SmileySun.java</em> replacing the current 
+		    contents.&nbsp; This gives you the structure of a typical class definition to work with in this
+			part of the lab.&nbsp; You could have typed this yourself, but this starter framework is given
+			to you as a convenience.
+<pre>
+/*
+ CSC 120
+ Lab 6
+ Samantha Student
+  
+ SmileySun.java
+ */
+
+import java.awt.*;
+
+public class SmileySun {
+
+    
+    
+    
+    // constructor method
+    public SmileySun () {
+        
+    } // end of constructor
+    
+    
+    public void draw( Graphics g ) {
+        
+    } // end of draw()
+    
+} // end of class SmileySun
+</pre>			
+			</li>
+
+	    <li>We will now cut all of the code that was used to draw the sun in the original 
+		    program out of the <b>MUPanel</b> class and paste it into the <b>SmileySun</b> class.&nbsp;
+			First of all, highlight all of the DECLARATIONS in <b>MUPanel</b> for the objects that
+			make up the sun (that would be three <b>Oval</b>s and an <b>Arc</b>), cut them out of the
+			code, and paste them into the <b>SmileySun</b> class at the top of the class definition where
+			declarations are placed.&nbsp; Next, move the INSTANTIATIONS of these four objects from the
+			<b>MUPanel</b> constructor to the constructor method of <b>SmileySun</b>.&nbsp; Finally, 
+			move the code that DRAWS the four objects from the <code>paintComponent</code> method of 
+			<b>MUPanel</b> into the <code><b>draw</b></code> method of <b>SmileySun</b>.
+			<br /><br /></li>
+
+	    <li>In <b>MUPanel</b>, DECLARE a <b>SmileySun</b> object named <b><code>theSun</code></b> in
+		    the proper place for all declarations, INSTANTIATE <b><code>theSun</code></b> with an
+			empty parameter list (an empty set of parentheses), and USE the <code>draw</code> method
+			of <b><code>theSun</code></b> to draw the object in the <code>paintComponenet</code>
+			method.<br /><br /></li>
+
+	    <li>Run the program, and it should look the same as it did before, but notice that the 
+		    <b>MUPanel</b> class is a little simpler, because we are working with one <b>SmileySun</b>
+			object, not four different objects that together make up the sun.<br /><br /></li>
+      </ol>
+  </li>
+
+  <li><b>Add two more SmileySun objects to your program.</b><br /><br />
+      <ol>
+	    <li>The real advantage of writing our own classes is that we can have multiple objects from the
+		    classes in our programs.&nbsp; DECLARE two more <b>SmileySun</b> objects at the proper
+			place in <b>MUPanel</b>, INSTANTIATE them in the constructor method, and USE the
+			<code>draw</code> method of each object in the <code>paintComponent</code>.&nbsp;
+			Run the program now &mdash; hey wait, how come there aren't three suns in the picture? <br/><br/>
+
+			We have three <b>SmileySun</b> objects in our program, but each of them draws itself in
+			the exact same screen location (so each one is on top of the others).&nbsp; We need to change
+			the class definition to add property variables to the <b>SmileySun</b> objects so that each
+			one knows its screen location, and can therefore be drawn in different spots on the screen.<br /><br /></li>
+	        
+	    <li>At the top of the <b>SmileySun</b> class definition, where the three <b>Oval</b>s and the
+		    <b>Arc</b> are declared, DECLARE two <b><code>int</code></b> variables, one named <code>over</code>
+			and the other named <code>down</code>.&nbsp; We are giving the SmileySun the knowledge of where
+			it is located on the screen by having it remember the coordinates of a <em>reference point</em>
+			for itself.<br /><br /></li>
+
+	    <li>The key idea of this lab is that the simple shapes that make up the parts of the SmileySun
+		    object should NOT be created with numbers for their screen locations, but should be created
+			with screen position CALCULATIONS
+            that are relative to the <em>reference point</em> of the SmileySun.&nbsp; Let's assume that the
+            SmileySun below was created with the code shown at the right of the drawing:<br/>
+            <img src="SmileySunWithBoundingRect01.png"> <br/>			
+		    If we use fixed numbers for the screen locations of the <b>Oval</b>s and <b>Arc</b>, each sun
+			is forced to be located in the same position.&nbsp; What we need to do is to change the instantiations
+			of the pieces of our SmileySun so that their locations are relative to the reference point.&nbsp; 
+			For our example, we would have this code: <br/>
+            <img src="SmileySunWithBoundingRect02.png"> <br/>			
+			To make this change, we need to be able to pass in the values of <code>over</code> and 
+			<code>down</code> when we make a new <b>SmileySun</b> object, so that different ones can
+			be in different positions.&nbsp; To do this, change the heading of the constructor
+			method of the <b>SmileySun</b> class to be this:
+<pre>
+    // constructor method
+    public SmileySun ( int x, int y ) {
+</pre>
+			Then paste in these two lines so that they are the first two lines in this method:
+<pre>
+    over = x;
+    down = y;
+</pre>		
+			Finally, change the instantiations of the <b>Oval</b>s and the <b>Arc</b> in the
+			<b>SmileySun</b> constructor method so that they use calculations based on <code>over</code>
+			and <code>down</code> to position the shapes.<br /><br /></li>
+			
+	    <li>Now that you've changed the <b>SmileySun</b> constructor method, your program won't run until
+		    you change the way you are instantiating the three <b>SmileySun</b> objects in <b>MUPanel</b>.&nbsp;
+			In each of the instantiations of <b>SmileySun</b> objects, add two numbers as parameter values, and
+			make sure that the values cause the suns to be located in non-overlapping screen positions.&nbsp;
+			Then run your program, and show your results to your instructor.<br /><br /></li>
+      </ol>
+  </li>
+-->
+
+  <li><b>Hand in your Lab2 Project.</b><br /><br />
+      <ol>
+	    <li>Ensure that the comment header at the top of the MUPanel.java file contains your name and today's date.&nbsp; Also your 
+		    name should appear in the title of the frame window, in place of Samantha Student.<br/><br/></li>
+		<li>Run your completed program and save a screen capture as a .png file using the Windows Snip & Sketch tool or the [Alt]-[PrtSc] keystroke
+		    as you did for Lab # 1.<br/><br/></li>
+	      <li>Use File Explorer to convert your <b>CSC120\Java\Lab2</b> folder into a .zip file by right-clicking on the Lab2 folder and 
+		    choosing "Send To > Compressed (zipped) folder".<br/><br/></li>
+	    <li>Then log into the
+			<a href="http://d2l.mountunion.edu" target="_blank"> D2L homepage</a>, go to CSC 120 in your list of courses,
+			and upload/submit the Lab2.zip and the screen capture .png
+			files into the Lab2 dropbox using the techniques from Lab1.&nbsp; Ask your instructor for help if you need it. <br/><br/>
+      </ol>
+  </li>
+
+  <li><b><em>If time remains in the class period</em>:</b><br /><br />
+      <ol>
+        <li>Experiment with other colors and drawing methods to add some extra features to the scene you have
+		    drawn for your Lab2 project.&nbsp; Use your creativity &mdash; can you add grass?&nbsp; a swing hanging from 
+			the tree?&nbsp; stick figure
+			people or dogs in the yard?&nbsp; Godzilla's foot about to stomp on the house?&nbsp; Etc., etc. <br/><br/>
+      </ol>
+  </li>
+
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab02_rubric.html" target="_blank"> Lab 02 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

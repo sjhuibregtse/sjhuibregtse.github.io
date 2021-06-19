@@ -1,0 +1,337 @@
+<html>
+
+<html>
+<head>
+<title>CSC 120 Lab 5</title>
+	    <link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body bgcolor="#ffffff">
+		<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+<font color="#660066">
+<center><h1>CSC 120 Lab 5 </h1></center></font>
+
+<font face="tahoma, arial">
+    In this lab we will use the NetBeans GUI Designer to create programs that respond to
+	user input operations, and practice using <code>if</code> statements.
+</font>
+
+<hr/>
+	<h2>Part 1</h2>
+<ol>
+    <li> When we write programs that respond to user input actions, we need to use a different starting template
+	     than we have been using so far this semester.&nbsp; We recommend that you copy the template
+	    files into your <b>CSC120</b> folder, so you will have them to use any time you want to start a new
+		 interactive program. <br/><br/>
+		 
+		 To do this, use a web browser to visit the <a href="../resources.html" target="_blank"> CSC 120 Resources page</a>.&nbsp;
+		 In the "Starter Templates for 
+		 Java Programmnig" section, right-click on the link that says "MUFrameWithGUIDesigner.zip" and choose
+	    "Save File as..." from the pop-up menu.&nbsp; Browse to your <b>CSC120</b> folder and save the zip file.
+		 <br/><br/>
+		 Next, launch File Explorer and browse to your CSC120 folder.&nbsp; Right-click on the
+		 .zip file you just saved, and choose "Extract all" from the pop-up menu.&nbsp; Make sure that the files
+		 will be extracted into a folder in your CSC120 folder, and check the box that says "Show extracted files
+		 when complete".&nbsp; Then click the "Extract" button.&nbsp; A new File Explorer window will appear, and you
+		 should browse as deep in the folder as you can, until you see three files named "MUFrame.form", "MUFrame.java"
+		 and "MUPanel.java".&nbsp; Highlight all three of these files now, and right-click on them to choose "Copy".
+	     <br/><br/> </li>
+	<li>For this lab there are three parts, so it is recommended that you create a lab folder inside your <strong>CSC120</strong> 
+		folder to store all three parts.  An appropriate name would be <strong>Lab5-LastName</strong> so you can zip and submit 
+		all three parts to the Lab 5 dropbox in D2L without issues as a single file.</li>
+    <li> Launch NetBeans, and create a new Java Application project named <em>Lab5</em> in your
+         <b>CSC120</b> folder.&nbsp; Expand the tree for this new project so that you can see the <b>src</b>
+		 folder for the project, and paste <b><u>ALL THREE</u></b>
+		 files you copied in the previous step into the <b>src</b> folder.&nbsp; Note:&nbsp; only the two .java
+		 files will show up in the tree.&nbsp;
+		 Run the MUFrame program by right clicking on the file named <b>MUFrame.java</b> and choose
+		 "Run File" from the pop-up menu.&nbsp; You should obtain a graphical output window that displays
+		 "Hello World" if you copied all the files properly. <br/><br/> </li>
+
+    <li> Double-click on the <b>MUFrame.java</b> filename to open the file in the NetBeans editor, and 
+	     at the top of the editor pane you will see the following: <br/>
+		 <img src="EditorTabs.png"> <br/>
+		 Notice the two buttons labeled "Source" and "Design" &mdash; you will use these to switch
+		 between different views of the file.&nbsp; Click on the "Source" button now, and notice that 
+		 the view changes so that you can see the Java code for the program.&nbsp; Scroll down in this
+		 file and you will see that this MUFrame class has a constructor method, plus a lot of other
+		 stuff that we won't be directly modifying.&nbsp; When we make changes in Design view, NetBeans
+		 will insert code in this file to support the GUI components we add to the interface.<br/><br/>
+
+		 Click on the "Design" button to return to the GUI Designer.&nbsp; One thing we will always want to do when 
+		 writing interactive programs is to change the name that is displayed in the title of the frame
+		 of the output window.&nbsp; If you run the program now, you will notice that the title of the 
+		 output window says "Program authored by Samantha Student" &mdash; 
+		 since that is not your name, we need to know how to change this so that your name appears as the author of
+		 your programs.&nbsp; On the right side of the screen you will see two tabs, one over the other; the top one
+		 says "Palette" and the bottom one says [JFrame] - Properties".&nbsp; In the Properties list in the latter
+		 section, find the property named "title", and click on the button that shows 3 dots on the right of that entry;
+		 then in the dialog that appears, change Samantha Student to your name.&nbsp; Here are screen captures of
+		 what the dialogs will look like: <br>
+		 <img src="TitleProperty.png" /> &nbsp; &nbsp; &nbsp;  <img src="TitleProperty2.png" /> <br/><br/>
+		 After clicking the OK button, run the program and make sure that your name appears in the window title, not
+		 Samantha's.<br/><br/>  </li>
+		 
+    <li> Still in the GUI Designer view, in the "Palette" area of the
+		 right side of the screen, find the "Button" icon and text in the "Swing Controls" area
+		 &ndash; it looks like this: <br/>
+		 <img src="SwingControls.png"> <br/>
+		 Click on "Button" (not on Toggle Button), and when you hover the mouse over the screen area,
+		 a button will appear.&nbsp; If you click the mouse, the button will be anchored in the
+		 screen area.&nbsp; You can click and drag the button to a new location, and you can resize the
+		 button by using the dragging handles that appear on the edges of the button.<br/><br/>
+
+		 We will always want to make two changes to GUI components when we add them to the Designer &mdash;
+		 we should change the text displayed in/on the component, and we should change the name of the variable
+		 in the program that refers to the component, to use a name that is suited to the task we are performing.
+		 &nbsp;Right-click on the button you just added to the Designer and choose the "Edit Text" option 
+	    	(properties - properties - text) from the pop-up menu.&nbsp; Change the default text on the face of the button to "Click Me!".&nbsp;
+		 Then right-click again on the button and choose the "Change Variable Name..." option (properties - code - variables), and rename the 
+		 variable as "myButton".<br/><br/>
+
+		 Run the MUFrame program and there should be a button on the screen that says "Click Me!".&nbsp; Try
+		 clicking it a few times &ndash; nothing happens yet, because we need to attach actions to the
+		 button.&nbsp; It's kind of annoying to have the "Hello World" message on the screen, so let's get rid of
+		 that by double-clicking on the <b>MUPanel.java</b> file to open the MUPanel class, and then
+		 deleting the <code>g.drawString</code> method from the <code>paintComponent</code> method.&nbsp; Run
+		 the program again &ndash; that looks better doesn't it?&nbsp; Close the program window now to return
+		 to NetBeans, and switch back to the MUFrame.java tab in the editor.<br/><br/> </li>
+
+    <li> Now for a very important step:&nbsp; we must attach an action to our button that will be activated when
+         the user clicks the button.&nbsp; To do this, double-click on the button in the Designer, which will
+		 cause the display to switch to the Source view of the program.&nbsp; You will see a new method that
+		 NetBeans has added to your program called <code>myButtonActionPerformed</code>; this method will contain
+		 code that will be executed every time the user clicks on the button when the program is running.&nbsp;
+		 Let's add a simple action that will show that the button is working &mdash; inside the curly braces of
+		 this new method, add the following code:
+<pre>
+    System.out.println("The button was clicked");
+</pre>		 
+		 Run the program, and now every time the button is clicked, a new line is displayed in the Java Console.&nbsp;
+		 Ask your instructor for help if this doesn't happen for you, or if you have questions about this.
+		 <br/><br/> </li>
+
+    <li> We can add variables, objects and other methods to the MUFrame.java file to perform processing operations.
+	     &nbsp;As an example, be sure you are in Source view for the MUFrame.java file in the editor window, and scroll
+		 up toward the top of the program to the comment that says "// declare private data here"; right under that comment,
+		 declare an Integer variable named <code>timesClicked</code>.&nbsp; 
+<pre>
+   private Integer timesClicked;
+</pre>
+	Now, inside the constructor method for the
+		 MUFrame class, insert an assignment statement that stores the value zero in <code>timesClicked</code>    
+<pre>
+   timesClicked = 0;
+</pre>
+	    Next, change the code in the <b>myButtonActionPerformed</b> method to the following:
+<pre>
+    timesClicked = timesClicked + 1;
+    System.out.println("Times the button has been clicked: " + timesClicked);
+</pre>		 
+		 When you run this version of the program, a message will appear in the Java Console that includes a count
+		 of how many times you have clicked the button.&nbsp; Run the program several times to test it out, and then
+		 close the <b>Lab5</b> project.
+		 <br/><br/> </li>
+	</ol>
+	<h2>Part 2</h2>
+<ol>
+    <li> Create a new NetBeans Java Application project named <em>Lab5-Part2</em> in your
+	    <b>CSC120</b> folder (<strong>No spaces in the project name, please!</strong>).&nbsp; 
+		 Using File Explorer, copy <b><em>ALL THREE</em></b>
+		 files from the <b>MUFrame with GUI designer</b> folder in your CSC120 folder, and paste
+		 them into the <b>src</b> folder of this new project.&nbsp; Edit the <b>MUPanel.java</b>
+		 file and remove the <code>g.drawString</code> statement from the paintComponent method.&nbsp;
+		 We will make a simple form that asks for three <code>String</code> values as input from the user
+		 and prints a result in a TextArea on the screen when the button is clicked. <br/><br/>
+		 
+		 Double-click the "MUFrame.java" file to open the GUI Designer, and use the Designer to make a 
+		 data entry form that looks like <a href="NameForm.png" target="_blank"> this
+		 example</a>.&nbsp; To do this, add the below components to the Designer display in the order presented in the table,
+	         positioning them approximately
+		 in the positions shown in the example, and making them approximately the same size as in the example:<br/><br/>
+		 <table border="1" width="80%" align="center">
+		  <tr style="background-color: #dcd0ff;">
+		    <th width="10%"> Step # </th>
+		    <th width="30%"> Type of Component </th>
+		    <th width="30%"> Edit Text to be ... </th>
+		    <th width="30%"> Change Variable Name to ... </th>
+		  </tr>
+		  <tr> <th align="center" style="background-color: #dcd0ff;"> 1 </th>
+		       <td align="center"> Label </td>
+		       <td align="center"> Enter First Name: </td>
+			<td align="center"> firstNameLabel </td>
+		  </tr>
+		  <tr style="background-color: #e6e6fa;"> 
+			 <th align="center" style="background-color: #dcd0ff;"> 2 </th>
+		       <td align="center"> TextField </td>
+		       <td align="center"> nothing (delete the default text) </td>
+			   <td align="center"> firstNameField </td>
+		  </tr>
+		  <tr> <th align="center" style="background-color: #dcd0ff;"> 3 </th>
+		       <td align="center"> Label </td>
+		       <td align="center"> Enter Middle Initial: </td>
+			   <td align="center"> middleInitLabel </td>
+		  </tr>
+		  <tr style="background-color: #e6e6fa;"> 
+			  <th align="center" style="background-color: #dcd0ff;"> 4 </th>
+		       <td align="center"> TextField </td>
+		       <td align="center"> nothing </td>
+			   <td align="center"> middleInitField </td>
+		  </tr>
+		  <tr> <th align="center" style="background-color: #dcd0ff;"> 5 </th>
+		       <td align="center"> Label </td>
+		       <td align="center"> Enter Last Name: </td>
+			   <td align="center"> lastNameLabel </td>
+		  </tr>
+		  <tr style="background-color: #e6e6fa;"> 
+			  <th align="center" style="background-color: #dcd0ff;"> 6 </th>
+		       <td align="center"> TextField </td>
+		       <td align="center"> nothing </td>
+			   <td align="center"> lastNameField </td>
+		  </tr>
+		  <tr> <th align="center" style="background-color: #dcd0ff;"> 7 </th>
+		       <td align="center"> Button </td>
+		       <td align="center"> Process Input Data </td>
+			   <td align="center"> theButton </td>
+		  </tr>
+		  <tr style="background-color: #e6e6fa;"> 
+			  <th align="center" style="background-color: #dcd0ff;"> 8 </th>
+		       <td align="center"> TextArea </td>
+		       <td align="center"> nothing </td>
+			   <td align="center"> outputArea </td>
+		  </tr>
+		 </table>
+		 <br/>
+		 Run the program and see if the Graphical Output Window looks like the sample.&nbsp; Keep adjusting the
+		 GUI components in the Designer until your output looks like the example.
+		 <br/><br/> </li>
+
+    <li> In the Designer view, double-click on the button, and then paste this code into the method named
+         <code>theButtonActionPerformed</code>:
+<pre>
+        String fName = firstNameField.getText();
+        String mInit = middleInitField.getText();
+        String lName = lastNameField.getText();
+	
+        String ans = fName + " " + mInit + ". " + lName;
+	
+        outputArea.setText("Full Name is " + ans);
+</pre>		 
+		 Run the program, and enter a series of names, clicking the button each time.&nbsp; The program should
+		 display the full names for the latest data you've entered. <strong>If your program does not display the full names
+	    	STOP and troubleshoot your code.  Do not move on until you have the previous steps completed and working.</strong> <br/><br/>
+	</li><li>
+		 What if we wanted to see all the names that we've entered?&nbsp; The current version of the program
+		 replaces the previous name with the new name.&nbsp; If we want to preserve the output we've generated so
+		 far, and add new output to the end of the outputArea, we can do that by replacing the <code>setText</code>
+		 method that we're calling for outputArea with the <code>append</code> method.&nbsp; Make this change and
+		 then run the program, entering several names.&nbsp; <br/>
+<!--pre>
+        outputArea.append("Full Name is " + ans);
+</pre-->		 
+		<br/> 
+		 Hey wait a minute &ndash; why are they all on the
+		 same line?&nbsp; It turns out that the append method puts new text immediately after the last character that
+		 is in the outputArea, without regard to what line it is on.&nbsp; If we want to cause each name to be
+		 displayed on a separate line in the outputArea, we need to append the "\n" escape sequence to the output
+		 after the full name.&nbsp; To do this, change the <code>append</code> method call in your program to 
+		 this one:
+<pre>
+        outputArea.append("Full Name is " + ans + "\n");
+</pre>
+        Run the program and enter several names &ndash; that's better, don't you think?
+		 <br/><br/> </li>
+
+    <li> It's kind of a pain to have to delete the previous names from the text fields to enter a new name; luckily
+	     there is a way to automatically clear out the fields so that they are empty when we go to enter a new
+		 name.&nbsp; To do this, as the last lines in the theButtonActionPerformed method, 
+		 call the <code>setText</code> method for each of the three TextFields in the program
+		 (firstNameField, middleInitField and lastNameField), and for each of those method calls, 
+		 use the parameter "" (that's two quotes with
+		 NOTHING in between -- in other words, it's the empty string).&nbsp;Run the program and notice that
+		 when you click the button, the fields are blanked out so you can enter new names without erasing the previous
+		 names. <br/><br/> </li>
+	</ol>
+	<h2>Part 3</h2>
+<ol>
+    <li> Close the <b>Lab5Part2</b> project, and then create a new NetBeans Java Application project named 
+	     <em>Lab5Part3</em> in your
+         <b>CSC120</b> folder (NO SPACES IN THE PROJECT NAME, PLEASE!).&nbsp; 
+		 Right-click on this link to the <a href="Lab5Part3Files.zip"> Lab5Part3Files.zip</a> file, and save this file
+		 to your CSC120 folder.&nbsp; Extract all from this .zip file, and then use File Explorer to copy the three files 
+		 you just extracted into the <b>src</b> folder of your new project.&nbsp; Now, back in NetBeans, run the <b>MUFrame.java</b>
+		 program and you should see a green text message displayed on the screen.&nbsp; Every time you click the 
+		 button, the text is moved a little bit to the right. <br/><br/> </li>
+		 
+    <li> Open the <b>MUPanel.java</b> file in NetBeans, and find the <code>g.setColor</code> statement in the
+	     paintComponent method.&nbsp; Put an <code>if</code> statement around this statement so that the
+		 color will be set to GREEN only if <code>horizPos</code> is smaller than 350.&nbsp; Then add an 
+		 <code>else</code> to go along with the <code>if</code> that will set the color to RED if the Boolean
+		 test in the <code>if</code> statement is false.&nbsp; Run the program and keep clicking the button until
+		 the text changes to RED.&nbsp; Run and test the program to see if the text changes color when it reaches
+		 the right half of the output window.<br/><br/> </li>
+		 
+    <li> Now, let's add the ability for the program to move the message down the screen.&nbsp; In the <b>MUPanel.java</b>
+    	 file, make a duplicate copy of the method named <code><b>moveRight</b></code> and rename the duplicate so
+		 that the new method name is <code><b>moveDown</b></code>.&nbsp; The body of the method should add 40 to the
+		 <code>vertPos</code> variable instead of <code>horizPos</code>.&nbsp; Then in the <b>MUFrame.java</b> file,
+		 in the Designer, add a new Button to the interface, make the text on the face of the button say "Move Down", 
+		 change the variable name to "moveDownButton", and then double-click on the button to define the action to
+		 be performed when the button is clicked.&nbsp; There are two things to do when the button is clicked; first
+		 of all, call the <code>moveDown</code> method of the <code>muPanel</code> object, and then call the
+		 <code>repaint</code> method of the <code>muPanel</code>.&nbsp; Use the action performed code for the moveRightButton
+		 as a guide for what to do here, and ask your instructor for help if you need to.&nbsp; Run the program,
+		 and test the Move Down button to see if it works properly.<br/><br/> </li>
+		 
+    <li> Can you add <code>if</code> statements to the <code>paintComponent</code> method of MUPanel so that the
+	     drawing color is set according to these rules?<br/><br/>
+		 <table width="65%">
+		   <tr bgcolor="#00cc00">
+		     <td width="75%"> &nbsp; upper-left quadrant <br/> &nbsp; &nbsp; (horizontal less than 350 AND vertical less than 300) </td>
+			 <td width="25%"> &nbsp; GREEN </td>
+		   </tr>
+		   <tr bgcolor="#cc0000">
+		     <td width="75%"> <font color="#ffff00"> &nbsp; upper-right quadrant <br/>&nbsp; &nbsp;  (horizontal NOT less than 350 AND vertical less than 300) </td>
+			 <td width="25%"> <font color="#ffff00"> &nbsp; RED </td>
+		   </tr>
+		   <tr bgcolor="#00cccc">
+		     <td width="75%"> <font color="#0000ff"> &nbsp; lower-left quadrant <br/>&nbsp; &nbsp;  (horizontal less than 350 AND vertical NOT less than 300) </td>
+			 <td width="25%"> <font color="#0000ff"> &nbsp; CYAN </td>
+		   </tr>
+		   <tr bgcolor="#cc00cc">
+		     <td width="75%"> <font color="#ffff00"> &nbsp; lower-right quadrant <br/>&nbsp; &nbsp;  (you should be able to figure this out...!) </td>
+			 <td width="25%"> <font color="#ffff00"> &nbsp; MAGENTA </td>
+		   </tr>
+		 </table> <br/>
+		 Helpful hint:&nbsp; it will be much easier to code this into your program if you use 4 
+		 <b><code>if</code></b> statements without any <b><code>else</code></b> clauses to set the colors		 
+		 correctly.&nbsp; You should use the <code><b>&amp;&amp;</b></code> operator to set up a compound test in each of the four
+		 <b><code>if</code></b> statements.&nbsp; Run and test your program so that the colors change to the proper value when 
+		 the text moves into different quadrants of the screen.
+		 <br/><br/> </li>
+		 
+  <li>  Add two more buttons to the program to allow the user to move the message to the LEFT and also to move the message UP
+		    on the screen.&nbsp; These buttons should call methods that are similar to how we moved the message RIGHT and DOWN. <br/><br/>
+  </li>
+
+    <li> When you have finished this lab, obtain screen captures of the output windows for both Lab5-Part2 and Lab5-Part3, saving
+	     both of them as .png files.&nbsp; Be sure to have more than one name displayed on screen for Part2, and to have moved the 
+	         message to the lower-right quadrant of the screen for Part3.&nbsp; Your name must be displayed in the title of the frame
+	    of the display windows.&nbsp;
+		 Next, use File Explorer to make a .zip files of your entire Lab 5 folder including all parts into a single zip file.  If you didn't
+	    	create a Lab5-LastName folder, you will need to zip <b>CSC120\Lab5-Part2</b> and 
+	     <b>CSC120\Lab5Part3</b> folders into a single zip file.&nbsp; Then turn <b>ALL OF THE FILES</b> into the Lab5 dropbox in 
+		 <a href="http://d2l.mountunion.edu" target="_blank"> D2L</a>. <em>Note, be sure to follow the guidance provided by your professor 
+	    regarding requirements for submitting one or more files.</em><br/><br/>
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab05_rubric.html" target="_blank"> Lab05 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

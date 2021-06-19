@@ -1,0 +1,240 @@
+<html>
+<head>
+<title> Some Help with PA 1 </title>
+</head>
+
+<body bgcolor="#ffffff">
+
+    <center>
+    <h2> CSC 120 &nbsp; &mdash; &nbsp;
+             Some Hints for Programming Assignment # 1 </h2> </center>
+
+    <strong> Basic Structure of Class Definitions: </strong>
+    <blockquote>
+        <u> MUPanel class </u> &mdash; in file MUPanel.java
+        <blockquote>
+            Start with the MUPanel.java file from either your Lab 1 project or another NetBeans project
+			that you have written.&nbsp; There are three important
+            locations in the class definition where you need to pay attention:
+            <blockquote>
+               <table cellpadding="2" cellspacing="0" width="80%" align="left">
+                 <tr>
+                   <td bgcolor="ffd2d2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+                       1.&nbsp; DECLARE all of the <code>ThingOne</code> and <code>ThingTwo</code>
+					   objects you need (minimum of 2 objects from each of those classes)
+					   at the top of the <code>MUPanel</code> class definition, before 
+					   the heading of the <code>MUPanel</code> constructor method
+                   </td>
+                 </tr>
+                 <tr>
+                   <td bgcolor="d2d2ff" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+                       2.&nbsp; Inside the <code>MUPanel</code> constructor method, INSTANTIATE the 
+					   objects you previously declared (that means use the <code>new</code> operator!)
+                   </td>
+                 </tr>
+                 <tr>
+                   <td bgcolor="d2ffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-bottom: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0">
+                       3.&nbsp; Inside the <code>paintComponent</code> method, USE the objects you 
+					   previously declared and instantiated (for this assignment, you will be calling 
+					   the <code>draw</code> method of each object)
+                   </td>
+                 </tr>
+               </table>
+            </blockquote>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        In the following sample class definition skeleton, these three areas are color-coded for your reference:<br/><br/>
+
+<table cellpadding="2" cellspacing="0" width="100%">
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+      <b><code>
+        &nbsp;&nbsp;public class MUPanel extends JPanel {<br/>
+        <br/>
+      </code></b>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="1" bgcolor="#ffd2d2" style="border-right: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;// PRIVATE OBJECTS ARE DECLARED IN THIS AREA <br/>
+        <br/>
+      </code></b>
+    </td>
+  <tr/>
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;public MUPanel() { <br/>
+		<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setLayout(null); <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setPreferredSize(new Dimension(800, 600)); <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setName("Mount Union Java Program"); <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;setBackground(Color.WHITE); <br/>
+      </code></b>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="1" bgcolor="#d2d2ff" style="border-right: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// INSTANTIATE THE OBJECTS DECLARED ABOVE IN THIS AREA! <br/>
+        <br/>
+      </code></b>
+    </td>
+  <tr/>
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+      <b><code>
+        &nbsp;&nbsp;&nbsp;&nbsp;} // end of constructor <br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;public void paintComponent( Graphics g ) {<br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;super.paintComponent(g); <br/>
+      </code></b>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="1" bgcolor="#d2ffd2" style="border-right: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// USE THE OBJECTS IN THIS AREA (DRAW THEM)! <br/>
+        <br/>
+      </code></b>
+    </td>
+  <tr/>
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid  #c0c0c0">
+      <b><code>
+        &nbsp;&nbsp;&nbsp;&nbsp;} // end of paintComponent()<br/>
+		<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;/*********************************************** <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;* Do NOT change or delete anything below here! <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;***********************************************/ <br/>	
+		<br/>
+		<br/>
+        &nbsp;&nbsp;} // end of class MUPanel 
+      </code></b>
+    </td>
+  </tr>
+</table>
+        </blockquote>
+
+<hr/> <br/>
+
+        <u> ThingOne class </u> &mdash; in file ThingOne.java
+        <blockquote>
+            Start with the ThingOne.java file linked to the PA1 assignment page.
+            &nbsp; Copy the file into your new project.&nbsp; There are three important
+            locations in the class definition where you need to pay attention:
+            <blockquote>
+               <table cellpadding="2" cellspacing="0" width="80%" align="left">
+                 <tr>
+                   <td bgcolor="ffd2d2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+                       1.&nbsp; DECLARE all of the private data you need (must at least have an <code>Integer</code> named anchorX and another
+                                <code>Integer</code> named anchorY) at the top of the class definition, before the heading of the <code>ThingOne</code> 
+								constructor method.
+                   </td>
+                 </tr>
+                 <tr>
+                   <td bgcolor="d2d2ff" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+                       2.&nbsp; The constructor method must have the same name as the class (namely, ThingOne), and store the parameters
+                                in the private data variables of the class.&nbsp; See the constructor of the Balloon, Flag
+                                or other classes for details.<br/>
+                   </td>
+                 </tr>
+                 <tr>
+                   <td bgcolor="d2ffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-bottom: 1px solid #c0c0c0; border-right: 1px solid #c0c0c0">
+                       3.&nbsp; There must be a draw method that will cause the ThingOne object to be drawn in the output window.&nbsp; This is where most of the work for the
+					            assignment will be.&nbsp;  The program must draw the shapes that make up the ThingOne relative to the 
+								(anchorX, anchorY) point of the object.&nbsp;
+								Once again, see the draw method of the Balloon or Flag class for an example of how to do this.
+                   </td>
+                 </tr>
+               </table>
+            </blockquote>
+        <br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/><br/>
+        In the following sample class definition skeleton, these three areas are color-coded for your reference:<br/><br/>
+
+<table cellpadding="2" cellspacing="0" width="100%">
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+      <b><code>
+        &nbsp;&nbsp;public class ThingOne { <br/>
+		<br/>
+      </code></b>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="1" bgcolor="#ffd2d2" style="border-right: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;// DECLARE anchorX, anchorY, AND ANY OTHER DATA YOU NEED IN THIS AREA! <br/>
+        <br/>
+      </code></b>
+    </td>
+  <tr/>
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;public ThingOne( Integer x, Integer y ) { <br/>
+      </code></b>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="1" bgcolor="#d2d2ff" style="border-right: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// STORE THE PARAMETERS IN THE PRIVATE DATA MEMBERS<br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// AS AN EXAMPLE, YOU SHOULD DO SOMETHING LIKE THIS FOR ALL PARAMETERS:<br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;anchorX = x;<br/>
+        <br/>
+      </code></b>
+    </td>
+  <tr/>
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0">
+      <b><code>
+        &nbsp;&nbsp;&nbsp;&nbsp;} // end of constructor<br/>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;public void draw( Graphics g ) { <br/>
+      </code></b>
+    </td>
+  </tr>
+  <tr>
+    <td width="100%" colspan="1" bgcolor="#d2ffd2" style="border-right: 1px solid #c0c0c0; border-left: 1px solid #c0c0c0; border-top: 1px solid #c0c0c0">
+      <b><code>
+        <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// USE g.setColor, g.drawRect, g.fillOval, ETC. TO DISPLAY YOUR THING <br/>
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;// IN THE OUTPUT WINDOW! <br/>
+        <br/>
+      </code></b>
+    </td>
+  <tr/>
+  <tr>
+    <td colspan="2" bgcolor="#ffffd2" style="border-left: 1px solid #c0c0c0; border-top: 1px solid  #c0c0c0; border-right: 1px solid #c0c0c0; border-bottom: 1px solid  #c0c0c0">
+      <b><code>
+        &nbsp;&nbsp;&nbsp;&nbsp;} // end of draw()<br/>
+        <br/>
+        &nbsp;&nbsp;} // end of class ThingOne
+      </code></b>
+    </td>
+  </tr>
+</table>
+        </blockquote>
+
+<hr/> <br/>
+
+        <u> ThingTwo class </u> &mdash; in file ThingTwo.java
+        <blockquote>
+            Same ideas as for the ThingOne class above....
+        </blockquote>
+    </blockquote>
+
+
+
+</body>
+</html>

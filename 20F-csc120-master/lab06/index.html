@@ -1,0 +1,435 @@
+<html>
+<head>
+  <title> CSC 120 Lab 6</title>
+	<link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+</head>
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee"
+ text="#000000">
+	<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+<font color="#990099">
+<center>
+<h1>CSC 120 Lab 6</h1>
+</center>
+</font>
+<p>In this lab we will make a Java Application that instantiates
+several objects from a RoundHead class,
+and provides buttons to control the RoundHeads. We will:
+</p>
+<ul>
+  <li>Use Boolean conditions and <code>if</code> statements.</li>
+  <li>Use Buttons and ActionListeners.</li>
+  <li>Call methods of one object from methods of another object.</li>
+  <li>Add data members and methods to an existing class.</li>
+</ul>
+	<h2>Part 1: Project Setup</h2>
+<ol>
+  <li><b>Create a new NetBeans project called Lab6, and copy the starter source
+files to it.</b><br>
+    <br>
+    <ol>
+      <li>File | New Project, etc. Make sure the Project Location is in
+          your CSC120 folder, and the Project Name is Lab6.<br><br></li>
+	  <li>Right-click on the following link and save this .zip file in your CSC120 folder:
+	      <blockquote>
+		      <a href="Lab6StarterFiles.zip"> Lab6StarterFiles.zip</a>
+		  </blockquote></li>
+      <li>Use Windows Explorer to Extract All from the .zip file you saved in the previous
+          step, and then copy <b><em>All Four</em></b> files that were extracted,
+	      and paste them in the src folder of your Lab 6 Netbeans project.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+	  <li><b>Run the program.</b><br>
+    <br>
+    <ol>
+      <li>Open the file <b>MUFrame.java</b> and switch to "Source" view; then edit
+	  the file so that the comment header
+at the top of the file has your name in place of Samantha Student's
+	      name and uses today's date.&nbsp;<br> <br></li>
+	      <li>Switch to "Design" view and 
+right-click on the label in the interface that says "Samantha Student" and edit the
+		      text so that your name is used instead of Samantha's.&nbsp; <br><br></li>
+	    <li>Change the title of the JFrame for the
+		    program so that your name appears instead of Samantha's.&nbsp; <br><br></li>
+	    <li>Open the file <b>MUPanel.java</b>
+and edit the comment header at the top of the file so that it has your name in place
+of Samantha's and uses today&rsquo;s date. <br>
+        <br>
+      </li>
+	    <li>Run the <b>MUFrame.java</b> application. <br><br>
+	      <ol type="a">
+		      <li>You should see one RoundHead character and
+		      one button, but at this time, clicking the button doesn't do anything.&nbsp;<br><br></li> 
+	    <li>Samantha Student's
+		    name should not appear anywhere in the window or in the window frame.<br><br></li>
+		    </ol>
+      </li>
+    </ol>
+  </li>
+	
+	</ol>
+	<h2>Part 2: Study The Code</h2>
+	<ol start="3">
+
+  <li><b>Look over the RoundHead class definition.</b><br>
+    <br>
+    <ol>
+      <li>Open the <b>RoundHead.java</b> file in the NetBeans IDE.&nbsp;
+	  Notice the various data properties and the purpose of each.<br>
+        <br>
+      </li>
+      <li>The constructor expects parameters to initialize some of the
+data members, but just sets the size to 30 for every RoundHead that is
+constructed.<br>
+        <br>
+      </li>
+      <li>The draw method should seem understandable, although
+	  a bit involved.&nbsp; Notice the use of an <code>if</code>
+	  statement.<br>
+        <br>
+      </li>
+      <li>The moveVertically method, when invoked by some other object,
+will change the value of down, so that the next time draw is invoked
+the RoundHead will appear in a different position.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+	</ol>
+	<h2>Part 3: Revising Code</h2>
+<ol start="4">
+  <li><b>Get the Move RoundHeads button to work.</b><br>
+    <br>
+    <ol>
+      <li>The starter program has been set up with a partially completed
+	  <code>moveButtonActionPerformed</code> method for you already.&nbsp; In "Source"
+	  view in the <b>MUFrame</b> class, find the 
+	  <code><b>moveButtonActionPerformed</b></code>
+method definition. &nbsp; <br>
+	      <blockquote><em>Note that this method doesn't do anything right now
+other than call the <code>repaint</code> method of the <code>muPanel</code>
+		      object.</em></blockquote>
+	      <li>Inside the <code>
+moveButtonActionPerformed</code> method, as the first action to be taken in the
+method, add a call to the <code>moveObjects</code> method of the <code>muPanel</code>
+object &mdash; this method
+accepts NO parameters inside the parentheses of the method call.&nbsp;  <em>Hint, revisit your Lab 5 project
+		      if you don't recall how to do this.</em><br>
+
+		      <blockquote><em>Note:&nbsp; you need to keep the <code>repaint</code> method call as the last action in 
+			      <code>moveButtonActionPerformed</code>.</em></blockquote>
+      </li>
+      <li><b>Run the program, test, and fix as needed.</b> &nbsp;Each time
+you click the Move RoundHeads button, the RoundHead should move up
+until it gets close to the top edge of the viewer, then start moving
+down. If you keep clicking until it gets close to the bottom edge of
+the viewer, then it should start moving up again.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Add a working Change Mood button to the Program.</b><br>
+    <br>
+    <ol>
+      <li> Use the Designer to add another JButton to the interface: <br>
+        <br>
+        <ol type="a">
+          <li> In "Design" view in the <b>MUFrame</b> class, right-click on
+		  the moveButton and choose "Copy" from the pop-up menu.&nbsp;<br><br></li>
+		<li>Right click in the Designer window just below the button and choose
+		  "Paste".&nbsp; A duplicate copy of the button will appear in the 
+			Designer &ndash;<br><br></li>
+			<li>Drag the new button so it is located a little bit
+		  below the move button.&nbsp; Edit the text of the new button so it
+		  displays "Change Mood", and change the variable name for the button
+				to <code>changeMoodButton</code>.&nbsp;<br><br></li> 
+		<li>Right-click on the new
+		  button and choose "Properties" from the bottom of the pop-up menu; 
+		  change the "background" and "foreground" properties of this JButton
+		  so that it displays dark blue text on an orange background. <br>
+            <br>
+          </li>
+          <li> Run the program now.&nbsp; You should now see two
+buttons in the control panel area on the right, but wait a minute &ndash;<br>
+<blockquote><em>clicking the Change Mood button doesn't do anything, because we need to 
+	attach an action to this button.</em>&nbsp; We will add the actions in the next
+	several steps so that the Change Mood button does something.</blockquote>
+	</li>
+        </ol>
+        <br>
+      </li>
+      <li> Add a method to the <code>MUPanel</code> class that
+will change the mood of all RoundHead objects in the program: <br>
+        <br>
+        <ol type="a">
+          <li> In the <b>MUPanel.java</b> file, find the <code>moveObjects</code>
+method &#8212; copy this entire method, and paste the lines into the file immediately
+		  after the <code>moveObjects</code> method.&nbsp; <br><br></li>
+		<li>Rename the
+copied method so that it is named <code><b>changeObjectMoods</b></code>,
+and change the method call in the body of this method so that the <code>changeMood</code>
+method of the <code>firstOne</code> object is invoked. </li>
+	      </ol>
+      </li>
+	    
+	    <li> Add an <code>actionPerformed</code> method for the Change Mood button: <br>
+        <br>
+        <ol type="a">
+          <li> In "Design" view for the <b>MUFrame.java</b> file, double-click
+		  on the changeMoodButton to attach an ActionPerformed method.&nbsp; Edit
+the body of the <code>changeMoodButtonActionPerformed</code> method so that it
+calls the <code>changeObjectMoods
+            </code>method of the <code>muPanel</code> object, and then calls
+			<code>repaint</code> for <code>muPanel</code>.<br>
+            <br>
+          </li>
+          <li> Run the program now, and if everything is working
+correctly, the buttons should do what their labels say they do!&nbsp;
+Test and fix your program as needed so that each time you click the
+Change Mood button, the RoundHead changes from happy to sad or vice
+versa. </li>
+        </ol>
+        <br>
+      </li>
+	    
+	  </ol></ol>
+<h2>Part 4: Add More Objects and Functionality</h2>
+<ol start="7">
+      
+
+  <li><b>Change the existing RoundHead and add another RoundHead.</b><br>
+    <br>
+    <ol type="a">
+      <li>In the constructor method of the <code>MUPanel</code> class, 
+	  where we instantiate the RoundHead
+called <code>firstOne</code>, change the instantiation so that the
+RoundHead will have a green hat, is initially sad, and will initially
+move 30 down instead of 30 up. <b>Run the program, test, and fix as
+needed before proceeding.</b><br>
+        <br>
+      </li>
+      <li>Add a second RoundHead object to the program. Declare this
+RoundHead in the <b>MUPanel</b> class, calling it <code>secondOne</code>,
+instantiate it so that it
+starts in position (300, 150) in the viewer, wears a blue hat, is
+happy, and initially moves 60 pixels up.<br>
+        <br><ul>
+<li>Don't forget to change the <code>paintComponent</code> method 
+of <b>MUPanel</b> so that
+both RoundHead objects are asked to draw themselves.</li>
+        <br>
+<li>Also, don't forget to change both of the methods in <b>MUPanel</b> that ask RoundHead
+objects to move and to change moods so that both objects are modified
+	when the buttons are clicked. </li><br>
+	  </ul>
+	    </li>
+        <li><b>Run, test, fix as needed before proceeding.</b><br>
+        <br>
+      </li>
+	    
+    </ol>
+  </li>
+  <li><b>Change the <code>draw</code> method of the RoundHead class.</b><br>
+    <br>
+    <ol type="a">
+      <li>Change the <code>draw</code> method of the RoundHead class so that happy
+RoundHeads have yellow faces and sad ones have pink faces. Of course,
+this will require the use of an <code>if/else</code> statement.<br>
+        <br>
+      </li>
+      <li><b>Run, test, fix.</b><br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Add three more RoundHeads to MUPanel.</b><br>
+    <br>
+    <ol type="a">
+      <li>Declare, instantiate, and use 3 more RoundHeads in the 
+	  <b>MUPanel</b> class:<br>
+        <br>
+        <ol type="i">
+          <li>a happy RoundHead at position (540, 150) with an orange
+hat that moves up 6 pixels at a time<br>
+            <br>
+          </li>
+          <li>a sad RoundHead with a black hat who moves 10 pixels down
+from an initial position of (400, 100)<br>
+            <br>
+          </li>
+          <li>a RoundHead whose hat color and mood reflect the way you
+are feeling right now (and whose overall appearance is different from
+any other RoundHead on the screen), located at position (15, 200) and
+moving 15 pixels up.<br>
+            <br>
+          </li>
+        </ol>
+      </li>
+	    <li><b>Run, test, fix.</b><br><br></li> &nbsp;
+	    <li>There should now be a total of 5 RoundHeads that can move
+around in the application window, and be changed from happy to sad
+and sad to happy.<br> <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Add the ability to move the RoundHeads horizontally.</b><br>
+    <br>
+    <ol type="a">
+      <li>Edit the <code>RoundHead</code> class.<br>
+        <br>
+        <ol type="i">
+          <li>Add one additional private data member, which will
+represent the horizontal step size that a RoundHead should take when
+the move button is clicked.<br>
+            <br>
+          </li>
+          <li>Modify the constructor method so that it expects one
+additional parameter, and uses it to initialize the added private data
+member.<br>
+            <br>
+          </li>
+          <li>Add a new method called <code><b>moveHorizontally</b></code>.
+You may use the existing <code>moveVertically</code> method as a
+guide, but now worry about turning around horizontally to avoid going
+off the left or right of the viewer window rather than worrying about
+turning around vertically to avoid going off the top or bottom of the
+viewer window.<br>
+            <br>
+          </li>
+        </ol>
+      </li>
+      <li>Edit the <code>MUPanel</code> class.<br>
+        <br>
+        <ol type="i">
+          <li>In the constructor method of the <b>MUPanel</b>
+class, change the instantiations of your RoundHeads, adding the
+required additional parameter. Make the first RoundHead move 5 pixels
+left initially, the second RoundHead move 25 pixels right, the third
+RoundHead not move horizontally at all, and the fourth and fifth
+RoundHeads move any horizontal amount and direction you wish.<br>
+            <br>
+          </li>
+          <li>Now add a sixth RoundHead (declare and instantiate) that
+is sad, wears a yellow hat, moves left 10 pixels at a time without
+moving up or down at all, and starts at position (50, 300).<br>
+            <br>
+          </li>
+          <li>Change the <code><b>moveObjects</b></code> method to
+call the <code>moveHorizontally</code> method of each of the RoundHead
+objects in addition to the <code>moveVertically</code> methods.<br>
+            <br>
+          </li>
+        </ol>
+      </li>
+      <li><b>Run, test, fix.</b> Are there <b>six</b> RoundHeads, some
+moving only horizontally, some only vertically, and some diagonally (both 
+horizontally and vertically in the same step)?<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Make the RoundHeads have different sizes and give them
+nickNames.</b><br>
+    <br>
+    <ol type="a">
+      <li>The RoundHead class already has a size data member, but the
+constructor always assigns a value of 30 to size. Change the
+constructor to expect an additional parameter for initializing the
+size. Then change the instantatitions of RoundHeads in the MUPanel
+class, giving each RoundHead a different size.<br>
+        <br>
+      </li>
+      <li><b>Run, test, fix.</b><br>
+        <br>
+      </li>
+      <li>Add a <code>String</code> data member called nickName to the
+RoundHead class. Edit the constructor accordingly and the
+instantiations of RoundHeads in the MUPanel class. Edit the draw
+method of the RoundHead class so that the nickName is drawn beneath the
+RoundHead using
+        <pre>g.drawString(nickName, ?, ?);</pre>
+      </li>
+      <li><b>Run, test, fix.</b><br>
+      </li>
+    </ol>
+  </li>
+
+</ol>
+	
+  <h2>Part 5 Challenge:&nbsp; Grow and Shrink the RoundHeads</h2>
+    <ol start="12">
+      <li>Add a method in the RoundHead class called <b><code>grow</code></b>.<br><br>
+<ol type="a">
+<li>This method returns nothing (void), and has no parameters. The body of
+the method makes the size grow by 50%.
+        <pre>            size = size + size/2;</pre>
+	</li>
+</li>
+      <li>Add a method in the <b>MUPanel</b> class called <code>growTheObjects</code>.
+
+This method should call the grow method for each of the RoundHead
+objects.<br>
+        <br>
+      </li>
+      <li>In the <b>MUFrame</b> class, add another 
+JButton called <code>growButton</code>.&nbsp; Using the same style as
+was used for the other buttons in your application, give the <code>growButton</code>
+meaninful label text, set its colors, add the actionPerformed method, etc.
+Follow the pattern that was used for the other buttons.<br>
+        <br>
+      </li>
+      <li>The <code><b>actionPerformed</b></code> method for the
+<code>growButton</code> should call the <code>growTheObjects</code>
+method of the <code>muPanel</code> object before repainting the <code>muPanel</code>.<br>
+        <br>
+      </li>
+      <li><b>Run, test, fix.</b> Try your new button. It should grow
+each RoundHead every time you click it.<br>
+        <br>
+	    </li></ol>
+	<li>Add a method in the RoundHead class called <code>shrink</code><br><br>
+		<ol type="a"><li>Next, add a button to shrink the RoundHeads by 50% each time a button is clicked.&nbsp; If an
+  individual RoundHead's size 
+  is less than 10, it should not shrink when the button is clicked.<br>
+    <br>
+	<li><b>Run, test, fix.</b> Try your new button. It should grow
+each RoundHead every time you click it.<br>
+        <br>
+			</li></ol>
+	    <li>Add comments documenting your challenge work.  Extra credit may be earned on this Lab, but only if
+		    your work is fully documented in your code comments.</li>
+  </li>
+    </ol>
+  </li>
+
+</ol>	
+
+  <h2>Part 6: Lab 6 Submission<br></h2>
+    <ol start="15">
+  <li>
+	Create and submit your project to the D2L Dropbox.<br><br>
+	  <ol type="a">
+		  <li>Run your program and move the RoundHeads around 
+			  by clicking buttons, and change their moods.&nbsp;<br><br></li>
+		  <li>Then create a screen capture of your output
+			  window and save it using a descriptive and meaningful name inside your project src folder.<br><br></li>
+		  <li>Close the project in NetBeans.&nbsp;<br><br> </li>
+		  <li>Create a zip of your Lab6 folder that includes your project
+		 folder along with the screen captures.<br><br></li>
+		  <li>Submit your .zip file to the Lab6 dropbox in our
+		 <a href="http://d2l.mountunion.edu" target="_blank">D2L</a> course room. <br/>
+		 <br/>
+  </li>
+</ol>
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab06_rubric.html" target="_blank"> Lab06 Grading Rubric</a>
+</blockquote>
+
+	<br/><br/><br/><br/>
+
+</body>
+</html>
+	

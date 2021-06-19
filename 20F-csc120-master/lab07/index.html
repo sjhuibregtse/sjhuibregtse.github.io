@@ -1,0 +1,178 @@
+<html>
+<head>
+  <title> CSC 120 Lab 7</title>
+		<link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+</head>
+<body vlink="#ff8800" alink="#ff0000" bgcolor="#ffffff" link="#0000ee"
+ text="#000000">
+	<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+<font color="#990099">
+<center>
+<h2>CSC 120 Lab 7</h2>
+</center>
+</font>
+<p>In this lab we will practice with <code><b>for</b></code> loops and drawing repetitive patterns with loops
+<ol type="A">
+  <li><b>Create a new NetBeans project called Lab7a, and copy source
+files to it.</b><br>
+    <br>
+    <ol>
+      <li>File | New Project, etc. Make sure the Project Location is in
+your CSC120\Java folder, and the Project Name is Lab7a. <br>
+        <br>
+      </li>
+	  <li>Right-click on the following link and save this .zip file in your CSC120 folder:
+	      <blockquote>
+		      <a href="Lab7aStarterFiles.zip"> Lab7aStarterFiles.zip</a>
+		  </blockquote></li>
+      <li>Use Windows Explorer to Extract All from the .zip file you saved in the previous
+          step, and then copy <b><u>BOTH</u></b> files that were extracted,
+	      and paste them in the src folder of your project.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Run the program.</b><br>
+    <br>
+    <ol>
+      <li>Run the program as it is given.&nbsp; Five lines are displayed in the Text Area
+	      on screen.&nbsp; Then examine the program in "Source" view.&nbsp;Look at the
+	      source code of the program -- there is only one <code>outputArea.append</code> statement inside the
+		  <code>for</code> loop
+		  (it is spread across several lines), which
+		  is executed multiple times because of the loop in the program.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Make changes to the given program.</b><br>
+    <br>
+    <ol>
+      <li>Make the value of the variable <code>down</code> take on the values 7, 14, 21, 28, 35 as the 
+	      program is executed.&nbsp; Use the same type of code to do this as is used in the program to 
+		  cause <code>over</code> take on a series of values.&nbsp; If you do this properly, the values
+		  of <code>down</code> shown above will be printed in the Text Area on screen.&nbsp; 
+		  Run your program and
+		  see if you can obtain correct output.<br>
+        <br>
+      </li>
+      <li>Make the program print 20 lines of output in the Text Area.&nbsp; Run the program and count to make 
+	      sure that 20 lines of output are printed.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  <li><b>Add code to change other variables.</b><br>
+    <br>
+    <ol>
+      <li>Inside the body of the constructor method for the <code>MUFrame</code> class,
+    	  declare two more <code>Integer</code>
+          variables called <code>width</code> and <code>height</code>.<br>
+		<br>
+	  </li>
+	  <li>Make these variables take
+		  on the following values:&nbsp; <code>width</code> should start with 700, and repeatedly decrease
+		  by 10 each time through the loop; <code>height</code> should start with 1, and double itself
+		  each time through the loop.<br>
+        <br>
+      </li>
+	  <li>Add code to the <code>outputArea.append</code> statement inside the loop so that all four 
+	      variable values
+	      are printed in the Text Area on one line, with appropriate labels preceding each numeric
+		  value.<br>
+        <br>
+      </li>
+      <li><b>Run the program, test, and fix as needed.</b> <br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  
+  <li><b>Create a new NetBeans project called Lab7b, and copy source
+files to it.</b><br>
+    <br>
+    <ol>
+	  <li>Close the current Lab7a project in NetBeans. <br>
+	    <br>
+	  </li>
+      <li>Choose "File | New Project, etc." from the NetBeans top-level menu bar.&nbsp; Make sure 
+	  the Project Location is in your CSC120\Java folder, and the Project Name is Lab7b. <br>
+	    <br>
+	  </li>
+	  <li>Right-click on the following link and save this .zip file in your CSC120 folder:
+	      <blockquote>
+		      <a href="Lab7bStarterFiles.zip"> Lab7bStarterFiles.zip</a>
+		  </blockquote></li>
+      <li>Use Windows Explorer to Extract All from the .zip file you saved in the previous
+          step, and then copy <b><u>ALL THREE</u></b> files that were extracted,
+	      and paste them in the src folder of your project.<br>
+        <br>
+      </li>
+	  <li> In NetBeans, open the file MUFrame.java, and in "Design" view, change the title of the frame
+	       so that it displays your name instead of "Samantha Student".
+	    <br><br>
+	  </li>
+      <li>Run the program as it is given.&nbsp; Notice that 7 blue bars are displayed in the output window.&nbsp; 
+	      Examine the <b>MUPanel.java</b> file and make sure you understand why the pattern that is drawn shows up as
+		  it does.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+  
+  <li><b>Draw patterns using loops.</b><br>
+    <br>
+    <ol>
+      <li>Change the code in the given <code>MUPanel</code> so that the patterns that may be viewed
+	      by clicking <a href="LoopyDrawings/Drawings.html" 
+		  target="_blank"> THIS LINK</a>
+	      are drawn in the output window.<br>
+		<br>
+	  </li>
+	  <li>Keep changing the program from pattern to pattern as you go along -- you don't need to keep 
+	      each version of the program in a separate NetBeans project (unless you want to do that). <br>
+	    <br>
+      </li>
+	  <li>Hint:&nbsp; each trip through the loop, after all the drawing is done, changing the values
+	                  of <code>over</code>, <code>down</code>, <code>width</code> and/or 
+					  <code>height</code> will cause the next shape to be drawn differently the 
+					  next time through the loop.&nbsp; What is changing in the pattern from
+					  shape to shape?&nbsp; Those variables are what need to be changed inside
+					  the loop body.<br>
+        <br>
+      </li>
+	  <li>Hint:&nbsp; to make every other color (or every third color, etc.) change to a 
+	      different color, you'll need to use the
+	      <b>%</b> operation to calculate the remainder of a division problem.<br>
+        <br>
+      </li>
+	  <li>Ask your instructor
+		  for help with any pattern you have trouble generating with a loop.<br>
+        <br>
+      </li>
+    </ol>
+  </li>
+
+  <li><b>Submit your Lab7b project for grading.</b><br>
+  <blockquote>
+      Turn in ONLY the final version of the Lab7b project into 
+	  the <a href="http://d2l.mountunion.edu" target="_blank">
+	  D2L dropbox</a> for this assignment.&nbsp; Be sure to submit a
+	  screen capture of your final pattern along with the .zip file
+	  of the entire NetBeans project for this part of the lab.
+  </blockquote>
+
+	  
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab07_rubric.html" target="_blank"> Lab07 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>
+	  

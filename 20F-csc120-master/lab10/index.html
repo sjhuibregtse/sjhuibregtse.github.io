@@ -1,0 +1,160 @@
+<html>
+
+    <head>
+        <title>CSC 120 Lab 10</title>
+	    <link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body bgcolor="#ffffff" text="#000000">
+
+<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+	    
+    <h1 align="center"><font color="#990099">CSC 120 Lab 10</font></h1>
+
+    <p>In this lab we will practice using methods of the String class, as well as JLabels, JButtons,
+       JTextFields and JTextAreas.</p>
+
+    <ol type="A">
+
+	    <!--li><b>If you didn't do so before today's class</b>, watch 
+			<a href="StringDemoVideo01.mp4" target="_blank"> this video</a>
+            that introduces the <code>String</code> class and some of the methods that may be used
+			to process String data (<em>approx. 9 minutes in length</em>).<br /><br /></li-->
+
+
+        <li><b>Get the beginning version of the program up and running.</b><br /><br />
+
+            <ol>
+
+                <li>Create a new Netbeans project called <b>Lab10</b>.
+                    Make sure the Location is in your CSC120\Java folder.<br /><br />
+                </li>
+
+                <li>In your web browser, right click on
+                    <b><a href="MUFrame.java">MUFrame.java</a></b>
+                    and choose <b>Save Target As...</b> (or <b>Save Link As...)</b>
+                    and save the files in the <b>src</b> folder of your project.<br /><br />
+                </li>
+
+                <li>Compile and run the program to see how the interface looks.&nbsp; Then
+				    type some text in the
+                    input field and click the button to see the output.&nbsp; Then edit the
+					value you typed in the input field, and click the button again.&nbsp;
+                    Notice that the output JTextArea displays the results of
+					our processing, which is only one operation at this time.<br /><br />
+                </li>
+            </ol>
+        </li>
+
+        <li><b>Add more code to the program to produce more kinds of output.</b><br /><br />
+
+            <ol>
+                <li>Click <a href="lab10final.png" target="_blank">HERE</a>
+                    to see a sample finished version of this lab.<br /><br />
+                </li>
+
+                <li>When a user types something in the input field, then clicks the button,
+                    the program should produce all of the output shown in the example.<br /><br />
+                </li>
+
+                <li>Complete each of the other kinds of output <b>ONE AT A TIME.</b>
+                    Finish getting one working before you start working on the next one.
+                    For each of the other kinds of output shown in the sample output:<br /><br />
+
+                    <ul>
+
+                        <li>Add a method in the MUFrame class that will display output
+                            in the JTextArea.&nbsp; Use the <code>capitalizeInputText</code> method
+							as a pattern for your new methods.&nbsp;
+                            Try to figure out by yourself which method(s) from the String class
+                            you'll need to use to produce a new String for the desired output.
+                            If you get stuck, ask for help but only after looking at the
+<a href="../resources/String.html#method_summary" target="_blank">String class methods</a>.<br /><br />
+                            Hint:&nbsp; you may find it helpful to focus on these specific methods and operators of the String class 
+                            when working on code to generate the sample output produced in this lab assignment:
+							<br/><br/>
+							<b><i>Operators:</i></b>
+							<blockquote>
+							    +
+							</blockquote>
+							<b><i>Methods:</i></b>
+							<blockquote><font face="Courier New">
+    toUpperCase <br/>
+    toLowerCase <br/>
+    charAt <br/>
+    substring <br/>
+    length <br/>
+    indexOf <br/>
+							</font></blockquote>
+                        </li>
+
+                        <li>Add a line of code in the <code>processInputButtonActionPerformed</code>
+						    method of the <b>MUFrame</b> class to call the new method.<br /><br />
+                        </li>
+
+                        <li>Run your program and fix any problems.<br />
+                            <font color="red">Only add one new kind of output, then
+                            test &amp; fix, then add another, then test &amp; fix, etc.</font><br /><br />
+                        </li>
+                    </ul>
+                </li>
+            </ol>
+        </li>
+
+        <!--li><b>Remove the JButton and convert the input JTextField to an active one.</b><br /><br />
+
+            <ol>
+
+                <li>Create a new Netbeans project called <b>Lab11a</b>.
+                    Make sure the Location is in your CSC120\Java folder.<br /><br />
+                </li>
+
+                <li>Copy all of the files from the src folder of the <b>Lab11</b> project,
+                    and paste them into the src folder of the new <b>Lab11a</b> project. <br /><br />
+                </li>
+
+                <li>In the <b>MUPanel.java</b> file, edit the <code>MUPanel</code> class,
+                    changing the setName value to CSC 120 Lab11a.<br /><br />
+                </li>
+
+                <li>In the <b>MUPanel.java</b> file, edit the <code>MUPanel</code> class,
+                    commenting out the declaration and instantiation of the JButton
+                    in the <code>MUPanel</code> constructor method.
+                    You could delete these lines, but when you call addActionListener for the inputField
+                    (below), you may want to look at how you did that for the button.<br /><br />
+                </li>
+
+                <li>Change the String parameter used to instantiate the <code>instructionsLabel</code>
+                    object from "Type something here, then click the button" so that it is now
+                    "Type something here, then press Enter". <br /><br />
+                </li>
+
+                <li>Now add the ActionListener object that used to be attached to the JButton
+                    to the JTextField that accepts the input value. To do this, simply
+                    call the <code>addActionListener</code> method for the <code>inputField</code>
+                    object. The parameter passed to the <code>addActionListener</code>
+                    method should be <code> new ProcessListener()</code> &#8212; the
+                    same as with the JButton in the previous version of this program.<br /><br />
+                </li>
+
+                <li>Run your program and fix any problems. When you run the program,
+                    you should be able to generate output by simply typing a text string
+                    in the input field and pressing the <b>Enter</b> key.<br /><br />
+                </li>
+
+            </ol>
+        </li-->
+		<li> Submit your <b>Lab10</b> project as a .zip file along with a screen capture of the output window to the 
+             <a href="http://d2l.mountunion.edu/" target="_blank"> D2L dropbox</a> for grading, as usual. </li>
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab10_rubric.html" target="_blank"> Lab10 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

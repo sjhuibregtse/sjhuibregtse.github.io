@@ -1,0 +1,146 @@
+<html>
+	<head>
+		<title>CSC 120 PA 2</title>
+	</head>
+	<body text="#000000" bgcolor="#ffffff" link="#0000EE" vlink="#FF8800" alink="#FF0000">
+	
+		
+		<center>
+		<h2><font color="#990099">CSC 120 Programming Assignment 2</font></h2>
+		</center>
+				
+        <!--h4>Note: You should <b>not</b> work on this assignment during lecture or lab class-time unless:
+        <ol type="a">
+            <li>You have completed all of the in-class assigned work for the day, and</li>
+            <li>You have permission from the instructor.</li>
+        </ol>
+        </h4-->
+		
+		<h4> This assignment must be submitted to the PA2 dropbox in D2L by the posted due date and time.</h4>
+
+        <h3> Overview:</h3>
+		<blockquote>
+    		You are to create your own Java class that contains a minimum of four (4) properties, at least two
+			of which must be some numeric type (<code>Integer</code> or <code>Double</code>).&nbsp; Then you must 
+			write code in an MUPanel class that declares and instantiates at least five (5) objects from
+			your class and displays lines of text that shows that the objects from your class work
+			correctly.
+		</blockquote>
+
+        <h3>Instructions:</h3>	
+		<p><strong>As a reminder, it is expected that each student will complete this assignment INDIVIDUALLY.  Contact your professor
+			if you need to discuss your project plan.</strong></p>
+        	
+		<ol>
+			<li>Initial Set-up.<br /><br />
+			
+			    <ol type="a">
+			        <li>Create a NetBeans Java Application named PA2, and copy the MUPanel.java file from your Lab4
+			            project into the src folder of the PA2 project.</b><br /><br />
+			        </li>
+			        <li>Do not try to run the program (yet). The program from Lab4 uses 
+					    <code>ClothingItem</code> and <code>Coffee</code> objects.&nbsp; However, you do not
+			            have those two classes in the src folder of your project, so NetBeans will
+			            complain about the fact that the those classes don't exist!<br /><br />
+			        </li>
+			    </ol>
+			</li>
+	    
+			<li>Create your class.<br /><br />
+			
+			    <ol type="a">
+			        <li>You need to design your class before you continue!
+			            You are not allowed to use a ClothingItem class or a Coffee class for this
+						assignment.&nbsp; Try to think of a class
+			            that nobody else will use.<br /><br />
+			        </li>
+				    <li>In the Files tab of your project, right-click on the src folder
+				        and choose "New | Java Class..." and set the <b>Class Name:</b>
+				        to be the name you've chosen for your class. Be sure you
+				        capitalize the name and don't use any spaces. For example
+				        you could use <b>Airplane</b>, but <b>not airplane</b>,
+				        and <b>not Air&nbsp;Plane</b>.<br /><br />
+				    </li>
+				    <li>Edit the new class. Change the comment header to say
+				        the name of the class, your name, and the date.<br /><br />
+				    </li>
+				    <li>Your class will need at least 4 properties (private data members),
+				        and at least two of them must be a numeric type (you can use either <code>Integer</code>
+						or <code>Double</code> as the data type for these properties).<br /><br />
+				    </li>
+				    <li>Make a constructor for your class that accepts a parameter for each of the
+					    properties,
+				        and uses them to initialize the corresponding properties of the object.<br /><br />
+				    </li>
+				    <li> Make <em><strong>getter</strong></em> and <em><strong>setter</strong></em> methods for each of the properties 
+					    of your class.&nbsp; The 
+					    <em><strong>getter</strong></em> and <em><strong>setter</strong></em>
+					     methods.  The <em><strong>getter</strong></em> method should return the proper data type for each of the properties, 
+					    and the <em><strong>setter</strong></em> methods should assign values appropriately. &nbsp; Rewatch the getter 
+					    and setter video for assistance.<br /><br/>
+				    <li>Make a <code>toString</code> method that returns a <code>String</code> 
+					    that describes the object in terms of its properties.&nbsp; Refer to the
+						<code>toString</code> method in the classes from Lab4.<br /><br />
+						
+					<li>Make a method that performs a calculation with two or more numeric properties of your class, similar
+					    to the <code><b>calculateTotalSpent</b></code> method of the <code>ClothingItem</code> class and the
+						<code><b>calculatePricePerOunce</b></code> method of the <code>Coffee</code> class.<br/><br/>
+						
+			    </ol>
+			</li>
+	    
+			<li>Modify the <code>MUPanel</code> to use your class.<br /><br />
+			
+			    <ol type="a">
+				    <li>The <code>MUPanel</code> from Lab4 declares <code>ClothingItem</code> and
+    					<code>Coffee</code> objects.&nbsp; Change the declarations in the MUPanel.java
+				        file so that you are declaring at least five (5) objects from your class.<br /><br />
+				    </li>
+				    <li>Instantiate your objects so that the constructor method has the correct number and
+					    type of values being passed into the constructor between the parentheses.&nbsp; Once again,
+						refer to the way this was done in Lab4. <br /><br />
+				    </li>
+				    <li>The <code>System.out.println</code> or <code>muta.println</code> statements used in Lab4 must be modified to use your objects
+					    and to print messages that make sense for your class.&nbsp; For instance, if your class is
+						<code>Airplane</code>, change the data printed with the <code>println</code> statements so that 
+						the output makes sense for Airplane objects.<br /><br />
+				    </li>
+				    <li>Use the numeric properties of your objects to perform some kind of calculation.&nbsp;
+					    For instance, if you had a <code>BaseballPlayer</code> class, you could add up the hits for all
+						players who play for the same team and print the total.&nbsp; Use the "getter" methods of your 
+						class to retrieve
+						data from the numeric properties so that those values can be used in a calculation.&nbsp;
+					        Use the <em><strong>setter</strong></em> to set initially and update values to be used throughout your
+						program.
+						Print the calculated value using <code>System.out.println</code>
+						or <code>muta.println</code>, whichever you prefer.<br /><br />
+				    </li>
+				    <li>Test your program, and fix & retest as needed.<br /><br />
+				    </li>
+			    </ol>
+			</li>
+	    
+		</ol>
+		
+
+ <h3> Turning in your Program for Grading: </h3>
+<blockquote>
+  When you have completed your NetBeans project for PA2 (including the comment header at
+  the top of the two files with your name and having your name appear in the title of the frame window, etc.), use 
+  File Explorer to make a
+  .zip file of the <b>PA2</b> folder in your
+<b>CSC120\Java</b> folder so that the file is named <b>PA2.zip</b>.&nbsp; Next, run your program and obtain a screen
+capture that shows the output generated by your program.&nbsp; Then upload
+those two files to the PA2 dropbox in <a href="http://d2l.mountunion.edu" target="_blank">D2L</a>.
+</blockquote>
+
+
+
+<h3> Grading Rubric: </h3>
+<blockquote> <a href="PA2_rubric.html" target="_blank"> PA2 Grading Rubric</a>
+</blockquote>
+<br/><br/><br/>				
+<h3> &nbsp; </h3>
+						
+	</body>
+</html>

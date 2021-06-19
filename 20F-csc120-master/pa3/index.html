@@ -1,0 +1,121 @@
+<html>
+<head>
+  <title>CSC 120 PA 3</title>
+	<link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body vlink="#ff8800" alink="#ff0000" link="#0000ee">
+	<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+
+
+<h1 align="center"><font color="#990099">CSC 120 Programming Assignment 3</font>
+</h1>
+
+<!--font size="+1">Note: You should <b>not</b> work on this assignment during
+lecture or lab class-time unless:</font>
+
+<ol type="a">
+  <li><font size="+1">You have completed all of the in-class assigned work for the day, and</font></li>
+  <li><font size="+1">You have permission from the instructor.</font></li>
+</ol-->
+
+
+<h4> This assignment must be submitted to the PA3 D2L dropbox <b>before</b> the beginning of class on the due date.</h4>
+
+<h3>Overview:</h3>
+
+<blockquote>Develop a Java Application program that displays at least three visual objects
+ in the MUPanel that are changed when the user clicks 
+a button in the program interface.&nbsp; The objects must be displayed on a background that can be changed
+somehow when another button is clicked.&nbsp; There must be at least two different effects that are
+caused when specific buttons are clicked, meaning that there must be at least
+two buttons in the user interface of the program.&nbsp; Other buttons
+may be used to control various properties of the objects' movements or changes,
+such as distance to move, etc.
+</blockquote>
+
+<h3>Instructions:</h3>
+
+<ol>
+    <li>Create an application called <b>PA3.</b> It should contain two classes named <b>MUFrame</b> and 
+	<b>MUPanel</b>.&nbsp; Start with the three files located in the <b>MUFrameWithGUIDesigner.zip</b> file
+	that is available in the "Starter Templates" section of the <a href="https://sjhuibregtse.github.io/20F-csc120/resources.html" target="_blank"> 
+	    CSC 120 Student Resources page</a> of the course web site.<br /><br />
+    </li>
+
+    <li>Create two more classes for objects that can be drawn in the MUPanel.
+        One class will be a <b>Background</b> class, and draw a background for the scene.
+        The other class is for objects that will be drawn on top of the background object.
+        Both classes will have methods for changing the objects in some way. The background
+        might change back and forth from day to night with clouds and sun or stars and moon,
+        or rain &amp; snow or whatever. The other objects might change colors, change shapes,
+        move up and down, move sideways, grow, shrink, etc.
+        You may not use the RoundHead class or any other class that has already been used
+        in a lab or a class that already exists. However, you may use one or more of the objects that you
+		created for PA1. Also, your objects must be more detailed than a simple
+        circle or oval or square that can be drawn with only one or two method calls from the
+        Graphics class.<br /><br />
+    </li>
+
+    <li>The MUPanel class must declare and instantiate one Background object,
+        and at least 3 objects from your other class,
+        and the paintComponent method of the MUPanel must call the draw methods of
+        the background object and the other objects.&nbsp; In addition, the MUPanel class
+		needs to have methods that can change the background and other objects in some
+		way (these "change" methods will be called from MUFrame when the buttons in 
+		the application are clicked by the user).<br /><br />
+    </li>
+  
+    <li>Using the GUI Designer, add <b>at least</b> two Buttons to the MUFrame. At least one button must
+        call a method in MUPanel that changes the appearance of the Background 
+		object. At least one button must call a method in MUPanel that changes all 
+		of the objects
+        from the other class to move them or change their appearance.
+        Of course these Buttons will need to have the proper code in their "actionPerformed"
+		methods, and call <code>muPanel.repaint();</code> at the end of the method as in Lab 6 and class demos.<br /><br />
+    </li>
+
+    <li>Enhancements are optional, but make your classes interesting and different from
+        ones used by other people. Perhaps the Background could draw a room with stuff on the floor
+        and walls, and maybe a light on the ceiling, and the other class could be a Furniture class.
+        Or the background could be a city with streets, and the other class could be people or
+        cars. Or a house & yard with Flowers (oh, wait we've
+        done that already). Hmmmm, the jungle and animals, or ... Be creative!<br /><br />
+		
+		Something interesting you might want to explore would be displaying a JPG, GIF or PNG image as part of the objects
+		in your scene, either as the background for your application or for the objects to be drawn on the background.&nbsp;
+		Consult the <a href="../howDoI/ImageWithFrame/index.html" target="_blank"> ImageWithFrame Demo</a> for an example of how to do this.<br /><br />
+    </li>
+    
+    <li>Don't forget your comment header for MUPanel, and put a comment header in each of the
+        other class files.<br /><br />
+    </li>
+
+    <li>As usual, when you have completed your NetBeans project for PA3 (including the comment header at
+  the top of the four files with your name, etc.), use File Explorer to make a
+  .zip file of the <b>PA3</b> folder in your
+<b>CSC120\Java</b> folder so that the file is named <b>PA3.zip</b>.&nbsp; Next, run the program and
+  obtain a screen capture of the output window that shows your name in the title of the window frame.&nbsp;
+  Then upload
+those files to the PA3 dropbox in <a href="http://d2l.mountunion.edu" target="_blank">D2L</a>.<br /><br />
+    </li>
+</ol>
+    
+<h3>Note: It is expected that each student will complete this assignment INDIVIDUALLY.</h3>
+
+<!--h3>ExampleS of Program Behavior: </h3>
+				<ul> 
+				    <li> Here is a video that shows <a href="PA3DemoVideo.mp4" target="_blank"> 
+					         several demo programs that satisfy the requirements for the assignment</a>.  </li>
+				</ul-->
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+     <a href="PA3_rubric.html" target="_blank"> PA3 Grading Rubric</a>
+</blockquote>
+
+	
+<br><br><br><br>
+</body>
+</html>

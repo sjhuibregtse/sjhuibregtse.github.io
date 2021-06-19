@@ -1,0 +1,162 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN">
+<html>
+  <head>
+    <meta http-equiv="content-type" content="text/html;
+      charset=ISO-8859-1">
+    <title>Windows NetBeans Install</title>
+  </head>
+  <body>
+  
+  <h2>Download and Install NetBeans 12 for Windows</h2>
+  
+  <!--p>
+  Java and NetBeans are free.
+  Your computer probably already has a version of the Java runtime (the JRE),
+  but it probably does not have a version of the JDK (Java Development Kit),
+  which you need for NetBeans.
+  </p-->
+  
+  <!--h3>Windows</h3-->
+  
+  <!--p>
+  You may want to first remove the Java runtime software from your computer,
+  then install the Java JDK with NetBeans bundle. The bundle installation
+  will install the latest version of Java runtime, the latest version of Java JDK,
+  and the NetBeans development environment all in one step.
+  </p-->
+  
+  <!--p>
+  You don't have to uninstall the existing version of the JRE.
+  If you leave the existing JRE (Java Runtime Environment) on your computer,
+  and install the bundle, it will install the new version in addition to the old one,
+  and NetBeans will use the new one.
+  </p-->
+  
+  <h3> 1)&nbsp; install OpenJDK11 on your computer:</h3>
+  
+  <ol type="A">
+  
+    <li>Click on this link to the file <a href="http://www.blaseweb.com/umu/csc120/netbeans/installJDK11.zip" target="_blank">installJDK11.zip</a> and choose "Save File..." to download the file to your computer.&nbsp; This may take a few moments; it is a rather large file.
+	<br /><br />
+    </li>
+    
+    <li>Use File Explorer to browse to the folder where the <b>installJdk11.zip</b> file was saved (it's most likely your Downloads folder).&nbsp; Right-click on the filename in File Explorer and choose "Extract All" from the pop-up window.<br/><br/>
+	<img src="JDKscreenshotStepB.png" width="645" height="502"/><br/><br/>
+	In the dialog that appears, make sure the checkbox is checked to show extracted files when complete, then click the <b>Extract</b> button.&nbsp; This will create a new folder named <b>installJdk11</b>.
+	<br /><br />
+    </li>
+    
+    <li>A new File Explorer window should be open showing the contents of the <b>installJdk11</b> folder created in the previous step; if not, browse to that folder using File Explorer.&nbsp; Double-click on the file named <b>installJDK11.bat</b>.&nbsp; If a security warning appears, you can choose to proceed -- this is a safe operation.&nbsp; After a few seconds, the <b>AdoptOpenJDK with Hotspot 11.0.7.10 (x64) Setup Wizard</b> will open on your computer.&nbsp; Click the <b>Next</b> button to move to the next step.
+	<br /><br />
+    </li>
+    
+    <li>Check the box indicating that you accept the terms of the License Agreement, then click the <b>Next</b> button.
+	<br /><br />
+    </li>
+    
+    <li>Don't make any changes in this step; simply click the <b>Next</b> button.
+	<br /><br />
+    </li>
+    
+     <li>You will now have reached the last step in the wizard.&nbsp; Click <b>Install</b>.&nbsp; If prompted, say Yes to allow AdoptOpenJDK to make changes to your computer.&nbsp; The install process should proceed, and you will see a message that says the process has completed.&nbsp; Click <b>Finish</b> to close the Setup Wizard.
+	<br /><br />
+    </li>
+    
+ </ol>
+  
+  <h3> 2)&nbsp; install Apache NetBeans 12 on your computer:</h3>
+  
+  <ol type="A">
+  
+    <li>Click on this link to the file <a href="http://www.blaseweb.com/umu/csc120/netbeans/installNetBeans12.zip" target="_blank">installNetBeans12.zip</a> and choose "Save File..." to download the file to your computer.&nbsp; Be patient, this file is a little larger than the last one....
+	<br /><br />
+    </li>
+    
+    <li>Use File Explorer to browse to the folder where the <b>installNetBeans12.zip</b> file was saved (it's most likely your Downloads folder).&nbsp; Right-click on the filename in File Explorer and choose "Extract All" from the pop-up window.&nbsp;
+	In the dialog that appears, make sure the checkbox is checked to show extracted files when complete, then click the <b>Extract</b> button.&nbsp; This will create a new folder named <b>installNetBeans12.zip</b>.
+	<br /><br />
+    </li>
+    
+    <li>A new File Explorer window should be open showing the contents of the <b>installNetBeans12</b> folder created in the previous step; if not, browse to that folder using File Explorer.&nbsp; Double-click on the file named <b>installNetBeans12.bat</b>.&nbsp; If a security warning appears, you can choose to proceed -- this is a safe operation.&nbsp; If prompted, say Yes to allow Apache NetBeans to make changes to your computer.&nbsp; After some seconds, the <b>Apache NetBeans IDE 12.0 Installer</b> will open on your computer.&nbsp; Click the <b>Next</b> button to move to the next step. 
+	<br /><br />
+    </li>
+    
+    <li>Check the box indicating that you accept the terms of the License Agreement, then click the <b>Next</b> button.
+	<br /><br />
+    </li>
+    
+    <li>You don't need to make any changes in this step; simply click the <b>Next</b> button.
+	<br /><br />
+    </li>
+    
+     <li>You will now have reached the Summary step in the wizard.&nbsp; Click <b>Install</b>.&nbsp; You can watch the progress of the installation on screen if you would like; it takes a little while, so be patient.&nbsp; When the process has completed, click <b>Finish</b> to close the Setup Wizard.
+	<br /><br />
+    </li>
+    
+  </ol>
+  
+  <h3> 3)&nbsp; verify that Apache NetBeans will launch on your computer:</h3>
+  
+  <ol type="A">
+  
+    <li>The NetBeans installer adds <b>Apache Netbeans IDE 12.0</b> to the list of apps that you can launch, and it also creates a desktop icon that you can use to start the IDE.&nbsp; Use either of those approaches to launch NetBeans for the first time.
+	<br /><br />
+    </li>
+    
+    <li>The first time you launch the program, there is some addtional set-up that needs to happen.&nbsp; When the <b>Apache NetBeans IDE 12.0</b> window appears, a <b>NetBeans IDE Installer</b> dialog box will pop up on screen:<br/><br/>
+	<img src="VerifyNetBeansStepB.png"/ width="400" height="360">
+	<br/><br>
+	Click <b>Next</b>, check the box saying that you accept the terms in all of the license agreements, and click <b>Install</b>.&nbsp; When the install process has completed, click <b>Finish</b>.
+	<br><br>
+    </li>
+    
+    <li>The NetBeans program window should look something like this:<br><br>
+	<img src="VerifyNetBeansStepC.png"/ <!--width="400" height="360"-->
+	<br><br>
+    </li>
+    
+    
+  </ol>
+	  <h3>Get Stuck?</h3>
+	  <p> Contact the IT Help Desk if you have any questions.  On campus phone support x4357, off campus phone support 330-829-8726, or email the helpdesk at helpdesk@mountuinon.edu</p>
+  <br><br>
+  <!--h3>Macintosh</h3>
+  
+  <p>
+  Oracle is the source for all versions of Java for Linux and Windows, but not for Macintosh.
+  Only Apple provides versions of Java for Macintosh.
+  For a Mac you'll have to first install the JDK from Apple, and then install
+  NetBeans from NetBeans.
+  </p>
+  
+  <ol>
+  
+    <li>Go to <a href="http://support.apple.com/downloads/" target="_blank">http://support.apple.com/downloads/</a><br /><br />
+    </li>
+  
+    <li>Type java in the "Search Downloads" box and press Enter.<br /><br />
+    </li>
+  
+    <li>Scroll down and find the Java version for your version of Mac OS, download it and install it.<br /><br />
+    </li>
+	
+	<li>Install the JDK (Java Development Kit) for your version of Mac OS now (perform a web search to find the proper version).<br><br/>
+	</li>
+  
+    <li>Go to <a href="http://netbeans.org/downloads/index.html">http://netbeans.org/downloads/index.html</a><br /><br />
+    </li>
+    
+    <li>In the "Java SE" column click the "Download" button.<br /><br />
+    </li>
+
+    <li>The web site should figure out what operating system you are running,
+        then provide a download version for it.<br /><br />
+    </li>
+
+    <li>Download NetBeans, then install it.<br /><br />
+    </li>
+  
+  </ol-->
+  
+  </body>
+</html>

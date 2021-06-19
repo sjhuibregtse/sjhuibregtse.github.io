@@ -1,0 +1,333 @@
+<html>
+
+<html>
+<head>
+<title>CSC 120 Lab 4</title>
+</head>
+
+<body bgcolor="#ffffff">
+<font color="#660066">
+<center><h2>CSC 120 <br/>
+            Lab #4 </h2></center></font>
+
+<font face="tahoma, arial">
+    In this lab we will practice creating a class definition, use arithmetic operators to perform calculations,
+	and explore the use of the 
+	<code>System.out.println</code> statement for displaying output in the Java Console.
+</font>
+
+<hr/>
+<ol>
+    <li> Create a new NetBeans Java Application project named <em>LAB4</em> in your
+         <b>CSC120</b> folder.&nbsp; Right-click on the following file and save it
+		 in the <b>src</b> folder of your new project. <br/><br/>
+
+         <ul>
+              <li> <a href="ClothingItem.java"> ClothingItem.java</a> </li>
+         </ul>
+         <br/>
+
+         Open this file in NetBeans and look at the code.&nbsp; This class has a constructor method (as all 
+		 classes must have), along with a <code>toString</code> method.&nbsp; Also, notice that there are 
+		 "getter" and "setter" methods for each of the private properties of the class, and notice the
+		 different data types of the private data members &ndash; <code>name</code> and <code>type</code>
+		 are <code><b>String</b></code> objects, while <code>price</code> is a <code><b>Double</b></code>
+		 variable and <code>quantity</code> is an <code><b>Integer</b></code>. <br/><br/> </li>
+
+    <li> Let's look at a main program that declares, instantiates and uses methods from the 
+	     <code>ClothingItem</code> class.&nbsp; Right-click on the following file and save it
+		 in the <b>src</b> folder of your new project. <br/><br/>
+
+         <ul>
+              <li> <a href="MUPanel.java"> MUPanel.java</a> </li>
+         </ul>
+         <br/>
+
+         Open this file in NetBeans, and edit the comment header at the top of the file so that your name
+		 replaces "Sammy Student".&nbsp; Also modify the "setName" method in the MUPanel constructor method
+		 to use your name instead of Sammy's.&nbsp; Notice that we declare six (6) <code>ClothingItem</code> objects
+		 at the top of the class definition.&nbsp; In the <code>MUPanel</code> constructor, we instantiate
+		 the six objects and then call a method named <code>workWithClothingItems</code> -- this method 
+		 must be defined later in our class definition.&nbsp; The <code>paintComponent</code> just draws a
+		 string that tells the user to look in the Java Console for the results of the program.&nbsp; Run
+		 the program now and look at the results below the editor window in your NetBeans IDE.<br/><br/> 
+
+         All the work in this program is being done in the <code>workWithClothingItems</code> method.&nbsp; 
+		 Notice that there are a series of <code>System.out.println</code> statements in this method &mdash;
+		 each time one of these statements is executed, a line of output is printed in the Java Console.&nbsp;
+		 See if you can determine why each <code>System.out.println</code> statement produces 
+		 its corresponding line of output in the Java Console.&nbsp; Ask your instructor for an explanation
+		 if you cannot figure out how the output is produced by this code.<br/><br/> </li>
+
+    <li> A nagging little problem in Java arises when we want to use <code>Double</code> numeric values to represent 
+	     currency amounts (dollars and cents).&nbsp; By default, Java programs print only as many decimal places 
+		 as are needed to represent the actual value, so if you take a close look at the output of the program
+		 you just ran, you'll notice that several of the prices are printed with only 1 digit to the right of the
+		 decimal point.&nbsp; To force Java to print currency values with two decimal places every time to represent
+		 cents, and automatically round long decimals to two decimal places, we can use a technique that involves 
+		 the <code>NumberFormat</code> class.&nbsp; To see how this works,
+		 copy the following line and paste it into the <b>ClothingItem.java</b> file as the new first line in the
+		 <code>toString</code> method:
+<pre>
+    DecimalFormat currency = new DecimalFormat("#.00");
+</pre>
+         Netbeans will underline "DecimalFormat" as if it is an error, but to fix that, click the light-bulb icon
+		 in the left margin of the line and choose "Add import for java.text.DecimalFormat".&nbsp;  Then, to use
+		 this new format, change the end of the assignment statement in the <code>toString</code> method to be:
+<pre>
+    + " at a price of $" + currency.format(price);
+</pre>		 
+         Run the program now and you should see trailing zeros in the dollar amounts that are printed by the
+		 <code>toString</code> method.<br/><br/>
+		 
+		 This technique was used in the <code>workWithClothingItems</code> method of the
+		 <b>MUPanel.java</b> file &mdash; can you find the two places in that method that use the
+		 <code>currency.format(...)</code> notation to print value that represent price data?&nbsp; 
+		 Ask your instructor for help if you can't
+		 figure out all the places where <code>currency.format(...)</code> is called.
+		 <br/><br/> </li>
+
+    <li> Right-click on the <b>src</b> folder of your project in the NetBeans file tree in the upper-left
+         panel of the IDE, and choose "New | Java Class" to create a new class file in your project &ndash;
+		 use the name <b>Coffee</b> for this new class file.<br/><br/> </li>
+
+    <li> Each <code>Coffee</code> object will have three properties:&nbsp; <b>size</b> which is a 
+	     <code>String</code>, <b>ounces</b> which is an <code>Integer</code>, and <b>price</b> which is a 
+         <code>Double</code>.&nbsp; Declare these three properties in the correct location in the
+		 <b>Coffee</b> class definition.&nbsp; Refer to the <b>ClothingItem</b> class definition for 
+		 an example of declarations. <br/><br/> </li>
+
+    <li> The constructor method of the <code>Coffee</code> class should accept three parameter values of the
+	     appropriate types, and store the parameter values in the properties of the class.&nbsp;
+		 Refer to the <b>ClothingItem</b> class definition for 
+		 an example of writing a constructor method. <br/><br/> </li>
+
+    <li> Write three "getter" methods in the <code>Coffee</code> class, one for each of the private data
+	     members of the class.&nbsp; "Getter" methods do not accept any parameters, and return a value
+		 that is the matching data type of the property.&nbsp;
+		 Refer to the <b>ClothingItem</b> class definition for 
+		 examples of how to write "getter" methods. <br/><br/> </li>
+
+    <li> Write three "setter" methods in the <code>Coffee</code> class, one for each of the private data
+	     members of the class.&nbsp; "Setter" methods accept one parameter of the same data type as the
+		 matching property, and return nothing (that means the return type of a "setter" method
+		 is <code>void</code>).&nbsp;
+		 Refer to the <b>ClothingItem</b> class definition for 
+		 examples of "setter" methods. <br/><br/> </li>
+		 
+    <li> Write a method named "calculatePricePerOunce" in the <code>Coffee</code> class.&nbsp; This method 
+         returns a <code>Double</code> value and accepts no parameters.&nbsp; The answer calculated and 
+         returned by this method should use the <code>price</code> and <code>ounces</code> properties to
+		 be the price per ounce for this <code>Coffee</code> object.&nbsp; Refer to the "calculateTotalSpent"
+		 method of the <code>ClothingItem</code> class for an example of how to write a method that calculates
+		 an answer using properties of the object. <br/><br/> </li>
+
+    <li> Write a <b><code>toString</code></b> method for the <code>Coffee</code> class.&nbsp; A 
+	     <code>toString</code> method does not accept any parameters, and returns a <code>String</code> value
+		 that is the concatenation of all of the data items in the class, with explanatory <code>String</code>
+		 literal values in quotes between the data items.&nbsp;
+		 Refer to the <b>ClothingItem</b> class definition for 
+		 an example of a <code>toString</code> method.&nbsp; The result of your <code>toString</code>
+		 method should look like this (the red text represents the values of the properties (private data
+		 members) of
+		 the object:
+<pre>
+        a Coffee object with size = <font color="#cc0000"><b>Grande</b></font> (<font color="#cc0000"><b>16</b></font> oz.) and price = $<font color="#cc0000"><b>7.00</b></font>
+</pre>
+         Be sure to use the <code>currency.format(...)</code> technique when printing the price so that monetary
+		 amounts are always displayed with two decimal places to the right of the decimal point, as seen in step
+		 3 of these lab directions. <br/><br/>
+		 </li>
+
+    <li> In the <b><code>MUPanel.java</code></b> file, declare 5 <code>Coffee</code> objects, using the names
+	     <code>cup1</code>, <code>cup2</code>, up to <code>cup5</code>.&nbsp; In the <code>MUPanel</code>
+		 constructor method, instantiate these objects using the following data: <br/>
+
+            <table align="left" width="50%" nowrap>
+			  <tbody>
+                <tr>
+				  <th width="30%">&nbsp;</th>
+                  <th width="30%">Size</th>
+                  <th width="20%">Ounces</th>
+                  <th width="20%">Price</th>
+                </tr>
+                <tr>
+                  <td align="right"> &nbsp; . . . for <b>cup1</b>:</td>
+                  <td align="center">Tall</td>
+                  <td align="center">12</td>
+                  <td align="center">6.00</td>
+                </tr>
+                <tr>
+                  <td align="right"> &nbsp; . . . for <b>cup2</b>:</td>
+                  <td align="center">Venti</td>
+                  <td align="center">20</td>
+                  <td align="center">8.00</td>
+                </tr>
+                <tr>
+                  <td align="right"> &nbsp; . . . for <b>cup3</b>:</td>
+                  <td align="center">Grande</td>
+                  <td align="center">16</td>
+                  <td align="center">7.00</td>
+                </tr>
+                <tr>
+                  <td align="right"> &nbsp; . . . for <b>cup4</b>:</td>
+                  <td align="center">Demi</td>
+                  <td align="center">3</td>
+                  <td align="center">2.70</td>
+                </tr>
+                <tr>
+                  <td align="right"> &nbsp; . . . for <b>cup5</b>:</td>
+                  <td align="center">Short</td>
+                  <td align="center">8</td>
+                  <td align="center">4.00</td>
+                </tr>
+			  </tbody>
+			  <tcaption> &nbsp; </tcaption>
+            </table>
+            <br/> <br/> <br/> <br/> <br/> <br/> <br/> <br/> </li>
+		 
+    <li> Copy the following code and paste it into the <b>MUPanel.java</b> file immediately before the
+	     comment that says "Do NOT change or delete anything below here!":
+<pre>
+
+    public void workWithCoffeeObjects() {
+	
+        DecimalFormat currency = new DecimalFormat("#.00");
+        System.out.println("=======================================");
+        System.out.println("cup1: " + cup1.toString() );
+        System.out.println("cup2: " + cup2.toString() );
+        System.out.println("cup3: " + cup3.toString() );
+        System.out.println("cup4: " + cup4.toString() );
+        System.out.println("cup5: " + cup5.toString() );
+        System.out.println();
+        System.out.println("The price of " + cup3.getSize() + " is $"
+		        + currency.format( cup3.getPrice() - cup4.getPrice() ) 
+		        + " more than the price of " + cup4.getSize() );
+        System.out.println(cup2.getSize() + " contains " + (cup2.getOunces() - cup1.getOunces()) 
+		        + " oz. more than " + cup1.getSize() + " contains");
+
+        //*********************** 
+        //* PRINT THE PRICE PER OUNCE OF cup2 AND cup4
+        //* USE THE calculatePricePerOunce METHOD DO TO THIS
+        //*********************** 
+
+        Double pricePerOunce;
+
+        pricePerOunce = cup2.calculatePricePerOunce();
+        System.out.println("Price per ounce for " + cup2.getSize() + "=$ " + currency.format(pricePerOunce) );
+
+
+        pricePerOunce = cup4.calculatePricePerOunce();
+        System.out.println("Price per ounce for " + cup4.getSize() + "=$ " + currency.format(pricePerOunce) );
+		
+        //*********************** 
+        //* REDUCE THE PRICE OF THE cup1 and cup5 OBJECTS TO 25% OF WHAT THEY WERE
+        //* USE THE setPrice AND getPrice METHODS DO TO THIS
+        //*********************** 
+				
+
+
+
+
+				
+		
+        System.out.println();
+        System.out.println("After reducing the prices,");
+        System.out.println("cup1: " + cup1.toString() );
+        System.out.println("cup2: " + cup2.toString() );
+        System.out.println("cup3: " + cup3.toString() );
+        System.out.println("cup4: " + cup4.toString() );
+        System.out.println("cup5: " + cup5.toString() );
+		
+    } // end of workWithCoffeeObjects
+</pre>	
+         <br/> </li>
+	 
+    <li> Insert a statement as the new last statement in the <code>MUPanel</code> constructor that calls the
+	     <code>workWithCoffeeObjects</code> method.&nbsp; It's the same as the 
+		 "workWithClothingItems" method call
+		 that's currently the last statement in the constructor.&nbsp; The <code>workWithCoffeeObjects</code>
+		 method accepts no parameters.
+		 <br/><br/>
+		 
+         Run the program and examine the first 9 lines of output &ndash; the sixth through ninth lines 
+		 of output should have
+	     the correct information for the difference of the prices and ounces for the various sizes of
+		 coffees and the prices per ounce. <br/><br/> </li>
+		 
+    <li> <code>System.out.println</code> works well for displaying lines of text in the Java Console, but
+	     an inconvenient thing about the statement is the small size of the Java Console and the need to
+		 scroll up and down to see output that consists of more than a few lines.&nbsp; It would be convenient
+		 to have a way to display lines of text in the Graphical Output window.&nbsp; Later in the semester, 
+		 we'll learn techniques for doing that, but at this point, we've written code to allow you to
+		 add an object called a <code><b>MUTextArea</b></code> that works the same way System.out works,
+		 but displays the text in the Graphical Output window.
+		 <br/><br/>
+		 
+         Find the line in the MUPanel constructor method that says 
+		 "<code>setPreferredSize(new Dimension(250,100));</code>" and change the numbers so that the
+		 preferred size is 800 x 600.&nbsp; Next, right-click on the following file and save it
+		 in the <b>src</b> folder of your project. <br/><br/>
+
+         <ul>
+              <li> <a href="MUTextArea.java"> MUTextArea.java</a> </li>
+         </ul>
+         <br/>
+
+         Copy the following line and paste it into the <b>MUPanel.java</b> file in the private declarations
+		 section of the file:
+<pre>
+    private MUTextArea muta;
+</pre>
+         Then copy the following lines and paste them into the <b>MUPanel.java</b> constructor method right after the line that
+		 sets the background color to WHITE:
+<pre>
+        muta = new MUTextArea();
+        muta.setBounds(10, 10, 780, 580);
+        add(muta);
+</pre>
+        Whew!&nbsp; Now we're ready to change EVERY <code>System.out.println</code> statement in the program 
+		to a <code>muta.println</code> statement.&nbsp; Instead of a lot of typing, we can use the "Replace"
+		feature of the "Edit" menu to change all the lines at once.&nbsp; Choose &nbsp; 
+		<b>Edit | Replace...</b> &nbsp; 
+		from the NetBeans top menu, and in the dialog box that appears, fill in the "Find What:" field with
+		<b>System.out</b>, fill in the "Replace With:" field with <b>muta</b>, and click the "Replace All"
+		button.&nbsp; Here's a screenshot of what this looks like: <br/><br/>
+		<img src="Lab4Dialog.png"><br/><br/>
+		
+		Now run the program and observe that the output is now displayed in a TextArea on the screen.&nbsp; Much
+		more convenient than the Java Console, no?
+		 <br/><br/> </li>
+		 
+ 
+    <li> After the comment in the <code>workWithCoffeeObjects</code> method, insert code that will set
+	     the prices of <code>cup1</code> and <code>cup5</code> to be 25% of what they were.&nbsp; To do this, call
+		 <code>setPrice</code> and <code>getPrice</code> for each of the objects, and use the proper
+		 calculation to determine what is 25% of the old price.&nbsp; See the <code>workWithClothingItems</code>
+		 method for an example of how to do this.&nbsp; DON'T DO THE MATH IN YOUR HEAD -- make the computer
+		 carry out the calculation by using arithmetic operators in Java.<br/><br/> 
+		 
+		 When you run the program now, the last 5 lines output should show prices that are 25% of their
+		 original values for <code>cup1</code> and <code>cup5</code>, with the others being the same as
+		 they were originally.<br/><br/> </li>
+		 
+	<li> Run your program and obtain a screen capture of the window that includes the title in the frame that
+    	 shows your name, and save the capure as a .png file.<br/><br/> </li>
+
+		 
+    <li> Using Windows Explorer, browse to your <b>CSC120</b> folder, right-click on the <b>Lab4</b> folder, choose
+	     "Send to | Compressed (zipped) folder", and make sure the name of the zip file is <b>Lab4.zip</b>. <br/><br/> </li>
+
+		 
+    <li> Submit the .zip file and the screen capture .png file to the Lab4 dropbox in <a href="http://d2l.mountunion.edu/" target="_blank">D2L</a>. <br/><br/> </li>
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab04_rubric.html" target="_blank"> Lab04 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

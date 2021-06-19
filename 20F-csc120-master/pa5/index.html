@@ -1,0 +1,110 @@
+<html>
+
+<head>
+  <title>CSC 120 Programming Assignment 5</title>
+		<link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+</head>
+
+<body>
+		<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+
+<h1 align="center"><font color="#800080">CSC 120 Programming Assignment 5</font></h1>
+
+
+
+<h4> It is expected that each student will complete this assignment INDIVIDUALLY.</h4>
+
+<h4> This assignment must be submitted to the PA5 D2L dropbox <b>before</b> noon on the due date.</h4>
+
+<h3>Overview:</h3>
+
+<blockquote>
+Write a Java application that uses an array to represent a collection of at least 10
+objects, and provides a user interface that gives a way to display information and/or
+statistics about the objects.&nbsp; The program should declare and instantiate an array
+of objects that keep information about something in the real world (such as Countries,
+Books, Students, etc.), and then implement JButtons that will display information
+from the array or statistics about the items in the array in a JTextArea.
+</blockquote>
+
+<h3>Instructions:</h3>
+
+<ol>
+
+    <li>Think of some objects in the real world that have at least five properties that can
+	    be represented as private data members in a class definition. Examples would be
+		the <code>Book</code> class and the <code>Student</code> class from Lab9, and the
+		<code>Country</code> class used in the sample video. <font size="+1">You
+		may not use Books, Students or Countries for your project; you must think up some other
+		class of objects to use for this assignment.</font> <br /><br /></li>
+    
+    <li>Write a Java class definition for the class you will use for this assignment. This class must
+	    have at least five private data members, a constructor method, getter methods for each of
+		the private data items, and a <code>toString()</code> method. You may also want to implement
+		setter methods for each of the private data items, but setters are not required for this
+		assignment.<br /><br /></li>
+
+    <li>In the <code>MUFrame</code> class, declare an array of your objects, and then in the constructor
+	    method of the <code>MUFrame</code> class, instantiate the array so that it contains at least
+		10 elements.<br /><br /></li>
+
+    <li>When you instantiate the objects in the array,
+        you'll need to do them one at a time not in a loop.<br />
+        For example,<pre>
+    nation[0] = new Country(some parameter values go here);
+    nation[1] = new Country(some parameter values go here);
+    nation[2] = new Country(some parameter values go here);
+    ...</pre></li>
+
+    <li>The program must have a JButton that when clicked will display every element in the array on
+	    a separate line in a JTextArea that is visible in the output window. Of course you must
+		use a loop to do this.<br /><br /></li>
+
+    <li>The program must have at least two JButtons that when clicked will use a loop to calculate
+        either the sum, average, minimum or maximum of a numeric data member of each element of the
+		array. For example, you might have a button that would find the average population of
+		all <code>Country</code> objects in the array, and another that would find the minimum area
+		of any <code>Country</code>. The information must be displayed in the JTextArea that is 
+		visible in the output window.<br /><br /></li>
+
+    <li>The program must have at least two JButtons that when clicked will use a loop to test each
+	    element of the array for some property of a <code>String</code> data member, using the <b><code>
+		.equals</code></b> method. Either count the number of array elements that have the property
+		being tested, or display them in the JTextArea. In the example video, a button can be
+		used to display only those countries that are located in Asia (continent.equals("Asia")).
+        <br /><br /></li>
+
+    <li>Look over your comment documentation, and especially make sure the
+        MUFrame.java header comment describes the project well.<br /><br /></li>
+
+    <li>Don't forget to document acknowledgements for any code you used
+        from labs, book, instructors, etc., and help you received.<br /><br /></li>
+
+    <li>As usual, make a .zip file from the entire PA5 folder from your CSC120 space
+        and obtain a screen capture of your output window; submit those files to the PA5 Dropbox in <a href="http://d2l.mountunion.edu" target="_blank"> D2L</a> before the
+		due date.<br /><br />
+    </li>
+
+		
+    </ol>
+
+
+
+<!--h3> Samples: </h3>
+<ul>
+    <em>Note:&nbsp;</em>The narrator in these video samples/demonstrations says they are for Programming Assignment 7, but that was for a previous semester with a different number of assignments.<br/><br/>
+    <li> <a href="PA7DemoVideo01.mp4" target="_blank"> Sample 1</a> &mdash; acceptable &mdash; minimum requirements met </li>
+    <li> <a href="PA7DemoVideo02.mp4" target="_blank"> Sample 2</a> &mdash; (extras: more than five JButtons, advanced processing in loops) </li>
+    <li> <a href="PA7DemoVideo03.mp4" target="_blank"> Sample 3</a> &mdash; (extras: JComboBox and JTextField components used in interface) </li>
+</ul-->
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="PA5_rubric.html" target="_blank"> PA5 Grading Rubric</a>
+</blockquote>
+	
+	<br/><br/><br/><br/><br/>
+
+</body>
+</html>

@@ -1,0 +1,374 @@
+<html>
+
+    <head>
+        <title>CSC 120 Lab 11</title>
+	    	<link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+    </head>
+
+    <body alink="#FF0000" bgcolor="#ffffff" link="#0000EE" text="#000000" vlink="#FF8800">
+
+	    	<p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+	    
+    <h1 align="center"><font color="#990099">CSC 120 Lab 11</font></h1>
+
+    <p>This lab will introduce the use of the <code>split</code> method of the <b>String</b> class, and
+	   illustrate how TextAreas can be used to process large amounts of data in a program.</p>
+
+    <ol type="A">
+
+	    <!--li><b>If you didn't do so before today's class</b>, watch 
+			<a href="StringDemoVideo02.mp4" target="_blank"> this video</a>
+            that demonstrates the use of the <code>trim</code> method and the <code>split</code> method
+			of the <code>String</code> class (<em>approx. 9 minutes in length</em>).&nbsp; Note:&nbsp; the narration in
+		        the video mentions the wrong lab number, because it was recorded for use in a previous semester.&nbsp; Don't
+		        worry, this video applies to Lab # 11 this semester!<br /><br /></li-->
+
+
+        <li><b>Get the beginning version of the Lab11 program up and running.</b><br /><br />
+
+            <ol>
+
+                <li>Create a new Netbeans project called <b>Lab11</b>.
+                    Make sure the Location is in your CSC120\Java folder.<br /><br />
+                </li>
+
+                <li>In your web browser, right click on
+                    <b><a href="Lab11WithFormFile.zip">Lab11WithFormFile.zip</a></b>
+                    and choose <b>Save Target As...</b> (or <b>Save Link As...)</b>
+                    and save the file in your <b>CSC120</b> folder.<br /><br />
+                </li>
+                
+                <li> Using File Explorer, right-click on the .zip file you just saved and choose "Extract All".&nbsp; The resulting
+                     folder will contain two files, one named MUFrame.java and the other named MUFrame.form.&nbsp; Copy both
+                     files to the <b>src</b> folder of your <b>Lab11</b> NetBeans project folder.<br/><br/>
+		</li>
+
+                <li>Compile and run the program at this time.&nbsp; Then
+				    type your name and some text on multiple lines in the
+                    input area at the top of the window and click the Process Input button to see 
+					what happens.&nbsp; Right now, the program just displays the contents of the input area
+					unchanged in the output area.&nbsp; If you click the Clear Input Area button, the
+					contents of the input area are cleared, but the output area keeps its contents.&nbsp;
+					The output area has its "editable" property turned off, so you cannot make any changes in 
+					the output area by clicking or typing in it.<br /><br />
+                </li>
+            </ol>
+        </li>
+
+        <li><b>Break the input into separate lines with the <code>split</code> method.</b><br /><br />
+
+            <ol>
+                <li>Replace the "<code>outputArea.append</code>" statement in the 
+				    <b>processInputButtonActionPerformed</b> method with a statement that declares an array
+				    of <code>String</code> objects named <code>lineOfInput</code>.&nbsp; Then 
+					place the following code after the array declaration:
+<pre>
+    lineOfInput = theInput.split("\n");
+    
+    outputArea.setText("There are " + lineOfInput.length + " lines in the input.\n\n");
+    outputArea.append("Here is the input, line by line:\n");
+</pre>
+                    After this code, write a <code>for</code> loop that appends each element of the 
+					<code>lineOfInput</code> array to the <code>outputArea</code> on separate lines, preceded
+					by the word "line", the line number and a colon.&nbsp; For example, if you run the program and enter the
+					first 5 letters of the alphabet on separate lines in the input area, you should obtain 
+					this output:
+					<blockquote>
+					    <font face="Georgia" size="+1">
+						    There are 5 lines in the input. <br>
+							<br>
+							Here is the input, line by line: <br>
+						    line 0: A <br>
+						    line 1: B <br>
+						    line 2: C <br>
+						    line 3: D <br>
+						    line 4: E <br>
+						</font>
+					</blockquote>
+					Ask your instructor if you need help accomplishing this task.
+					<br /><br />
+                </li>
+				
+				<li>Here is a text area on the web page that contains all the letters of the alphabet on 
+				    separate lines.&nbsp; Copy all of the data in this text area (hint: click in the text area,
+					then press [Ctrl]-A to highlight all the text in the text area, then press [Ctrl]-C
+					to copy the contents).&nbsp; Then run your program, 
+				    paste the data into the input area (you can press [Ctrl]-V to paste), and process the input
+					by clicking on the appropriate button.&nbsp; There are 26 lines of input,
+					so your program should display that in the output area.
+					<blockquote>
+					<form>
+					  <textarea rows="5" cols="30">
+A
+B
+C
+D
+E
+F
+G
+H
+I
+J
+K
+L
+M
+N
+O
+P
+Q
+R
+S
+T
+U
+V
+W
+X
+Y
+Z
+</textarea>
+					</form>
+					</blockquote>
+                </li>
+				
+				<li>Copy the following data, run your program, 
+				    paste the data into the input area, and process the input.&nbsp; You should obtain 
+					98 lines of output, numbered 0 to 97.
+					<blockquote>
+					<form>
+					  <textarea rows="8" cols="70">
+The ASCII Table
+===============
+ Dec   Hex      -Binary-      char      description
+  32 	20 	00100000 	  	space
+  33 	21 	00100001 	! 	exclamation mark
+  34 	22 	00100010 	" 	double quote
+  35 	23 	00100011 	# 	number
+  36 	24 	00100100 	$ 	dollar
+  37 	25 	00100101 	% 	percent
+  38 	26 	00100110 	&amp; 	ampersand
+  39 	27 	00100111 	' 	single quote
+  40 	28 	00101000 	( 	left parenthesis
+  41 	29 	00101001 	) 	right parenthesis
+  42 	2A 	00101010 	* 	asterisk
+  43 	2B 	00101011 	+ 	plus
+  44 	2C 	00101100 	, 	comma
+  45 	2D 	00101101 	- 	minus
+  46 	2E 	00101110 	. 	period
+  47 	2F 	00101111 	/ 	slash
+  48 	30 	00110000 	0 	zero
+  49 	31 	00110001 	1 	one
+  50 	32 	00110010 	2 	two
+  51 	33 	00110011 	3 	three
+  52 	34 	00110100 	4 	four
+  53 	35 	00110101 	5 	five
+  54 	36 	00110110 	6 	six
+  55 	37 	00110111 	7 	seven
+  56 	38 	00111000 	8 	eight
+  57 	39 	00111001 	9 	nine
+  58 	3A 	00111010 	: 	colon
+  59 	3B 	00111011 	; 	semicolon
+  60 	3C 	00111100 	&lt; 	less than
+  61 	3D 	00111101 	= 	equality sign
+  62 	3E 	00111110 	&gt; 	greater than
+  63 	3F 	00111111 	? 	question mark
+  64 	40 	01000000 	@ 	at sign
+  65 	41 	01000001 	A 	 
+  66 	42 	01000010 	B 	 
+  67 	43 	01000011 	C 	 
+  68 	44 	01000100 	D 	 
+  69 	45 	01000101 	E 	 
+  70 	46 	01000110 	F 	 
+  71 	47 	01000111 	G 	 
+  72 	48 	01001000 	H 	 
+  73 	49 	01001001 	I 	 
+  74 	4A 	01001010 	J 	 
+  75 	4B 	01001011 	K 	 
+  76 	4C 	01001100 	L 	 
+  77 	4D 	01001101 	M 	 
+  78 	4E 	01001110 	N 	 
+  79 	4F 	01001111 	O 	 
+  80 	50 	01010000 	P 	 
+  81 	51 	01010001 	Q 	 
+  82 	52 	01010010 	R 	 
+  83 	53 	01010011 	S 	 
+  84 	54 	01010100 	T 	 
+  85 	55 	01010101 	U 	 
+  86 	56 	01010110 	V 	 
+  87 	57 	01010111 	W 	 
+  88 	58 	01011000 	X 	 
+  89 	59 	01011001 	Y 	 
+  90 	5A 	01011010 	Z 	 
+  91 	5B 	01011011 	[ 	left square bracket
+  92 	5C 	01011100 	\ 	backslash
+  93 	5D 	01011101 	] 	right square bracket
+  94 	5E 	01011110 	^ 	caret / circumflex
+  95 	5F 	01011111 	_ 	underscore
+  96 	60 	01100000 	` 	grave / accent
+  97 	61 	01100001 	a 	 
+  98 	62 	01100010 	b 	 
+  99 	63 	01100011 	c 	 
+100 	64 	01100100 	d 	 
+101 	65 	01100101 	e 	 
+102 	66 	01100110 	f 	 
+103 	67 	01100111 	g 	 
+104 	68 	01101000 	h 	 
+105 	69 	01101001 	i 	 
+106 	6A 	01101010 	j 	 
+107 	6B 	01101011 	k 	 
+108 	6C 	01101100 	l 	 
+109 	6D 	01101101 	m 	 
+110 	6E 	01101110 	n 	 
+111 	6F 	01101111 	o 	 
+112 	70 	01110000 	p 	 
+113 	71 	01110001 	q 	 
+114 	72 	01110010 	r 	 
+115 	73 	01110011 	s 	 
+116 	74 	01110100 	t 	 
+117 	75 	01110101 	u 	 
+118 	76 	01110110 	v 	 
+119 	77 	01110111 	w 	 
+120 	78 	01111000 	x 	 
+121 	79 	01111001 	y 	 
+122 	7A 	01111010 	z 	 
+123 	7B 	01111011 	{ 	left curly bracket
+124 	7C 	01111100 	| 	vertical bar
+125 	7D 	01111101 	} 	right curly bracket
+126 	7E 	01111110 	~ 	tilde
+</textarea>
+					</form>
+					</blockquote>
+                </li>
+				
+			</ol>	
+
+        </li>
+
+        <li><b>Use the <code>split</code> method to break each line of input into separate values.</b><br /><br />
+
+            <ol>
+
+                <li>Now that we have an array that contains each line of the input in a separate array element,
+				    we can process each line of input in the body of a <code>for</code> loop.&nbsp; Let's say we
+					have some data that describes the makeup of the Cleveland Orchestra for the current season.&nbsp;
+					Each line of input will contain three values for a different type of instrument in the
+					orchestra:&nbsp; the name of the instrument, the orchestra section to which the instrument
+					belongs, and the number of musicians that play that instrument this season.&nbsp; Each of
+					these values is separated from each other by a semicolon.&nbsp; 
+				    <br/><br/>
+					To split each line of input into three pieces, we can use the following code in the
+					<code>for</code> loop that displays each line in the output area:
+<pre>
+    String[] part = lineOfInput[x].split(";");
+</pre>					
+                    Now we have an array of <code>String</code>s called <code>part</code>, where element 0
+					of the array contains the instrument name, element 1 contains the instrument's section
+					and element 2 contains the number of musicians for this instrument.
+					<br><br>
+				</li>
+
+                <li>In your web browser, right click on
+                    <b><a href="Instrument.java">Instrument.java</a></b>
+                    and choose <b>Save Target As...</b> (or <b>Save Link As...)</b>
+                    and save the file in the <b>src</b> folder of your project.&nbsp; This file defines the
+					<code>Instrument</code> class with private data members for each of the three
+					pieces of data described above.&nbsp; Look at the code in this file and make sure
+					you understand how it is written. <br /><br />
+                </li>
+
+				<li>At the top of the <b>MUFrame</b> class, declare an array of Instrument objects.&nbsp; Then, 
+				    immediately before the <code>for</code> loop in the actionPerformed method 
+				    for the processInput button, instantiate
+					the array of Instruments so that there are as many elements in this array as there are
+					lines in the input.
+                    <br/><br/>
+				</li>
+				
+				<li>Inside the <code>for</code> loop in the actionPerformed method for the processInput button,
+				    do the following:
+					<ul>
+					    <li> split the input line into an array of Strings called <code>part</code>,
+						     using a semicolon as the delimiter (see the code example above) </li>
+						<li> <code> for (Integer p = 0; p < part.length; p++) {<br/> &nbsp; &nbsp; part[p] = part[p].trim();<br/>} // end for</code> </li>
+						<li> instantiate element <code>x</code> (or whatever you called your for loop control
+						     variable) of the array of <code>Instrument</code> objects, using this code on the right-hand side of the assignment operator: <br/><br/>
+							 &nbsp; &nbsp; &nbsp; &nbsp; <code> = new Instrument ( part[0], part[1], Integer.parseInt( part[2] ) );</code>
+							<br/><br/>
+						</li>
+						<li> change the <code>append</code> call inside the loop to be this:
+<pre>
+    outputArea.append( "line " + x + ": " + instrumentArray[x].toString() + "\n" );
+</pre>
+						 (you may need to change the names of <code>x</code> and <code>instrumentArray</code> in this
+						 sample to be the names you used in your program)</li>
+					</ul>
+				    <br>
+				</li>
+				
+				<li>Run your program, and test it with this data from the Cleveland Orchestra:
+					<blockquote>
+					<form>
+					  <textarea rows="5" cols="50">
+Timpani; Percussion; 2
+Drum; Percussion; 2
+Triangle; Percussion; 1
+Wood Blocks; Percussion; 1
+French Horn; Brass; 6
+Trumpet; Brass; 4
+Cornet; Brass; 2
+Trombone; Brass; 3
+Bass Trombone; Brass; 1
+Euphonium; Brass; 1
+Tuba; Brass; 1
+Violin, 1st; Strings; 18
+Violin, 2nd; Strings; 16
+Viola; Strings; 11
+Cello; Strings; 11
+Bass; Strings; 9
+Harp; Strings; 2
+Flute; Woodwinds; 4
+Piccolo; Woodwinds; 1
+Oboe; Woodwinds; 4
+English Horn; Woodwinds; 1
+Clarinet; Woodwinds; 6
+Bassoon; Woodwinds; 4
+Contra-Bassoon; Woodwinds; 1
+Piano; Keyboards; 2
+Harpsichord; Keyboards; 1
+</textarea>
+					</form>
+					</blockquote>
+				The program should print information for 26 different instruments from this test data.
+                    <br/><br/>				
+                </li>
+				
+				<li>Add code to your program that prints the following information about the orchestra:<br><br>
+				    <ol type="i">
+					    <li> after all of the instruments in the orchestra have been printed, print a single line
+                             that shows the total number of musicians in the entire orchestra </li>
+					    <li> next, print only one line that shows the total number of musicians in the Strings section </li>
+					    <li> finally, print a line for every instrument in the orchestra that is in the "Brass" section </li>
+					</ol> <br>
+					    For the test data given for this lab, your program should print that there are 115 musicians in the
+						entire orchestra, 67 of whom play in the Strings section, and there are 7 different instruments in the
+						Brass section (French Horn, Trumpet, Cornet, Trombone, Bass Trombone, Euphonium and Tuba).
+				    <br/><br/>
+				</li>
+				
+			</ol>	
+
+        </li>
+
+		<li> Submit your <b>Lab11</b> project as a .zip file along with a screen capture to the 
+             <a href="http://d2l.mountunion.edu/" target="_blank"> D2L dropbox</a> for grading, as usual. </li>
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab11_rubric.html" target="_blank"> Lab11 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

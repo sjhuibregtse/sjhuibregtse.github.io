@@ -1,0 +1,257 @@
+<html>
+  <head>
+    <title>CSC 120 -- Lab 9</title>
+	  <link href="../styles-sjh.css" type="text/css" rel="stylesheet" />
+  </head>
+  <body>
+	  <p class="resource">Access <a href="../resources.html" target="_blank">
+	Java Programming Resources for CSC 120</a> via this link.</p>
+    <font color="#660066">
+      <center>
+        <h1>CSC 120 Lab 9</h1>
+      </center>
+    </font>
+    <ol type="A">
+      <li>Lab9a: Experiments with an array of Student objects.<br />
+        <br />
+        <ol>
+          <li>Create a project named <b>Lab9a</b> in NetBeans.<br />
+            <br />
+          </li>
+          <li><b>Copy needed files into your src folder.</b><br />
+            <p> Right click on each of these: </p>
+            <ul>
+              <li><b><a href="Lab9a/MUPanel.java">MUPanel.java</a></b>,<br />
+              </li>
+              <li><b><a href="Lab9a/Student.java">Student.java</a></b><br />
+              </li>
+            </ul>
+            <p> and choose <b>Save Target As...</b> (or <span
+                style="font-weight: bold;">Save Link As...</span>) and
+              save the files in the src folder of your project.</p>
+          </li>
+          <li>When the proper files are in place, run the project to see
+            the output. This program uses an array of <code>Student</code>
+            objects to represent data describing 15 different students.
+            The output is printed in a <code>JTextArea </code>GUI
+            component using several <i>append</i> method calls. <br />
+            <br />
+          </li>
+          <li>In the <i>fillArray( )</i> method of the <code>MUPanel</code>
+            class, change the first element in the array (element 0) so
+            that it represents you. Change "Samantha Student" to your
+            name, change the dorm to your residence hall (or use "off-campus" if
+            you don't live in a residence hall), specify a code number that
+            indicates your current class (1=Freshman, 2=Sophomore,
+            3=Junior, 4=Senior), specify a <code>Boolean</code> value
+            indicating whether or not you are an intercollegiate athlete, and put in a
+            decimal number representing your GPA (you may use your
+            actual GPA or a made-up value, as you wish).<br />
+            <br />
+            Next, change the number of students so that the array will
+            contain two more <code>Student</code> objects. Then add
+            instantiations for a sixteenth and a seventeenth student in
+            the <code>fillArray()</code> method that represents either
+            friends of yours, or made-up people (could be your favorite
+            historical figures, athletes, movie stars, etc.). <br />
+            <br />
+            Run this program and observe the results. The output should
+            state that 17 students are listed, and the average GPA
+            should be different than it was originally.<br />
+            <br />
+          </li>
+          <li>Create and invoke a <i>displaySophomores</i> method.<br />
+            <br />
+            Make a copy of the <code>displayEntireArray()</code> method, then
+            paste a copy of this code immediately after the method, and then change the name of the
+            newly copied method to <b><code>displaySophomores</code></b>.<br />
+            <br />
+            Change the body of the <code>displaySophomores</code> method so that it only
+            processes students in the array that are Sophomores (have a
+            <code>classCode</code> value of 2). To do this, place an <code>if</code>
+            statement immediately inside the <code>for</code> loop, and
+            test to see if the result of the <code>getClassCode()</code>
+            method called for element number <code>k</code> of the <code>studentRoster</code>
+            array is equal to 2. Only if this test evaluates as true
+            should the student in position <code>k</code> of the array 
+			be printed and her gpa added to the
+            total. Also, edit the text strings in this second block so
+            that the first line printed by the block is "Listing of
+            Sophomores".<br />
+            <br />
+            Add a line in the <code>MUPanel</code> constructor method
+            to invoke this method; it should be invoked AFTER <code>displayEntireArray</code> has
+			been invoked. Run the program now; you should see
+            two sets of output lines in the JTextArea: the original list of
+            all students, and a second list showing only those students
+            who are Sophomores.<br />
+            <br />
+          </li>
+          <li>Create and invoke three more methods, as follows:<br />
+            <br />
+            <ol type="a">
+			  <li>One method displays a listing of students who are athletes,<br />
+            <br /></li>
+              <li>Another method displays a list of all students who are on
+            the Dean's List (GPA &gt;= 3.5),<br />
+            <br /></li>
+              <li>The third method displays a list of all the students who
+            live in "McMaster Hall" (Hint:&nbsp; to test a <code>String</code>
+            for equality, use&nbsp;<code>.equals("McMaster Hall")</code> -- don't use
+            the&nbsp;<code>==</code>&nbsp;operator for the test).<br />
+            <br /></li>
+			</ol>
+            You will need to add lines in the <code>MUPanel</code>
+            constructor method to invoke these methods.<br />
+            <br />
+          </li>
+          <li>You can now close this
+            project.<br />
+            <br />
+          </li>
+        </ol>
+      </li>
+      
+      <li>Lab9b: Experiments with an array of Book objects.<br />
+        <br />
+        <ol>
+          <li>Create a new NetBeans project named <b>Lab9b</b>.<br />
+            <br />
+          </li>
+          <li><b>Copy starter file into your src folder.</b><br />
+            <p> Right click on <b><a href="Lab9b/MUPanel.java">MUPanel.java</a></b>
+              and choose <b>Save Target As...</b> (or <span
+                style="font-weight: bold;">Save Link As...</span>) to
+              save the file in the src folder of your project.</p>
+          </li>
+          <li>This program WILL NOT run, because <code>MUPanel</code>,
+            <code>displayEntireArray </code>and <code>fillArray </code>try
+            to use an array of <code>Book</code> objects, and the <code>Book</code>
+            class definition is not supplied. Your task for this step of
+            the lab is to provide a complete class definition for a <code>Book</code>
+            class, that allows the program to run correctly.<br />
+            <br />
+            The <code>Book</code> class must have three (3) private
+            data members: a <code>String</code> for the book's title, a
+            <code>String</code> for the book's author, and an <code>Integer</code>
+            for the number of pages in the book. You must write a
+            minimum of three methods for this class: a constructor
+            method (to see the order of the parameters for the
+            constructor, refer to the statements in <code>fillArray</code>
+            that call the constructor), a method named <code>getNumPages()</code>
+            that returns the number of pages in a <code>Book</code>
+            object, and a <code>toString()</code> method that returns a
+            <code>String</code> formatted in this format:
+            <blockquote> <font face="Arial">
+			    <em><font color="#009900">title_of_book</font></em>, by <em><font color="#009900">author_of_book</font></em>, has <em><font color="#009900">number_of_pages</font></em> pages.
+			</font> </blockquote>
+            When you have correctly written the <code>Book</code> class
+            definition, you should obtain output that looks like this <a
+              href="Lab9b/Lab9bScreenShot1.gif" target="_blank">screen shot image</a>.
+            when you run the program.<br />
+            <br />
+          </li>
+          <li>Now, let's add two more pieces of information to the <code>Book</code>
+            class: an <code>Integer</code> value representing the copyright
+            year for the book, and a <code>Boolean</code> value
+            representing whether the book is a hardback book or not. If
+            we do this, we'll also need to modify the constructor method
+            of the class, so that it accepts two more parameters of the
+            appropriate type, and stores those parameter values in the
+            new private data members. <br />
+            <br />
+            The code in the constructor method of the <code>MUPanel</code>
+            class (as well as <code></code>
+            <code>displayArray </code>and <code>fillEntireArray)</code> will
+            also need some modifications. For each book, you'll need to
+            specify two more pieces of information when the book is
+            instantiated. Use these values:<br />
+            <br />
+            <table align="center" border="1" width="70%">
+              <tbody>
+                <tr>
+                  <th>Title</th>
+                  <th>Copyright Year</th>
+                  <th>Hardback?</th>
+                </tr>
+                <tr>
+                  <td align="center">War and Peace</td>
+                  <td align="center">1864</td>
+                  <td align="center">true</td>
+                </tr>
+                <tr>
+                  <td align="center">Gone With The Wind</td>
+                  <td align="center">1936</td>
+                  <td align="center">true</td>
+                </tr>
+                <tr>
+                  <td align="center">Using Java</td>
+                  <td align="center">2011</td>
+                  <td align="center">false</td>
+                </tr>
+                <tr>
+                  <td align="center">Autobiography of a Yogi</td>
+                  <td align="center">1953</td>
+                  <td align="center">false</td>
+                </tr>
+                <tr>
+                  <td align="center">Computing Unbound</td>
+                  <td align="center">1992</td>
+                  <td align="center">false</td>
+                </tr>
+                <tr>
+                  <td align="center">Heaven Help Us</td>
+                  <td align="center">1996</td>
+                  <td align="center">false</td>
+                </tr>
+                <tr>
+                  <td align="center">Computer Systems</td>
+                  <td align="center">2010</td>
+                  <td align="center">true</td>
+                </tr>
+              </tbody>
+            </table>
+            <br />
+            The <code>toString()</code> method for the <code>Book</code>
+            class should be changed as follows: after forming the string
+            as you did above, concatenate 
+			the string " (c) ", followed by the copyright year for the
+            book, followed by a semicolon and a space. Then, using an <i>if/else</i>
+            statement, concatenate the string "Hardback" to the answer String if the <code>hardback</code>
+            private data member is true, or the string "Paperback" if
+            the <code>hardback</code> private data member is false.<br />
+            <br />
+            Also, be sure to add "getter" methods for both the copyright
+            year and the hardback status value.<br />
+            <br />
+            When you have correctly modified the <code>Book</code>
+            class definition and <code>MUPanel</code>, you should
+            obtain output that looks like this <a
+              href="Lab9b/Lab9bScreenShot2.gif" target="_blank"> screen shot image</a>
+            when you run the program. <br />
+            <br />
+          </li>
+          <li>Uncomment the <code>append()</code> method calls in <code>displayEntireArray</code>
+            and add <code>if</code> statements to the <code>for</code>
+            loop so that the program calculates the totals and produces
+            the output shown in this final <a
+              href="Lab9b/Lab9bScreenShot3.gif" target="_blank"> screen shot</a>.<br />
+            <br />
+          </li>
+        </ol>
+      </li>
+      <li>Make .zip files from both your <b>Lab9a</b> project and your <b>Lab9b</b> project, and obtain screen captures
+	      for both of your programs in this lab.&nbsp; Submit all four of these files
+    	  to the Lab09 Dropbox in <a href="http://d2l.mountunion.edu" target="_blank"> D2L</a>.<br />
+
+</ol>
+
+<h3> Grading Rubric: </h3>
+<blockquote>
+    <a href="Lab09_rubric.html" target="_blank"> Lab09 Grading Rubric</a>
+</blockquote>
+
+<br/><br/><br/><br/>
+
+</body>
+</html>

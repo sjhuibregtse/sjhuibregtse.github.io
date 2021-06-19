@@ -1,0 +1,256 @@
+<html>
+<head>
+<title>CSC 120 Programming Style Guidelines</title>
+</head>
+
+<body text=#000000 vLink=#FF8800 aLink=#FF0000 link=#0000EE 
+bgColor=#ffffff><font color=#990099>
+<center>
+<h1>CSC 120 <font color=#800080>Programming Style Guidelines </font></h1>
+</center></font>
+
+<H3>Programs that produce correct answers are not always sufficiently 
+well-designed and/or readable to earn an "A" grade.&nbsp; It is vitally 
+important in the computing profession to develop programs that can be easily 
+read by a person that is knowledgeable in the programming language used who is not the
+author of the code; in most 
+professional environments, program source code must be able to be maintained by a 
+person other than the author of the program.&nbsp; To foster good programming 
+habits, the faculty of the CS department have agreed on the following 
+guidelines for programs written to satisfy requirements for CSC 120 this 
+semester.</H3>
+<H4>In-Program Documentation:</H4>
+<BLOCKQUOTE>Concise, meaningful, well-formatted comments should be located at 
+  key points in your program.&nbsp; Examples of commenting requirements will be 
+  given throughout the semester, as our knowledge of Java expands.&nbsp; At a 
+  minimum, all programs must contain a program heading comment that states 
+  student name, assignment number, date that the program was completed and a 
+  brief explanation of the purpose of the program.&nbsp; See the example 
+  programs at the bottom of this page for a look at what we consider good and 
+  bad documentation. </BLOCKQUOTE>
+<P>
+<H4>Programming Style:</H4>
+<BLOCKQUOTE>Code should be well-formatted, using the same indenting style 
+  throughout the program.&nbsp; Blank lines should be used between important 
+  portions of the program, to enhance readability.&nbsp; Object, variable and 
+  method names should be meaningfully related to the problem being solved.&nbsp; 
+  See your textbook or other Java sources to see what good program style looks 
+  like.<BR><BR>Here are some programming conventions (rules of thumb) that will 
+  make your programs easier to read, understand and maintain.&nbsp; By following 
+  these conventions, you will eliminate many errors that are often made by 
+  beginning students. 
+  <UL>
+    <LI>objects and variables should always be declared <EM>private</EM> 
+    <LI>methods should be <EM>public</EM> 
+    <LI>class names start with a capital letter 
+    <LI>object, variable and method names start with a lower-case letter 
+    <LI>names of constants should be capitalized (for example, <code>private final 
+    static int ARRAY_SIZE = 25;</code>) 
+    <LI>accessor methods should use names beginning with "<code>get</code>" and "<code>set</code>".&nbsp; 
+    Examples include <code>getValue</code>, <code>getThing</code>, <code>setValue</code>, 
+    <code>setObject</code>, etc. 
+    <LI>it is helpful to always use curly braces <code>{}</code> to delimit a block of code 
+    even if there is only one statement in the block.&nbsp; For example, <PRE>            if (num &gt; 10) {
+                 x = num / 2;
+            }
+</PRE></LI></UL></BLOCKQUOTE>
+<P>
+<H4>Example of Good Coding Style:</H4>
+<BLOCKQUOTE>We consider the following program to be written in a good 
+  style.&nbsp; Note the effective use of comments (not too many, but enough to 
+  identify the major operations of the program, and to explain the use of each 
+  variable).&nbsp; Further note the consistent indenting style, the use of blank 
+  lines to make the code more readable, etc.&nbsp; This program would receive 
+  full credit for Documentation and Programming Style when graded. <PRE>         /*------------------------------------------*
+          *         CSC 120 Project # 1              *
+          *         Author: Sammy Student            *
+          *         Date:   July 31, 2023            *
+          *                                          *
+          * A program that calculates the number of  *
+          * calories in a foodstuff based upon the   *
+          * number of grams of carbohydrate, fat and *
+          * protein in the foodstuff                 *
+          *------------------------------------------*/
+
+         import java.awt.*;
+         import java.swing.*;
+         import java.awt.event.*;
+
+         public class MUPanel extends JPanel implements ActionListener {
+         
+             // Declare private data here
+
+             private int carbs,          // input, grams of carbohydrate in some food
+                         fat,            // input, grams of fat
+                         protein,        // input, grams of protein
+                         totalCalories;  // calculated from input values
+                 
+             private Label carbPrompt,
+                           fatPrompt,
+                           proteinPrompt;
+             
+             private TextField carbField,
+                               fatField,
+                               proteinField;
+
+             public MUPanel() {
+             
+                 Container contentPane = this.getContentPane();
+                 contentPane.setLayout(null);
+                 contentPane.setBackground(Color.WHITE);
+
+                 // Instantiate objects and initialize data here
+
+                 carbs   = 0;
+                 fat     = 0;
+                 protein = 0;
+                 
+                 // set up user interface items
+                 
+                 carbPrompt = new Label("Enter grams of carbohydrate:");
+                 add(carbPrompt);
+                 carbField = new TextField(10);
+                 carbField.setText("0");
+                 carbField.addActionListener(this);
+                 add(carbField);
+
+                 fatPrompt = new Label("Enter grams of fat:");
+                 add( fatPrompt );
+                 fatField = new TextField(10);
+                 fatField.setText("0");
+                 fatField.addActionListener(this);
+                 add (fatField);
+
+                 proteinPrompt = new Label("Enter grams of protein:");
+                 add( proteinPrompt );
+                 proteinField = new TextField(10);
+                 proteinField.setText("0");
+                 proteinField.addActionListener(this);
+                 add (proteinField);
+                 
+             } // end of constructor
+			 
+             public void paintComponent (Graphics g) {
+             
+                 super.paintComponent(g);
+
+                 // calculate total calories based on input values
+
+                 totalCalories = 4*carbs + 9*fat + 4*protein;
+
+                 // place output in AppletViewer window
+
+                 g.drawString("A food with: "+carbs+" grams of carbohydrate,", 10, 200);
+                 g.drawString(fat+" grams of fat, and", 75, 220);
+                 g.drawString(protein+" grams of protein,", 75, 240);
+                 g.drawString("contains: ", 10, 260);
+                 g.drawString(totalCalories+" calories.", 75, 260);
+             } // end of paintComponent()
+             
+             public void actionPerformed(ActionEvent event) {
+                 // store the values entered in the input fields by user
+                 // in the proper variables
+                 
+                 carbs   = Integer.parseInt(carbField.getText());
+                 fat     = Integer.parseInt(fatField.getText());
+                 protein = Integer.parseInt(proteinField.getText());
+                 
+                 // redraw the AppletViewer window with the new values
+
+                 repaint();
+             } // end of actionPerformed
+
+         } // end of class MUPanel
+         </PRE></BLOCKQUOTE>
+<P>
+<H4>Example of Bad Coding Style:</H4>
+<BLOCKQUOTE>This program produces exactly the same output as the previous 
+  example, but it is almost impossible for a person to read.&nbsp; This program 
+  would earn no points in the Programming Style or the Documentation part of the 
+  assignment, even though it calculates all of the answers correctly. <PRE>         import java.awt.*;
+		 import javax.swing.*;
+         import java.awt.event.*;
+         public class MUPanel extends JPanel implements ActionListener {
+         private int c,f,p,t;                 
+         Label cP,fP,pP;
+ TextField cF,fF,pF;
+         public MUPanel(){
+         c=0;f=0;p=0;
+         cP=new Label( "Enter grams of carbohydrate:" );
+     add( cP );
+              cF = new TextField( 10 );
+         cF.setText( "0" );
+            cF.addActionListener( this );
+         add ( cF );
+         fP = new Label( "Enter grams of fat:" );
+         add( fP );
+         fF = new TextField( 10 );
+ fF.setText( "0" );
+         fF.addActionListener( this );
+         add ( fF );
+               pP = new Label( "Enter grams of protein:" );
+         add( pP );
+         pF = new TextField( 10 );
+         pF.setText( "0" );
+         pF.addActionListener( this );
+         add ( pF);
+         }
+         public void paintComponent ( Graphics g ){
+		     super.paintComponent(g);
+             t=4*c+9*f+4*p;
+             g.drawString("A food with: "+c+" grams of carbohydrate,", 10, 200);
+             g.drawString(f+" grams of fat, and", 75, 220);
+                 g.drawString(p+" grams of protein,", 75, 240);
+         g.drawString("contains: ", 10, 260);
+
+
+         g.drawString(t+" calories.", 75, 260);
+         } // end of paint()
+         public void actionPerformed ( ActionEvent event ){
+         c=Integer.parseInt( cF.getText() );
+         f=Integer.parseInt( fF.getText() );
+         p=Integer.parseInt( pF.getText() );
+         repaint();
+         }
+         }
+         
+</PRE></BLOCKQUOTE>
+<P>
+<H4>Special note about closing braces ( the '}' character):</H4>
+<BLOCKQUOTE>Some students in the past have adopted a habit of placing the 
+  closing curly brace for a code block at the end of the last line in the block, 
+  instead of on a separate line after the last line in the block.&nbsp; This has 
+  proven to make a program <STRONG>VERY DIFFICULT</STRONG> to read, and so such 
+  usage will result in a Programming Style deduction this semester.&nbsp; Here 
+  is an example that shows the bad style usage of closing curly braces being 
+  discussed in this paragraph: <PRE>         import java.awt.*;
+         import javax.swing.*;
+         import java.awt.event.*;
+     
+         public class MUPanel extends JPanel {
+
+             private int x, y, z;                 
+             private double avg;
+
+             public MUPanel {
+                 x = 14;
+                 y = 19;
+                 z = 22;}
+
+             public void paintComponent ( Graphics g ) {
+                 super.paintComponent(g);
+				 
+                 avg = (x + y + z) / 3.0; // force floating-point division
+
+                 if (avg &lt; 10) {
+                     System.out.println("Small average of "+avg);}
+                 else if (avg &gt; 20) {
+                     System.out.println("Large average of "+avg);}
+                 else {
+                     System.out.println("Medium average of "+avg);}}}         
+</PRE>This program produces the correct output, but it is hard for a reader of 
+  the program to tell which of the closing braces marks the end of the else 
+  clause, the end of the paintComponent method, etc.&nbsp; Avoid this style in your 
+  programming this semester. </BLOCKQUOTE>
+<P><BR>
+</BODY></HTML>
